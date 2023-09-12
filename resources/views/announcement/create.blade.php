@@ -2,27 +2,14 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Aggiungi il tuo videogame</h2>
+                <h2>Aggiungi il tuo videogame: </h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-4">
-                <livewire:create-announcement/>
+            <div class="col-12">
+                <livewire:create-announcement />
             </div>
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <x-layout />
+</x-layout>

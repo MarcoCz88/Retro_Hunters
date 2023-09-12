@@ -8,27 +8,30 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 @guest
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('register')}}">Registrati</a>
-                </li> 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('login')}}">Login</a>
-                </li>  
-                
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Registrati</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    </li>
+
                 @endguest
-               
+
                 @auth
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('create-annucement')}}">Inserisci articolo</a>
-                </li> 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
-                </li>   
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('announcement.create') }}">Inserisci articolo</a>
+                    </li>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <li class="nav-item">
+                            <button class="btn btn-primary">Logout</button>
+                        </li>
+                    </form>
                 @endauth
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">Dashboard</a>
                 </li>
