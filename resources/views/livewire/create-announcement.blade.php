@@ -1,18 +1,47 @@
-<div>
-    <form>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+{{-- 'title', 'body', 'price', 'developer', 'publisher' --}}
+<form wire:submit.prevent="store">
+    <div class="mb-3">
+        <label class="form-label">Titolo: </label>
+        <input type="text" class="form-control" wire:model="title">
+        <div>
+            @error('title')
+                <span class="error">{{ $message }}</span>
+            @enderror
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Descrizione: </label>
+        <textarea type="text" class="form-control" wire:model="body">Inserisci la tua descrizione...</textarea>
+        <div>
+            @error('title')
+                <span class="error">{{ $message }}</span>
+            @enderror
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Prezzo: </label>
+        <input type="numeric" class="form-control" wire:model="price">
+        <div>
+            @error('title')
+                <span class="error">{{ $message }}</span>
+            @enderror
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Sviluppatore: </label>
+        <input type="text" class="form-control" wire:model="developer">
+        <div>
+            @error('title')
+                <span class="error">{{ $message }}</span>
+            @enderror
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>
+            <label class="form-label">Produttore: </label>
+            <input type="text" class="form-control" wire:model="publisher">
+            <div>
+                @error('title')
+                    <span class="error">{{ $message }}</span>
+                @enderror
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+</form>

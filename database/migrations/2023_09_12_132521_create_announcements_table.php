@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('annoucements', function (Blueprint $table) {
+        Schema::create('announcements', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('body');
+            $table->float('price', 6, 2);
+            $table->string('developer');
+            $table->string('publisher');
             $table->timestamps();
         });
     }

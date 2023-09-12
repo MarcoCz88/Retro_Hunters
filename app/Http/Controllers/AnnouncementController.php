@@ -20,7 +20,7 @@ class AnnouncementController extends Controller
      */
     public function create()
     {
-        return view('create');
+        return view('announcement.create');
     }
 
     /**
