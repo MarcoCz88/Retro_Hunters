@@ -1,12 +1,16 @@
 <?php
 
 namespace Database\Seeders;
+use App\Models\Category;
+
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
+
+    
     /**
      * Seed the application's database.
      */
@@ -18,5 +22,22 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        $categories = [
+            "Azione",
+            "MMORPG",
+            "Sparatutto",
+            "Survival",
+            "Puzzle",
+            "Strategia",
+            "RPG",
+            "Simulatori",
+            "Sport"
+        ];
+        foreach ($categories as $category) {
+            Category::create([
+               'name'=> $category
+             ]);
+         }
+    
     }
 }
