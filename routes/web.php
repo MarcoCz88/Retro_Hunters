@@ -8,3 +8,5 @@ use App\Http\Controllers\AnnouncementController;
 Route::get('/', [PublicController::class,'welcome'])->name('home');
 
 Route::get('/announcement/create',[AnnouncementController::class,'create'])->name('announcement.create')->middleware('auth');
+Route::get('/announcement/index',[AnnouncementController::class,'index'])->name('announcement.index');
+Route::get('/announcement/show/{announcement}',[AnnouncementController::class,'show'])->name('announcement.show');

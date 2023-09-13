@@ -12,7 +12,8 @@ class AnnouncementController extends Controller
      */
     public function index()
     {
-        //
+        $announcements = Announcement::paginate(4);
+        return view('announcement.index', compact('announcements'));
     }
 
     /**
@@ -23,20 +24,13 @@ class AnnouncementController extends Controller
         return view('announcement.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    // public function store(Request $request)
-    // {
-        
-    // }
 
     /**
      * Display the specified resource.
      */
     public function show(Announcement $announcement)
     {
-        //
+        return view('announcement.show', compact('announcement'));
     }
 
     /**

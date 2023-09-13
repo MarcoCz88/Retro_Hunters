@@ -2,18 +2,15 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center">Retro Hunters</h1>
+                <h2>Tutti gli annunci</h2>
             </div>
         </div>
-        <div class="row align-items-center ">
-            
-              @foreach($announcements as $announcement)
+        <div class="row">
+             @foreach($announcements as $announcement)
               <div class="col-12 col-md-4 mt-2">
                 <x-card-announcement :announcement="$announcement"/>
               </div>
               @endforeach
-       
         </div>
     </div>
-
 </x-layout>
