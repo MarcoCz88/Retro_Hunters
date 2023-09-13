@@ -5,16 +5,16 @@
         <input type="text" class="form-control" wire:model="title">
         <div>
             @error('title')
-                <span class="error">{{ $message }}</span>
+                <span class="text-danger error">{{ $message }}</span>
             @enderror
         </div>
     </div>
     <div class="mb-3">
         <label class="form-label">Descrizione: </label>
-        <textarea type="text" class="form-control" wire:model="body">Inserisci la tua descrizione...</textarea>
+        <textarea type="text-denger text" class="form-control" wire:model="body">Inserisci la tua descrizione...</textarea>
         <div>
-            @error('title')
-                <span class="error">{{ $message }}</span>
+            @error('body')
+                <span class="text-danger error">{{ $message }}</span>
             @enderror
         </div>
     </div>
@@ -22,8 +22,8 @@
         <label class="form-label">Prezzo: </label>
         <input type="numeric" class="form-control" wire:model="price">
         <div>
-            @error('title')
-                <span class="error">{{ $message }}</span>
+            @error('price')
+                <span class="text-danger error">{{ $message }}</span>
             @enderror
         </div>
     </div>
@@ -31,8 +31,8 @@
         <label class="form-label">Sviluppatore: </label>
         <input type="text" class="form-control" wire:model="developer">
         <div>
-            @error('title')
-                <span class="error">{{ $message }}</span>
+            @error('developer')
+                <span class="text-danger error">{{ $message }}</span>
             @enderror
         </div>
     </div>
@@ -40,8 +40,8 @@
         <label class="form-label">Produttore: </label>
         <input type="text" class="form-control" wire:model="publisher">
         <div>
-            @error('title')
-                <span class="error">{{ $message }}</span>
+            @error('publisher')
+                <span class="text-danger error">{{ $message }}</span>
             @enderror
         </div>
     </div>
@@ -54,8 +54,8 @@
             @endforeach
         </select>
         <div>
-            @error('title')
-                <span class="error">{{ $message }}</span>
+            @error('category')
+                <span class="text-danger error">{{ $message }}</span>
             @enderror
         </div>
     </div>
