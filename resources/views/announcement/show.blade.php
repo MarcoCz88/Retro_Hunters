@@ -17,7 +17,7 @@
                 <p>{{$announcement->body}}</p>
             </div>
             <div class="col-10">
-                <p>Creato da: {{$announcement->user->name }} il {{$announcement->created_at->format('d/m/Y')}} </p>
+                <p>Creato da: {{$announcement->user->name }} il {{$announcement->created_at->format('d/m/Y H:i')}} </p>
             </div>
         </div>
     </div>
