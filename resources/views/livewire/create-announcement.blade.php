@@ -35,13 +35,29 @@
                 <span class="error">{{ $message }}</span>
             @enderror
         </div>
-        <div class="mb-3">
-            <label class="form-label">Produttore: </label>
-            <input type="text" class="form-control" wire:model="publisher">
-            <div>
-                @error('title')
-                    <span class="error">{{ $message }}</span>
-                @enderror
-            </div>
-            <button type="submit" class="btn btn-primary">Salva Annuncio</button>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Produttore: </label>
+        <input type="text" class="form-control" wire:model="publisher">
+        <div>
+            @error('title')
+                <span class="error">{{ $message }}</span>
+            @enderror
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Genere: </label>
+        <select class="form-control" wire:model.live="category">
+            <option value="">Scegli la categoria</option>
+            @foreach ($categories as $category)
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @endforeach
+        </select>
+        <div>
+            @error('title')
+                <span class="error">{{ $message }}</span>
+            @enderror
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>

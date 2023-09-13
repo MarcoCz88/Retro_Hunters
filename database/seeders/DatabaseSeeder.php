@@ -18,26 +18,28 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-        $categories = [
-            "Azione",
-            "MMORPG",
-            "Sparatutto",
-            "Survival",
-            "Puzzle",
-            "Strategia",
-            "RPG",
-            "Simulatori",
-            "Sport"
-        ];
-        foreach ($categories as $category) {
-            Category::create([
-               'name'=> $category
-             ]);
-         }
+        \App\Models\User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+            'password' => '12345678'
+        ]);
+
+        // $categories = [
+        //     "Azione",
+        //     "MMORPG",
+        //     "Sparatutto",
+        //     "Survival",
+        //     "Puzzle",
+        //     "Strategia",
+        //     "RPG",
+        //     "Simulatori",
+        //     "Sport"
+        // ];
+        // foreach ($categories as $category) {
+        //     Category::create([
+        //        'name'=> $category
+        //      ]);
+        //  }
     
     }
 }
