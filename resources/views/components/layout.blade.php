@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="it">
 
-<head>
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title ?? 'Retro Hunters' }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
-</head>
+ </head>
 
-<body class="body-custom">
+ <body class="body-custom">
     <x-navbar />
 
     @if (session('message'))
@@ -22,6 +22,6 @@
 
     <x-footer />
     @livewireScripts
-</body>
+ </body>
 
 </html>
