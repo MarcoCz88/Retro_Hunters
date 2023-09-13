@@ -11,7 +11,8 @@
                     <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('announcement.index') }}">Tutti gli annunci</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('announcement.index') }}">Tutti gli
+                        annunci</a>
                 </li>
                 @guest
                     <li class="nav-item">
@@ -23,32 +24,32 @@
 
                 @endguest
 
-                @auth
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('announcement.create') }}">Inserisci articolo</a>
-                    </li>
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <li class="nav-item">
-                            <button class="btn btn-primary">Logout</button>
-                        </li>
-                    </form>
-                @endauth
-
                 <li class="nav-item">
                     <a class="nav-link" href="#">Dashboard</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Dropdown
+                        Generi
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">link</a></li>
-                        <li><a class="dropdown-item" href="#">link</a></li>
-                        <li><a class="dropdown-item" href="#">link</a></li>
+                        @foreach ($categories as $category)
+                            <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
+                        @endforeach
+
                     </ul>
                 </li>
+                @auth
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('announcement.create') }}">Inserisci articolo</a>
+                </li>
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <li class="nav-item">
+                        <button class="btn btn-primary">Logout</button>
+                    </li>
+                </form>
+            @endauth
             </ul>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

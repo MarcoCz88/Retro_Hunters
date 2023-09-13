@@ -11,6 +11,7 @@
                 <x-card-announcement :announcement="$announcement"/>
               </div>
               @endforeach
+              {{$announcements->links()}}
         </div>
     </div>
 </x-layout>
