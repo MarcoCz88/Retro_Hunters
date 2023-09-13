@@ -21,7 +21,7 @@ class CreateAnnouncement extends Component
         'price' => 'required|numeric',
         'developer' => 'required|min:2|max:35',
         'publisher' => 'required|min:2|max:35',
-        // 'category' => 'required',
+        'category' => 'required',
     ];
 
     public function store(){
