@@ -43,5 +43,5 @@
                     <span class="error">{{ $message }}</span>
                 @enderror
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Salva Annuncio</button>
 </form>
