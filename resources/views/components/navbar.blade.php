@@ -49,7 +49,19 @@
                         <button class="btn btn-primary">Logout</button>
                     </li>
                 </form>
+                @if (Auth::user()->is_revisor)
+                <li class="nav-item">
+                    <a class="nav-link btn btn-sm" href="{{route('revisor.index')}}">Area Revisioni
+                        <span class="badge rounded-pill bg-danger">
+                            {{App\Models\Announcement::toBeRevisionedCount()}}
+                            <span class="visually-hidden">messaggi non letti</span>
+                        </span>
+                    </a>
+                </li>    
+                @endif
             @endauth
+                
+                
             </ul>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
