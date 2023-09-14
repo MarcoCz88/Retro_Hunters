@@ -15,6 +15,9 @@ Route::get('/announcement/index',[AnnouncementController::class,'index'])->name(
 Route::get('/announcement/show/{announcement}',[AnnouncementController::class,'show'])->name('announcement.show');
 
 // ROTTE REVISORI
-Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
-Route::patch('/accept/announcement/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->name('revisor.accept_announcement');
-Route::patch('/reject/announcement/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('revisor.reject_announcement');
+Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
+Route::patch('/accept/announcement/{announcement}',[RevisorController::class, 'acceptAnnouncement'])->middleware('isRevisor')->name('revisor.accept_announcement');
+Route::patch('/reject/announcement/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
+//ROTTE CANDIDATURE
+Route::get('/become/revisor', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+Route::get('/make/revisor/{user}',[RevisorController::class, 'makeRevisor'])->name('make.revisor');
