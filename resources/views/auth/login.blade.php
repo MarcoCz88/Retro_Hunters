@@ -21,6 +21,7 @@
               </div>
               <button type="submit" class="btn btn-primary">Accedi</button>
            </form>
+           <p>Non hai ancora un account? <a href="{{route('register')}}">Registrati</a></p>
         </div>
     </div>
 </x-layout>
