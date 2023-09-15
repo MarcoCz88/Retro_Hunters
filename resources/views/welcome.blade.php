@@ -5,15 +5,14 @@
                 <h1 class="text-center">Retro Hunters</h1>
             </div>
         </div>
-        <div class="row align-items-center ">
+        <div class="row align-items-center">
             
               @foreach($announcements as $announcement)
-              <div class="col-12 col-md-4 mt-2">
-                <x-card-announcement :announcement="$announcement"/>
+              <div class="col-12 col-md-4 mt-2">                
+                <x-card-announcement :announcement="$announcement"/>              
               </div>
               @endforeach
        
         </div>
     </div>
-
 </x-layout>

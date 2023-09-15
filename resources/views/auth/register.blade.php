@@ -1,8 +1,8 @@
 <x-layout>
-<x-slot name="title">
+    <x-slot name="title">
         Registrati
     </x-slot>
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-12">
                 <h2 class="text-center">Registrati</h2>
@@ -40,4 +40,6 @@
             </form>
         </div>
     </div>
+    <div class="container h-50 d-inline-block"></div>
+
 </x-layout>
