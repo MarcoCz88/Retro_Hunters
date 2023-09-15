@@ -18,7 +18,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $announcement_to_check->title }}</h5>
                             <p class="card-text">{{ $announcement_to_check->category->name }}</p>
-                            <p class="card-text">{{ $announcement_to_check->body }}</p>
+                            <p class="card-text text-truncate">{{ $announcement_to_check->body }}</p>
                             <p class="card-text">Prezzo: {{ $announcement_to_check->price }}€</p>
                             <p class="card-text">Sviluppato da: {{ $announcement_to_check->developer }}</p>
                             <p class="card-text">Pubblicato da: {{ $announcement_to_check->publisher }}</p>
