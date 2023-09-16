@@ -13,7 +13,8 @@
   }
 
   .card_revisor {
-    flex-grow: 1;
+    min-width: 350px !important;
+    /* flex-grow: 2; */
   }
   
   .card__back svg, .card__menu svg {
