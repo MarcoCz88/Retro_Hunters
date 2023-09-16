@@ -33,7 +33,8 @@
             </a>
         </div>
     </div>
-    <div class="card__img"><img src="https://picsum.photos/200" class="card-img-top" alt="{{ $announcement->title }}">
+    <div class="card__img">
+        <img src="https://picsum.photos/200" class="card-img-top" alt="{{ $announcement->title }}">
     </div>
     <div class="card__title">{{ $announcement->title }}</div>
     <div class="card__subtitle">{{ $announcement->category->name }}</div>
