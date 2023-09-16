@@ -29,7 +29,7 @@
                                 <p class="card-text">Caricato da: {{ $announcement_to_check->user->name ?? '' }} il
                                     {{ $announcement_to_check->created_at->format('d/m/Y H:i') }}</p>
                             </span>
-                            <span class="card-footer">
+                            <span class="card-footer d-flex justify-content-between">
                                 <form
                                     action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
                                     method="POST">
