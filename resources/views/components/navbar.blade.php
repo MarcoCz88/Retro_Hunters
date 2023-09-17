@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{route('home')}}">RH</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -8,50 +8,47 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
+                    <a class="nav-link link-custom" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('announcement.index') }}">Tutti gli
+                    <a class="nav-link link-custom" aria-current="page" href="{{ route('announcement.index') }}">Tutti gli
                         annunci</a>
                 </li>
-                @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Registrati</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login</a>
-                    </li>
-
-                @endguest
+                
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
+                    <a class="nav-link link-custom" href="#">Dashboard</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Generi
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
-                            <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
+                            <li><a class="dropdown-item link-custom" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
                         @endforeach
-
                     </ul>
                 </li>
-                @auth
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('announcement.create') }}">Inserisci articolo</a>
-                </li>
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
+                @guest
+                <form action="{{ route('register') }}" method="GET">
                     <li class="nav-item">
-                        <button class="btn btn-primary">Logout</button>
+                        <button class="btn btn-primary mx-2"> Registrati</button>
                     </li>
                 </form>
+                <form action="{{ route('login') }}" method="GET">
+                    <li class="nav-item">
+                        <button class="btn btn-primary mx-2">Login </button>
+                    </form>
+                @endguest
+                @auth
+                <li class="nav-item">
+                    <a class="nav-link link-custom" href="{{ route('announcement.create') }}">Inserisci articolo</a>
+                </li>
+                
                 @if (Auth::user()->is_revisor)
                 <li class="nav-item">
-                    <a class="nav-link btn btn-sm" href="{{route('revisor.index')}}">Area Revisioni
+                    <a class="nav-link btn btn-sm link-custom" href="{{route('revisor.index')}}">Area Revisioni
                         <span class="badge rounded-pill bg-danger">
                             {{App\Models\Announcement::toBeRevisionedCount()}}
                             <span class="visually-hidden">messaggi non letti</span>
@@ -59,14 +56,16 @@
                     </a>
                 </li>    
                 @endif
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <li class="nav-item">
+                        <button class="btn btn-primary">Logout</button>
+                    </li>
+                </form>
             @endauth
                 
                 
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Ricerca</button>
-            </form>
         </div>
     </div>
 </nav>

@@ -1,0 +1,17 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar-custom , .dropdown-menu{
+    background-color: #3586FF;
+}
+
+.link-custom{
+    color: #F8F9FA;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link:active {
+    color: yellow;
+    text-decoration: underline;
+}
