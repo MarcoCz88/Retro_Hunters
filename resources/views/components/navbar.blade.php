@@ -14,8 +14,6 @@
                     <a class="nav-link link-custom" aria-current="page" href="{{ route('announcement.index') }}">Tutti gli
                         annunci</a>
                 </li>
-                
-
                 <li class="nav-item">
                     <a class="nav-link link-custom" href="#">Dashboard</a>
                 </li>
