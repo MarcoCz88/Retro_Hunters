@@ -30,7 +30,7 @@
                                 <p class="card-text">Caricato da: {{ $announcement_to_check->user->name ?? '' }} il
                                     {{ $announcement_to_check->created_at->format('d/m/Y H:i') }}</p>
                             </span>
-                            <span class="card-footer d-flex justify-content-between">
+                            <span class="card-footer d-flex justify-content-between align-items-center">
                                 <form
                                     action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
                                     method="POST">
@@ -44,6 +44,13 @@
                                     @csrf
                                     @method('PATCH')
                                     <button type="submit" class="btn btn-danger mx-1">Rifiuta</button>
+                                </form>
+                                <form
+                                    action="{{ route('revisor.undo_announcement', ['announcement' => $announcement_to_check]) }}"
+                                    method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn btn-primary mx-1">Annulla revisione</button>
                                 </form>
                             </span>
                         </div>

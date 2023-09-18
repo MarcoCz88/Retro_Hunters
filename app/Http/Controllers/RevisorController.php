@@ -29,6 +29,14 @@ class RevisorController extends Controller
         return redirect()->back()->with('message',"Hai rifiutato l'articolo di {$announcement->user->name}");
     }
 
+    public function undoAnnouncement(){
+        $announcement = Announcement::where('is_accepted', true)->orWhere('is_accepted', false)->latest()->first();
+        if($announcement != null){
+            $announcement->setAccepted(null);
+            return redirect()->back()->with('message', "L'azione è stata annullata con successo");
+        }
+    }
+
     public function becomeRevisor(){
         Mail::to('hello@example.com')->send(new BecomeRevisor(Auth::user()));
         return redirect()->back()->with('message', 'La tua candidatura è stata inviata con successo.');
