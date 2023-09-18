@@ -16,7 +16,8 @@ class RevisorController extends Controller
 {
     public function index(){
         $announcement_to_check = Announcement::where('is_accepted', null)->first();
-        return view('revisor.index', compact('announcement_to_check'));
+        $announcement_to_undo = Announcement::where('is_accepted', true)->orWhere('is_accepted', false)->latest()->first();
+        return view('revisor.index', compact('announcement_to_check', 'announcement_to_undo'));
     }
 
     public function acceptAnnouncement(Announcement $announcement){
@@ -30,9 +31,9 @@ class RevisorController extends Controller
     }
 
     public function undoAnnouncement(){
-        $announcement = Announcement::where('is_accepted', true)->orWhere('is_accepted', false)->latest()->first();
-        if($announcement != null){
-            $announcement->setAccepted(null);
+        $announcement_to_undo = Announcement::where('is_accepted', true)->orWhere('is_accepted', false)->latest()->first();
+        if($announcement_to_undo != null){
+            $announcement_to_undo->setAccepted(null);
             return redirect()->back()->with('message', "L'azione è stata annullata con successo");
         }
     }

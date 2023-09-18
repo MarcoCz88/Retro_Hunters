@@ -11,9 +11,9 @@
 </head>
 
 <body class="body-custom">
-    <x-navbar/>
+    <x-navbar />
     
-    <main>
+    <header>
         @if (session('message'))
             <div class="alert alert-success">
                 {{ session('message') }}
@@ -24,12 +24,13 @@
                 {{ session('access.denied') }}
             </div>
         @endif
+    </header>
+
+    <main>
+        {{ $slot }}
     </main>
-<header>
-<x-search/>
- </header>
-   {{ $slot }}
- <x-footer />
+
+    <x-footer />
 
     @livewireScripts
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

@@ -45,13 +45,7 @@
                                     @method('PATCH')
                                     <button type="submit" class="btn btn-danger mx-1">Rifiuta</button>
                                 </form>
-                                <form
-                                    action="{{ route('revisor.undo_announcement', ['announcement' => $announcement_to_check]) }}"
-                                    method="POST">
-                                    @csrf
-                                    @method('PATCH')
-                                    <button type="submit" class="btn btn-primary mx-1">Annulla revisione</button>
-                                </form>
+
                             </span>
                         </div>
                     </div>
@@ -60,17 +54,9 @@
         </div>
     @endif
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+     <form action="{{ route('revisor.undo_announcement', ['announcement' => $announcement_to_undo]) }}" method="POST">
+        @csrf
+        @method('PATCH')
+        <button type="submit" class="btn btn-primary mx-1">Annulla revisione</button>
+    </form>
 </x-layout>
