@@ -7,10 +7,10 @@
 <?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
- <?php $__env->slot('title', null, []); ?> 
+     <?php $__env->slot('title', null, []); ?> 
         Registrati
      <?php $__env->endSlot(); ?>
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-12">
                 <h2 class="text-center">Registrati</h2>
@@ -65,10 +65,12 @@ unset($__errorArgs, $__bag); ?>
                   <label>Conferma Password</label>
                   <input type="password" class="form-control" name="password_confirmation">
                </div>
-               <button type="submit" class="btn">Registrati</button>
+               <button type="submit" class="btn btn-primary my-3">Registrati</button>
             </form>
         </div>
     </div>
+    <div class="container h-50 d-inline-block"></div>
+
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>
