@@ -1,17 +1,11 @@
 <x-layout>
 
-    <div class="container my-3">
-        <div class="row row_revisor">
-            <div class="col-12">
-                <h2>
-                    {{ $announcement_to_check ? "Ecco l'annuncio da revisionare: {$announcement_to_check->title} " : 'Non ci sono annunci da controllare' }}
-                </h2>
-            </div>
-        </div>
-    </div>
     @if ($announcement_to_check)
-        <div class="container">
-            <div class="row">
+        <div class="container my-3">
+            <div class="row row_card">
+                <h2>
+                    Ecco l'annuncio da revisionare: {{ $announcement_to_check->title }}
+                </h2>
                 <div class="col-12 d-flex justify-content-center">
                     <div class="card card_revisor m-3" style="width: 18rem;">
                         <div class="card__img__revisor">
@@ -51,6 +45,16 @@
                 </div>
             </div>
         </div>
+    @else
+        <div class="container my-3">
+            <div class="row row_revisor">
+                <div class="col-12">
+                    <h2>
+                        Non ci sono annunci da controllare
+                    </h2>
+                </div>
+            </div>
+        </div>
     @endif
 
     <div class="container">
@@ -70,13 +74,15 @@
                             <th scope="row">{{ $announcement_to_undo->title }}</th>
                             <td>{{ $announcement_to_undo->body }}</td>
                             <td>
-                                <button onclick="document.getElementById('formUndo').submit()" type="submit" class="btn btn-primary mx-1">Annulla revisione</button>
+                                <button onclick="document.getElementById('formUndo').submit()" type="submit"
+                                    class="btn btn-primary mx-1">Annulla revisione</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
 
-                <form id="formUndo" action="{{ route('revisor.undo_announcement', ['announcement' => $announcement_to_undo]) }}"
+                <form id="formUndo"
+                    action="{{ route('revisor.undo_announcement', ['announcement' => $announcement_to_undo]) }}"
                     method="POST">
                     @csrf
                     @method('PATCH')
