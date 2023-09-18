@@ -15,6 +15,11 @@
                         gli
                         annunci</a>
                 </li>
+                <?php if(auth()->guard()->check()): ?>
+                    <li class="nav-item">
+                        <a class="nav-link link-custom" href="<?php echo e(route('announcement.create')); ?>">Inserisci articolo</a>
+                    </li>
+                <?php endif; ?>
                 <li class="nav-item dropdown">
                     <a class="nav-link link-custom dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -28,11 +33,27 @@
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </ul>
                 </li>
-                <?php if(auth()->guard()->check()): ?>
-                    <li class="nav-item">
-                        <a class="nav-link link-custom" href="<?php echo e(route('announcement.create')); ?>">Inserisci articolo</a>
-                    </li>
 
+            </ul>
+        </div>
+        <?php if(auth()->guard()->check()): ?>
+            <p class="d-none">
+                <?php echo e($counter = App\Models\Announcement::toBeRevisionedCount()); ?> 
+            </p>
+            <li class="nav-item dropdown ms-auto mx-5">
+                <a class="nav-link link-custom dropdown-toggle mx-2" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <?php echo e(Auth::user()->name); ?>
+
+                    <?php if($counter > 0): ?>
+                        <span class="badge rounded-pill bg-danger">
+                            <?php echo e(App\Models\Announcement::toBeRevisionedCount()); ?>
+
+                            <span class="visually-hidden">messaggi non letti</span>
+                        </span>
+                    <?php endif; ?>
+                </a>
+                <ul class="dropdown-menu">
                     <?php if(Auth::user()->is_revisor): ?>
                         <li class="nav-item">
                             <a class="nav-link btn btn-sm link-custom" href="<?php echo e(route('revisor.index')); ?>">Area Revisioni
@@ -44,16 +65,7 @@
                             </a>
                         </li>
                     <?php endif; ?>
-
-                </ul>
-            </div>
-            <li class="nav-item dropdown ms-auto">
-                <a class="nav-link link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <?php echo e(Auth::user()->name); ?>
-
-                </a>
-                <ul class="dropdown-menu">
+                    <hr class="mx-2">
                     <li class="nav-item mx-2">
                         <a href="/logout" onclick="event.preventDefault();getElementById('form-logout').submit()">Logout</a>
                     </li>
@@ -66,7 +78,7 @@
     </div>
     <?php if(auth()->guard()->guest()): ?>
         <li class="nav-item dropdown ms-auto">
-            <a class="nav-link link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            <a class="nav-link link-custom dropdown-toggle mx-2" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Visitatore
             </a>

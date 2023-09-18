@@ -15,6 +15,11 @@
                         gli
                         annunci</a>
                 </li>
+                @auth
+                    <li class="nav-item">
+                        <a class="nav-link link-custom" href="{{ route('announcement.create') }}">Inserisci articolo</a>
+                    </li>
+                @endauth
                 <li class="nav-item dropdown">
                     <a class="nav-link link-custom dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -28,11 +33,25 @@
                         @endforeach
                     </ul>
                 </li>
-                @auth
-                    <li class="nav-item">
-                        <a class="nav-link link-custom" href="{{ route('announcement.create') }}">Inserisci articolo</a>
-                    </li>
 
+            </ul>
+        </div>
+        @auth
+            <p class="d-none">
+                {{ $counter = App\Models\Announcement::toBeRevisionedCount() }} 
+            </p>
+            <li class="nav-item dropdown ms-auto mx-5">
+                <a class="nav-link link-custom dropdown-toggle mx-2" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    {{ Auth::user()->name }}
+                    @if ($counter > 0)
+                        <span class="badge rounded-pill bg-danger">
+                            {{ App\Models\Announcement::toBeRevisionedCount() }}
+                            <span class="visually-hidden">messaggi non letti</span>
+                        </span>
+                    @endif
+                </a>
+                <ul class="dropdown-menu">
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item">
                             <a class="nav-link btn btn-sm link-custom" href="{{ route('revisor.index') }}">Area Revisioni
@@ -43,15 +62,7 @@
                             </a>
                         </li>
                     @endif
-
-                </ul>
-            </div>
-            <li class="nav-item dropdown ms-auto">
-                <a class="nav-link link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    {{ Auth::user()->name }}
-                </a>
-                <ul class="dropdown-menu">
+                    <hr class="mx-2">
                     <li class="nav-item mx-2">
                         <a href="/logout" onclick="event.preventDefault();getElementById('form-logout').submit()">Logout</a>
                     </li>
@@ -64,7 +75,7 @@
     </div>
     @guest
         <li class="nav-item dropdown ms-auto">
-            <a class="nav-link link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            <a class="nav-link link-custom dropdown-toggle mx-2" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Visitatore
             </a>
