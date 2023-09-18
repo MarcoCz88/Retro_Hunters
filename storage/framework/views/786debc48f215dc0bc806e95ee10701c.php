@@ -14,9 +14,6 @@
                     <a class="nav-link link-custom" aria-current="page" href="<?php echo e(route('announcement.index')); ?>">Tutti gli
                         annunci</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link link-custom" href="#">Dashboard</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">

@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-12">
                 <h2>
-                    <?php echo e($announcement_to_check ? "Ecco l'annuncio da revisionare: {$announcement_to_check->title} " : `Non ci sono annunci da controllare`); ?>
+                    <?php echo e($announcement_to_check ? "Ecco l'annuncio da revisionare: {$announcement_to_check->title} " : "Non ci sono annunci da controllare"); ?>
 
                 </h2>
             </div>
@@ -54,13 +54,11 @@
                                     <?php echo method_field('PATCH'); ?>
                                     <button type="submit" class="btn btn-danger mx-1">Rifiuta</button>
                                 </form>
-                                <form
-                                    action="<?php echo e(route('revisor.undo_announcement', ['announcement' => $announcement_to_check])); ?>"
-                                    method="POST">
-                                    <?php echo csrf_field(); ?>
-                                    <?php echo method_field('PATCH'); ?>
-                                    <button type="submit" class="btn btn-primary mx-1">Annulla revisione</button>
-                                </form>
+<<<<<<< HEAD
+
+=======
+                                
+>>>>>>> a020d1e925c2d76e78fd2c929f8e6d5a586d0094
                             </span>
                         </div>
                     </div>
@@ -68,6 +66,21 @@
             </div>
         </div>
     <?php endif; ?>
+<<<<<<< HEAD
+
+     <form action="<?php echo e(route('revisor.undo_announcement', ['announcement' => $announcement_to_undo])); ?>" method="POST">
+        <?php echo csrf_field(); ?>
+        <?php echo method_field('PATCH'); ?>
+        <button type="submit" class="btn btn-primary mx-1">Annulla revisione</button>
+    </form>
+=======
+    <form
+                                    action="<?php echo e(route('revisor.undo_announcement', ['announcement' => $announcement_to_check])); ?>"
+                                    method="POST">
+                                    <?php echo csrf_field(); ?>
+                                    <?php echo method_field('PATCH'); ?>
+                                    <button type="submit" class="btn btn-primary mx-1">Annulla revisione</button>
+                                </form>
 
 
 
@@ -81,7 +94,7 @@
 
 
 
-
+>>>>>>> a020d1e925c2d76e78fd2c929f8e6d5a586d0094
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>
