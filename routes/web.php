@@ -21,3 +21,6 @@ Route::patch('/reject/announcement/{announcement}',[RevisorController::class, 'r
 //ROTTE CANDIDATURE
 Route::get('/become/revisor', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/make/revisor/{user}',[RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+// ROTTE RICERCHE ANNUNCI
+Route::get('/search/announcement', [PublicController::class,'searchAnnouncements'])->name('announcements.search');

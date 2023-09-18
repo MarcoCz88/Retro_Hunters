@@ -8,7 +8,7 @@
         <div class="row align-items-center">
             
               @foreach($announcements as $announcement)
-              <div class="col-12 col-md-6 col-lg-4 mt-2">                
+              <div class="col-12 col-md-6 col-lg-4 mt-2 d-flex justify-content-center">                
                 <x-card-announcement :announcement="$announcement"/>              
               </div>
               @endforeach

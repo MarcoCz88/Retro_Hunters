@@ -11,8 +11,9 @@
 </head>
 
 <body class="body-custom">
+    <x-navbar/>
     <header>
-        <x-navbar />
+        <x-search/>
     </header>
 
     <main>

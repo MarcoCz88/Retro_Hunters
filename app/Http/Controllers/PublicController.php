@@ -9,8 +9,7 @@ use Illuminate\Http\Request;
 class PublicController extends Controller
 {
     public function welcome() {
-        $announcements= Announcement::where('is_accepted', true)->take(6)->orderBy('created_at', 'desc')->get();
-        
+        $announcements= Announcement::where('is_accepted', true)->take(6)->orderBy('created_at', 'desc')->get();       
         return view('welcome', compact('announcements'));
     }
 
@@ -18,5 +17,8 @@ class PublicController extends Controller
         return view ('categoryShow', compact('category') );
     }
 
-
+    public function searchAnnouncements(Request $request){
+        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(6);
+        return view('announcement.index', compact('announcements'));
+    }
 }
