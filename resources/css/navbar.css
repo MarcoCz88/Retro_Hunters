@@ -1,8 +1,13 @@
 * {
     font-family: "Poppins", sans-serif;
+    font-size: large;
 }
 
-.navbar-custom , .dropdown-menu{
+.navbar-custom{
+    background-color: #3586FF;
+}
+
+.dropdown-menu{
     background-color: #3586FF;
 }
 
@@ -11,9 +16,21 @@
     transition: color 0.3s;
 }
 
+a{
+    text-decoration: none;
+}
+
 .nav-link:hover, .nav-link:active {
     color: yellow;
     text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited{
+    color: #F8F9FA;
 }
 
 li{
