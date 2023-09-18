@@ -30,12 +30,12 @@ class RevisorController extends Controller
         return redirect()->back()->with('message',"Hai rifiutato l'articolo di {$announcement->user->name}");
     }
 
-    public function undoAnnouncement(){
-        $announcement_to_undo = Announcement::where('is_accepted', true)->orWhere('is_accepted', false)->latest()->first();
-        if($announcement_to_undo != null){
-            $announcement_to_undo->setAccepted(null);
+    public function undoAnnouncement(Announcement $announcement){
+        // $announcement_to_undo = Announcement::where('is_accepted', true)->orWhere('is_accepted', false)->latest()->first();
+        // if($announcement_to_undo != null){
+            $announcement->setAccepted(null);
             return redirect()->back()->with('message', "L'azione è stata annullata con successo");
-        }
+        
     }
 
     public function becomeRevisor(){
