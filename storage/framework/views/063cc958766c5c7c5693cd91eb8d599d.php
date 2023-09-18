@@ -75,6 +75,7 @@
                         <tr>
                             <th scope="col">Titolo</th>
                             <th scope="col">Descrizione</th>
+                            <th scope="col">Revisionato il: </th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -82,6 +83,7 @@
                         <tr>
                             <th scope="row"><?php echo e($announcement_to_undo->title); ?></th>
                             <td><?php echo e($announcement_to_undo->body); ?></td>
+                            <td><?php echo e($announcement_to_undo->updated_at->format('d/m/Y H:i')); ?></td>
                             <td>
                                 <button onclick="document.getElementById('formUndo').submit()" type="submit"
                                     class="btn btn-primary mx-1">Annulla revisione</button>
