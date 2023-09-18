@@ -8,10 +8,7 @@
 }
 
 /* body {
-  display: flex;
-  background: #333;
-  justify-content: flex-end;
-  align-items: flex-end;
+  background: rgb(243, 243, 54);
   min-height: 100vh;
 } */
 
@@ -52,6 +49,7 @@
 }
 .social-icon__link:hover {
   transform: translateY(-10px);
+  color: yellow;
 }
 
 .menu__link {
@@ -67,6 +65,7 @@
 
 .menu__link:hover {
   opacity: 1;
+  color: yellow;
 }
 
 .footer p {
