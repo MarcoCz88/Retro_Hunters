@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-12">
                 <h2>
-                    {{ $announcement_to_check ? "Ecco l'annuncio da revisionare: {$announcement_to_check->title} " : `Non ci sono annunci da controllare` }}
+                    {{ $announcement_to_check ? "Ecco l'annuncio da revisionare: {$announcement_to_check->title} " : "Non ci sono annunci da controllare" }}
                 </h2>
             </div>
         </div>
@@ -45,7 +45,11 @@
                                     @method('PATCH')
                                     <button type="submit" class="btn btn-danger mx-1">Rifiuta</button>
                                 </form>
+<<<<<<< HEAD
 
+=======
+                                
+>>>>>>> a020d1e925c2d76e78fd2c929f8e6d5a586d0094
                             </span>
                         </div>
                     </div>
@@ -53,10 +57,33 @@
             </div>
         </div>
     @endif
+<<<<<<< HEAD
 
      <form action="{{ route('revisor.undo_announcement', ['announcement' => $announcement_to_undo]) }}" method="POST">
         @csrf
         @method('PATCH')
         <button type="submit" class="btn btn-primary mx-1">Annulla revisione</button>
     </form>
+=======
+    <form
+                                    action="{{ route('revisor.undo_announcement', ['announcement' => $announcement_to_check]) }}"
+                                    method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn btn-primary mx-1">Annulla revisione</button>
+                                </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> a020d1e925c2d76e78fd2c929f8e6d5a586d0094
 </x-layout>

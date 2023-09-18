@@ -12,7 +12,10 @@
 
 <body class="body-custom">
     <x-navbar />
+<<<<<<< HEAD
     
+=======
+>>>>>>> a020d1e925c2d76e78fd2c929f8e6d5a586d0094
     <header>
         @if (session('message'))
             <div class="alert alert-success">
@@ -25,7 +28,10 @@
             </div>
         @endif
     </header>
+<<<<<<< HEAD
 
+=======
+>>>>>>> a020d1e925c2d76e78fd2c929f8e6d5a586d0094
     <main>
         {{ $slot }}
     </main>
