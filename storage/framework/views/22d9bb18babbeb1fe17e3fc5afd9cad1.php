@@ -27,10 +27,7 @@
 <?php $component = $__componentOriginal71c6471fa76ce19017edc287b6f4508c; ?>
 <?php unset($__componentOriginal71c6471fa76ce19017edc287b6f4508c); ?>
 <?php endif; ?>
-<<<<<<< HEAD
     
-=======
->>>>>>> a020d1e925c2d76e78fd2c929f8e6d5a586d0094
     <header>
         <?php if(session('message')): ?>
             <div class="alert alert-success">
@@ -45,10 +42,7 @@
             </div>
         <?php endif; ?>
     </header>
-<<<<<<< HEAD
 
-=======
->>>>>>> a020d1e925c2d76e78fd2c929f8e6d5a586d0094
     <main>
         <?php echo e($slot); ?>
 
