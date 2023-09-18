@@ -8,11 +8,11 @@
 <?php endif; ?>
 <?php $component->withAttributes([]); ?>
 
-    <div class="container">
-        <div class="row">
+    <div class="container my-3">
+        <div class="row row_revisor">
             <div class="col-12">
                 <h2>
-                    <?php echo e($announcement_to_check ? "Ecco l'annuncio da revisionare: {$announcement_to_check->title} " : "Non ci sono annunci da controllare"); ?>
+                    <?php echo e($announcement_to_check ? "Ecco l'annuncio da revisionare: {$announcement_to_check->title} " : 'Non ci sono annunci da controllare'); ?>
 
                 </h2>
             </div>
@@ -20,7 +20,7 @@
     </div>
     <?php if($announcement_to_check): ?>
         <div class="container">
-            <div class="row ">
+            <div class="row">
                 <div class="col-12 d-flex justify-content-center">
                     <div class="card card_revisor m-3" style="width: 18rem;">
                         <div class="card__img__revisor">
@@ -62,11 +62,39 @@
         </div>
     <?php endif; ?>
 
-     <form action="<?php echo e(route('revisor.undo_announcement', ['announcement' => $announcement_to_undo])); ?>" method="POST">
-        <?php echo csrf_field(); ?>
-        <?php echo method_field('PATCH'); ?>
-        <button type="submit" class="btn btn-primary mx-1">Annulla revisione</button>
-    </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <h2>Log ultima azione: </h2>
+                        <tr>
+                            <th scope="col">Titolo</th>
+                            <th scope="col">Descrizione</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><?php echo e($announcement_to_undo->title); ?></th>
+                            <td><?php echo e($announcement_to_undo->body); ?></td>
+                            <td>
+                                <button onclick="document.getElementById('formUndo').submit()" type="submit" class="btn btn-primary mx-1">Annulla revisione</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <form id="formUndo" action="<?php echo e(route('revisor.undo_announcement', ['announcement' => $announcement_to_undo])); ?>"
+                    method="POST">
+                    <?php echo csrf_field(); ?>
+                    <?php echo method_field('PATCH'); ?>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>
