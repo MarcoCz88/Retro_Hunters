@@ -56,42 +56,42 @@
             </div>
         </div>
     @endif
+    @if ($announcement_to_undo)
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <table class="table">
+                        <thead>
+                            <h2>Log ultima azione: </h2>
+                            <tr>
+                                <th scope="col">Titolo</th>
+                                <th scope="col">Descrizione</th>
+                                <th scope="col">Revisionato il: </th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">{{ $announcement_to_undo->title }}</th>
+                                <td>{{ $announcement_to_undo->body }}</td>
+                                <td>{{ $announcement_to_undo->updated_at->format('d/m/Y H:i') }}</td>
+                                <td>
+                                    <button onclick="document.getElementById('formUndo').submit()" type="submit"
+                                        class="btn btn-primary mx-1">Annulla revisione</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <table class="table">
-                    <thead>
-                        <h2>Log ultima azione: </h2>
-                        <tr>
-                            <th scope="col">Titolo</th>
-                            <th scope="col">Descrizione</th>
-                            <th scope="col">Revisionato il: </th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">{{ $announcement_to_undo->title }}</th>
-                            <td>{{ $announcement_to_undo->body }}</td>
-                            <td>{{ $announcement_to_undo->updated_at->format('d/m/Y H:i') }}</td>
-                            <td>
-                                <button onclick="document.getElementById('formUndo').submit()" type="submit"
-                                    class="btn btn-primary mx-1">Annulla revisione</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <form id="formUndo"
+                        action="{{ route('revisor.undo_announcement', ['announcement' => $announcement_to_undo]) }}"
+                        method="POST">
+                        @csrf
+                        @method('PATCH')
+                    </form>
 
-                <form id="formUndo"
-                    action="{{ route('revisor.undo_announcement', ['announcement' => $announcement_to_undo]) }}"
-                    method="POST">
-                    @csrf
-                    @method('PATCH')
-                </form>
-
+                </div>
             </div>
         </div>
-    </div>
-
+    @endif
 </x-layout>
