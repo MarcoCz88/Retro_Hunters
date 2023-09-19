@@ -7,6 +7,7 @@
     <title>{{ $title ?? 'Retro Hunters' }}</title>
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://kit.fontawesome.com/9e81fed8b0.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -38,5 +39,3 @@
 </body>
 
 </html>
-
-

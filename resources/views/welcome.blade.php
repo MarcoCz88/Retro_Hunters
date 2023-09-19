@@ -1,7 +1,12 @@
 <x-layout>
     
     <div class="container mt-3">
-        <x-masthead/>
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center text-primary">Retro Hunters</h1>
+                <h3 class="text-center text-primary">Un mare di videogiochi</h3>
+            </div>
+        </div>
         <x-search />
         <div class="row align-items-center">
             

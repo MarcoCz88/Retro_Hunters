@@ -76,7 +76,7 @@
                 </li>
             @endauth
             @guest
-                <li class="nav-item dropdown ms-auto">
+                <li class="nav-item dropdown ms-auto mx-5">
                     <a class="nav-link link-custom dropdown-toggle mx-2" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Visitatore
