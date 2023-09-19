@@ -36,3 +36,74 @@ a:visited{
 li{
     list-style-type: none;
 }
+
+.boxLeng{
+    width: 30px;
+    height: 30px;
+}
+
+.select-leng{
+    width: 30px;
+    height: 30px;
+    background:  rgb(220, 220, 220);
+    border-radius: 50%;
+    position: absolute;
+    appearance: none;
+    border: none;
+    text-align: center;
+}
+
+.imgLeng{
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.imgSelectLeng{
+    padding: 1px;
+    width: 22px;
+    height: 22px;
+    border-radius: 0%;
+}
+
+.lengIT{
+    width: 30px;
+    height: 30px;
+    background:  rgb(220, 220, 220);
+    border-radius: 50%;
+    position: absolute;
+    top:60px;
+    animation: slidein .5s;
+
+}
+.lengEN{
+    width: 30px;
+    height: 30px;
+    background:  rgb(220, 220, 220);
+    border-radius: 50%;
+    position: absolute;
+    top:95px;
+    animation: slidein 1.5s;
+
+}
+.lengFR{
+    width: 30px;
+    height: 30px;
+    background:  rgb(220, 220, 220);
+    border-radius: 50%;
+    position: absolute;
+    top:130px;
+    animation: slidein 2s;
+}
+
+@keyframes slidein {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
