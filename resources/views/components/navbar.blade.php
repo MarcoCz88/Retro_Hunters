@@ -43,11 +43,13 @@
                     <a class="nav-link link-custom dropdown-toggle mx-2" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{ Auth::user()->name }}
-                        @if ($counter > 0)
-                            <span class="badge rounded-pill bg-danger">
-                                {{ App\Models\Announcement::toBeRevisionedCount() }}
-                                <span class="visually-hidden">messaggi non letti</span>
-                            </span>
+                        @if (Auth::user()->is_revisor)
+                            @if ($counter > 0)
+                                <span class="badge rounded-pill bg-danger">
+                                    {{ App\Models\Announcement::toBeRevisionedCount() }}
+                                    <span class="visually-hidden">messaggi non letti</span>
+                                </span>
+                            @endif
                         @endif
                     </a>
                     <ul class="dropdown-menu">
