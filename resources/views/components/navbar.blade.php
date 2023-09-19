@@ -97,9 +97,10 @@
                     </ul>
                 </li>
             @endguest
-            <li class="nav-item"><x-_locale lang="it" nation="it"/></li>
-            <li class="nav-item"><x-_locale lang="en" nation="gb"/></li>
-            <li class="nav-item"><x-_locale lang="es" nation="es"/></li>
+            <button id="selectLeng" class="select-leng"><img src="/media/leng-3.png" class="imgSelectLeng" alt=""></button>
+            <li id="lengIT" class="lengIT nav-item"><x-_locale lang="it" nation="it"/></li>
+            <li id="lengEN" class="lengEN nav-item"><x-_locale lang="en" nation="gb"/></li>
+            <li id="lengES" class="lengES nav-item"><x-_locale lang="es" nation="es"/></li>
         </div>
         
         
