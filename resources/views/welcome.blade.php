@@ -2,7 +2,6 @@
     
     <div class="container mt-3">
         <x-masthead/>
-        RETRO HUNTERS
         <x-search />
         <div class="row align-items-center">
             
