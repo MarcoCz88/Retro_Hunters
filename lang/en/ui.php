@@ -9,5 +9,12 @@ return [
     'contact'=>'Contact',
     'addAnnouncement'=>'Add new announcement:',
     'addAnnouncementNav'=>'New Announcement',
-    'genre'=>'Category'
+    'genre'=>'Category',
+    'noAnnouncements'=>'Oops, no one has uploaded ads for this reserch yet.',
+    'addYou'=>'add it yourself!',
+    'genreCreate'=>'Category',
+    'developer'=>'Developer',
+    'published'=>'Published by',
+    'price'=>'Price',
+    'createdBy'=>'Created by',
 ];

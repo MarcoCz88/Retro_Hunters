@@ -9,5 +9,13 @@ return [
     'contact'=>'Contactos',
     'addAnnouncement'=>'Añadir un anuncio nuevo:',
     'addAnnouncementNav'=>'Nuevo anuncio',
-    'genre'=>'categoría'
+    'genre'=>'categoría',
+    'noAnnouncements'=>'Vaya, nadie ha subido anuncios para esta investigación todavía.',
+    'addYou'=>'¡Agrégalo tú mismo!',
+    'genreCreate'=>'Categorìa',
+    'developer'=>'Desarrollador',
+    'published'=>'Publicado por',
+    'price'=>'Precio',
+    'createdBy'=>'Creado por',
+    
 ];
