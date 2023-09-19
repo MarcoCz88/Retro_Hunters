@@ -23,7 +23,7 @@
                 <p class="border-bottom border-warning">Vuoi pubblicarne uno?</p>
             </div>
             <div class="col-4 mx-2 px-2 d-flex justify-content-center">
-            <button href="{{ route('announcement.create') }}" class="button-89 text-dark" role="button">Pubblica un annuncio</button>
+            <a href="{{ route('announcement.create') }}" class="button-89 text-dark" role="button">Pubblica un annuncio</a>
                 
             </div>
         </div>
