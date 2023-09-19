@@ -11,3 +11,19 @@ main {
 .row_revisor{
     min-height: 300px;
 }
+
+.linkLog{
+    color: #3586FF;
+    text-decoration: none;
+}
+.linkLog:visited{
+    color: #3586FF;
+
+}
+
+.boxLog{
+    background-color: #c3c3c3;
+    border-radius: 20px;
+    width: 500px;
+
+}

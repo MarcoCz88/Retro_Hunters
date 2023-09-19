@@ -37,6 +37,12 @@ li{
     list-style-type: none;
 }
 
+.customdrop{
+    position: absolute;
+    right: 0px;
+    top: 40px;
+}
+
 .boxLeng{
     width: 30px;
     height: 30px;
@@ -47,10 +53,14 @@ li{
     height: 30px;
     background:  rgb(220, 220, 220);
     border-radius: 50%;
-    position: absolute;
     appearance: none;
     border: none;
     text-align: center;
+}
+
+.select-leng:hover{
+    background:  rgb(188, 188, 188);
+
 }
 
 .imgLeng{
@@ -73,7 +83,7 @@ li{
     border-radius: 50%;
     position: absolute;
     top:60px;
-    animation: slidein .5s;
+    animation: slidein 1s;
 
 }
 .lengEN{
