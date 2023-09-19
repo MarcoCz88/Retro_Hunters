@@ -45,12 +45,14 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <?php echo e(Auth::user()->name); ?>
 
-                        <?php if($counter > 0): ?>
-                            <span class="badge rounded-pill bg-danger">
-                                <?php echo e(App\Models\Announcement::toBeRevisionedCount()); ?>
+                        <?php if(Auth::user()->is_revisor): ?>
+                            <?php if($counter > 0): ?>
+                                <span class="badge rounded-pill bg-danger">
+                                    <?php echo e(App\Models\Announcement::toBeRevisionedCount()); ?>
 
-                                <span class="visually-hidden">messaggi non letti</span>
-                            </span>
+                                    <span class="visually-hidden">messaggi non letti</span>
+                                </span>
+                            <?php endif; ?>
                         <?php endif; ?>
                     </a>
                     <ul class="dropdown-menu">
