@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/media/logo.ico" type="image/ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title ?? 'Retro Hunters' }}</title>
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://kit.fontawesome.com/9e81fed8b0.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body class="body-custom">
