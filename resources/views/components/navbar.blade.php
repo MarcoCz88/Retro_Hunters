@@ -97,7 +97,7 @@
                     </ul>
                 </li>
             @endguest
-            <x-_locale/>
+            
         </div>
         
         
