@@ -1,12 +1,13 @@
 <x-layout>
-    <x-search />
-    <div class="container">
+    
+    <div class="container mt-3">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center">Retro Hunters</h1>
-                <h3 class="text-center">Un mare di videogiochi</h3>
+                <h1 class="text-center text-primary">Retro Hunters</h1>
+                <h3 class="text-center text-primary">Un mare di videogiochi</h3>
             </div>
         </div>
+        <x-search />
         <div class="row align-items-center">
             
               @foreach($announcements as $announcement)

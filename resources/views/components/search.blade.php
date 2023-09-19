@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<div class="container mt-4 border-custom">
     <div class="row">
         <div class="wrap col-12 bg-custom">
             <form class="search" action="{{route('announcements.search')}}" method="GET">
