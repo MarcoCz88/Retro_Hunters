@@ -2,7 +2,7 @@
     <x-search />
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12  mt-3 text-primary">
                 <h2>Tutti gli annunci</h2>
             </div>
         </div>
