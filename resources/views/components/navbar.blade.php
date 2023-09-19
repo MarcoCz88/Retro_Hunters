@@ -97,7 +97,9 @@
                     </ul>
                 </li>
             @endguest
-            
+            <li class="nav-item"><x-_locale lang="it" nation="it"/></li>
+            <li class="nav-item"><x-_locale lang="en" nation="gb"/></li>
+            <li class="nav-item"><x-_locale lang="es" nation="es"/></li>
         </div>
         
         
