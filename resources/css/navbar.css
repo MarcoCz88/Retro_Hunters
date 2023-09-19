@@ -29,7 +29,7 @@ a:hover {
     text-decoration: underline;
 }
 
-a:visited{
+.nav_link:visited{
     color: #F8F9FA;
 }
 

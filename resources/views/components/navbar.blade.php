@@ -66,7 +66,7 @@
                         @endif
                         <hr class="mx-2">
                         <li class="nav-item mx-2">
-                            <a href="/logout"
+                            <a class="nav_link" href="/logout"
                                 onclick="event.preventDefault();getElementById('form-logout').submit()">Logout</a>
                         </li>
                         <form id="form-logout" action="{{ route('logout') }}" method="POST">

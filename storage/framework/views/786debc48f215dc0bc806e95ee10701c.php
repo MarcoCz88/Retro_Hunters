@@ -70,7 +70,7 @@
                         <?php endif; ?>
                         <hr class="mx-2">
                         <li class="nav-item mx-2">
-                            <a href="/logout"
+                            <a class="nav_link" href="/logout"
                                 onclick="event.preventDefault();getElementById('form-logout').submit()">Logout</a>
                         </li>
                         <form id="form-logout" action="<?php echo e(route('logout')); ?>" method="POST">
@@ -80,12 +80,12 @@
                 </li>
             <?php endif; ?>
             <?php if(auth()->guard()->guest()): ?>
-                <li class="nav-item dropdown ms-auto mx-5">
+                <li class="nav-item dropdown ms-auto me-1">
                     <a class="nav-link link-custom dropdown-toggle mx-2" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Visitatore
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu ">
                         <li class="nav-item mx-2">
                             <a href="/login"
                                 onclick="event.preventDefault();getElementById('form-login').submit()">Login</a>
@@ -101,7 +101,16 @@
                     </ul>
                 </li>
             <?php endif; ?>
+            <div class="boxLeng my-3 my-md-0">
+                <button id="selectLeng" class="select-leng"><img src="/media/leng-3.png" class="imgSelectLeng" alt=""></button>
+                <div id="lengIT" class="lengIT d-none"><img src="/media/IT.jpeg" class="imgLeng" height="10px" alt=""></div>
+                <div id="lengEN" class="lengEN d-none"><img src="/media/EN.jpeg" class="imgLeng" height="10px" alt=""></div>
+                <div id="lengFR" class="lengFR d-none"><img src="/media/FR.png" class="imgLeng" height="10px" alt=""></div>    
+            </div>
         </div>
+        
+        
+
     </div>
 </nav>
 <?php /**PATH C:\Users\amste\wa\Retro-Hunters_gruppo_01\resources\views/components/navbar.blade.php ENDPATH**/ ?>

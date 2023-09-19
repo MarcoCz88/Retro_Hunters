@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "bkwld/laravel-pug": "*",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/fortify": "^1.17",
         "laravel/framework": "^10.10",
@@ -62,7 +63,9 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "pug/installer": true,
+            "nodejs-php-fallback/nodejs-php-fallback": true
         }
     },
     "minimum-stability": "stable",

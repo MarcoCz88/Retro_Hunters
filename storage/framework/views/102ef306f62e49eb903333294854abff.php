@@ -9,19 +9,19 @@
 <?php $component->withAttributes([]); ?>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mt-3 text-primary">
                 <h2>Aggiungi il tuo videogame: </h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 col-md-6">
                 <?php
 $__split = function ($name, $params = []) {
     return [$name, $params];
 };
 [$__name, $__params] = $__split('create-announcement', []);
 
-$__html = app('livewire')->mount($__name, $__params, '3C6r4nW', $__slots ?? [], get_defined_vars());
+$__html = app('livewire')->mount($__name, $__params, '10M1Uyc', $__slots ?? [], get_defined_vars());
 
 echo $__html;
 
