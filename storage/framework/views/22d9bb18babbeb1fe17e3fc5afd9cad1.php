@@ -8,6 +8,7 @@
     <?php echo \Livewire\Mechanisms\FrontendAssets\FrontendAssets::styles(); ?>
 
     <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.js']); ?>
+    <script src="https://kit.fontawesome.com/9e81fed8b0.js" crossorigin="anonymous"></script>
 
 </head>
 
