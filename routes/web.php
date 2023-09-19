@@ -26,3 +26,6 @@ Route::get('/make/revisor/{user}',[RevisorController::class, 'makeRevisor'])->na
 
 // ROTTE RICERCHE ANNUNCI
 Route::get('/search/announcement', [PublicController::class,'searchAnnouncements'])->name('announcements.search');
+
+//ROTTE LINGUA
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
