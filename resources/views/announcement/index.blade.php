@@ -14,8 +14,8 @@
             @empty
                 <div class="col-12">
                     <div class="my-3">
-                        <p>Non ci sono annunci per questa ricerca.</p>
-                        <a href="{{ route('announcement.create') }}">Inseriscilo tu!</a>
+                        <p>{{ __('ui.noAnnouncements')}}</p>
+                        <a href="{{ route('announcement.create') }}">{{ __('ui.addYou')}}</a>
                     </div>
                 </div>
             @endforelse

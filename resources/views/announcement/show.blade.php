@@ -10,14 +10,14 @@
                 <img src="https://picsum.photos/500" alt="{{$announcement->title}}">
             </div>
             <div class="col-5">
-                <p>Genere: {{$announcement->category->name}}</p>
-                <p>Sviluppatore: {{$announcement->developer}}</p>
-                <p>Pubblicato da: {{$announcement->publisher}}</p>
-                <p>Prezzo: {{$announcement->price}}</p>
+                <p>{{ __('ui.genreCreate')}} : {{$announcement->category->name}}</p>
+                <p>{{ __('ui.developer')}} : {{$announcement->developer}}</p>
+                <p>{{ __('ui.published')}} : {{$announcement->publisher}}</p>
+                <p>{{ __('ui.price')}} : {{$announcement->price}}</p>
                 <p>{{$announcement->body}}</p>
             </div>
             <div class="col-10">
-                <p>Creato da: {{$announcement->user->name }} il {{$announcement->created_at->format('d/m/Y H:i')}} </p>
+                <p>{{ __('ui.createdBy')}} : {{$announcement->user->name }} il {{$announcement->created_at->format('d/m/Y H:i')}} </p>
             </div>
         </div>
     </div>
