@@ -64,16 +64,18 @@ li{
 }
 
 .imgLeng{
-    padding: 2px;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 30px;
     height: 30px;
     border-radius: 50%;
 }
+
 .imgSelectLeng{
-    padding: 1px;
     width: 22px;
     height: 22px;
-    border-radius: 0%;
+    overflow: hidden;
 }
 
 .lengIT{
@@ -82,6 +84,7 @@ li{
     background:  rgb(220, 220, 220);
     border-radius: 50%;
     position: absolute;
+    right: 13px;
     top:60px;
     animation: slidein 1s;
 
@@ -92,17 +95,20 @@ li{
     background:  rgb(220, 220, 220);
     border-radius: 50%;
     position: absolute;
-    top:95px;
+    right: 13px;
+    top:100px;
     animation: slidein 1.5s;
 
 }
-.lengFR{
+.lengES{
     width: 30px;
     height: 30px;
     background:  rgb(220, 220, 220);
     border-radius: 50%;
     position: absolute;
-    top:130px;
+    right: 13px;
+    top:140px;
+    border: 1px solid white;
     animation: slidein 2s;
 }
 

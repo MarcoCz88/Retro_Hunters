@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-custom py-3">
+<nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('home') }}">RH</a>
+        <a class="navbar-brand" href="{{ route('home') }}"><img src="/media/logo-white.png" height="50px" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -11,19 +11,17 @@
                     <a class="nav-link link-custom" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link-custom" aria-current="page" href="{{ route('announcement.index') }}">Tutti
-                        gli
-                        annunci</a>
+                    <a class="nav-link link-custom" aria-current="page" href="{{ route('announcement.index') }}">{{ __('ui.allAnnouncements')}}</a>
                 </li>
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link link-custom" href="{{ route('announcement.create') }}">Inserisci articolo</a>
+                        <a class="nav-link link-custom" href="{{ route('announcement.create') }}">{{ __('ui.addAnnouncementNav')}}</a>
                     </li>
                 @endauth
                 <li class="nav-item dropdown">
                     <a class="nav-link link-custom dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Generi
+                        {{ __('ui.genre')}}
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
@@ -97,9 +95,14 @@
                     </ul>
                 </li>
             @endguest
-            <li class="nav-item"><x-_locale lang="it" nation="it" /></li>
-            <li class="nav-item"><x-_locale lang="en" nation="gb" /></li>
-            <li class="nav-item"><x-_locale lang="es" nation="es" /></li>
+            <button id="selectLeng" class="select-leng"><img src="/media/leng-3.png" class="imgSelectLeng" alt=""></button>
+                <div id="lengIT" class="lengIT d-none"><x-_locale lang="it" nation="it"/></div>
+                <div id="lengEN" class="lengEN d-none"><x-_locale lang="en" nation="gb"/></div>
+                <div id="lengES" class="lengES d-none"><x-_locale lang="es" nation="es"/></div>
+            {{-- <button id="selectLeng" class="select-leng"><img src="/media/leng-3.png" class="imgSelectLeng" alt=""></button>
+            <li id="lengIT" class="lengIT nav-item"><x-_locale lang="it" nation="it"/></li>
+            <li id="lengEN" class="lengEN nav-item"><x-_locale lang="en" nation="gb"/></li>
+            <li id="lengES" class="lengES nav-item"><x-_locale lang="es" nation="es"/></li> --}}
         </div>
 
 

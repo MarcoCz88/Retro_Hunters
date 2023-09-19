@@ -19,10 +19,10 @@
     </ul>
     <ul class="menu">
       <li class="menu__item"><a class="menu__link" href="{{ route('home') }}">Home</a></li>
-      <li class="menu__item"><a class="menu__link" href="{{route('become.revisor')}}">Lavora con noi</a></li>
-      <li class="menu__item"><a class="menu__link" href="{{ route('register') }}">Registrati</a></li>
+      <li class="menu__item"><a class="menu__link" href="{{route('become.revisor')}}">{{ __('ui.workWithUs')}}</a></li>
+      <li class="menu__item"><a class="menu__link" href="{{ route('register') }}">{{ __('ui.registered')}}</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">{{ __('ui.contact')}}</a></li>
 
     </ul>
     <p>&copy;2023 Retro-Hunters.it | All Rights Reserved</p>
