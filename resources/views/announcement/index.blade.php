@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12  mt-3 text-primary">
-                <h2>Tutti gli annunci</h2>
+            <p class="h3 my-3">{{ __('ui.allAnnouncements')}}</p>
             </div>
         </div>
         <div class="row mb-5">

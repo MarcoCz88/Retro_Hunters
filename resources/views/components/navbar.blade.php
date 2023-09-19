@@ -11,19 +11,17 @@
                     <a class="nav-link link-custom" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link-custom" aria-current="page" href="{{ route('announcement.index') }}">Tutti
-                        gli
-                        annunci</a>
+                    <a class="nav-link link-custom" aria-current="page" href="{{ route('announcement.index') }}">{{ __('ui.allAnnouncements')}}</a>
                 </li>
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link link-custom" href="{{ route('announcement.create') }}">Inserisci articolo</a>
+                        <a class="nav-link link-custom" href="{{ route('announcement.create') }}">{{ __('ui.addAnnouncementNav')}}</a>
                     </li>
                 @endauth
                 <li class="nav-item dropdown">
                     <a class="nav-link link-custom dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Generi
+                        {{ __('ui.genre')}}
                     </a>
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
