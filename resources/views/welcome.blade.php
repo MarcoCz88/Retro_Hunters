@@ -2,10 +2,7 @@
     
     <div class="container mt-3">
         <x-masthead/>
-        Proviamo sto cazzo di push <br>
-         Valerio-I lo vedo
-        Proviamo sto cazzo di push
-        riesco a pullare e pushare
+        RETRO HUNTERS
         <x-search />
         <div class="row align-items-center">
             
