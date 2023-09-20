@@ -7,7 +7,19 @@
         </div>
         <div class="row">
             <div class="col-5">
-                <img src="https://picsum.photos/500" alt="{{$announcement->title}}">
+                @if ($announcement->images)
+                <div class="carousel-inner">
+                    @foreach ($announcement->images as $image)
+                        <div class="carousel-item @if($loop->first)active @endif">
+                            <img src="{{Storage::url($image->path)}}" alt="{{ $announcement->title }}" class="img-fluid p-3 rounded">
+                        </div>
+                    @endforeach
+                </div>
+                {{-- <img src="https://picsum.photos/200" class="card-img-top"
+                    alt="{{ $announcement->title }}"> --}}
+            </div>
+                @else
+                @endif
             </div>
             <div class="col-5">
                 <p>{{ __('ui.genreCreate')}} : {{$announcement->category->name}}</p>
@@ -23,7 +35,19 @@
     </div>
     <div class="container">
         <div class="row">
-            <x-carosel-show />
+            @if ($announcement->images)
+            <div class="carousel-inner">
+                @foreach ($announcement->images as $image)
+                    <div class="carousel-item @if($loop->first)active @endif">
+                        <img src="{{Storage::url($image->path)}}" alt="{{ $announcement->title }}" class="img-fluid p-3 rounded">
+                    </div>
+                @endforeach
+            </div>
+            {{-- <img src="https://picsum.photos/200" class="card-img-top"
+                alt="{{ $announcement_to_check->title }}"> --}}
+        </div>
+            @else
+            @endif
         </div>
     </div>
 </x-layout>
