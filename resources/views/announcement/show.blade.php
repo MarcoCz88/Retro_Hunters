@@ -8,26 +8,26 @@
         <div class="row">
             <div class="col-5">
                 <div id="showCarousel" class="carousel slide" data-ride="carousel">
-                    @if ($announcement->images)
+                    @if ($announcement->images->isNotEmpty())
                         <div class="card__img carousel-inner">
                             @foreach ($announcement->images as $image)
                                 <div class="carousel-item @if ($loop->first) active @endif">
-                                    <img src="{{ Storage::url($image->path) }}" alt="{{ $announcement->title }}"
-                                        class="img-fluid p-3 rounded">
+                                    <img src="{{ Storage::url($image->path) }}" alt="{{ $announcement->title }}">
                                 </div>
                             @endforeach
                         </div>
                     @else
                         <div class="carousel-inner">
-                            <div class="carousel-item">
-                                <img src="https://lorempic.com/400" alt="{{ $announcement->title }}">
+                            <div class="carousel-item active">
+                                <img src="{{ Storage::url('images/default.jpg') }}" class="img-fluid"
+                                    alt="{{ $announcement->title }}">
                             </div>
-                            {{-- <div class="carousel-item">
-                            <img src="https://picsum.photos/200" alt="{{ $announcement->title }}">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/200" alt="{{ $announcement->title }}">
-                        </div> --}}
+                            <div class="carousel-item">
+                                <img src="{{ Storage::url('images/default.jpg') }}" alt="{{ $announcement->title }}">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ Storage::url('images/default.jpg') }}" alt="{{ $announcement->title }}">
+                            </div>
                         </div>
                     @endif
                     <a class="carousel-control-prev" href="#showCarousel" role="button" data-slide="prev">
