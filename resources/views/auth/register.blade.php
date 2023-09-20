@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-4 boxLog mx-2 mx-md-0 p-3">
                 <h2 class="text-center">{{ __('ui.registered')}}</h2>
-                <form method="POST" action="{{route('register')}}">
+                <form method="POST" action="{{route('register')}}" class="d-flex flex-column align-items-center">
                   @csrf
                     <div class="form-group">
                        <label>{{ __('ui.name')}}</label>
@@ -33,7 +33,7 @@
                        <label>{{ __('ui.confirmPsw')}}</label>
                        <input type="password" class="form-control" name="password_confirmation">
                     </div>
-                    <button type="submit" class="btn btn-primary my-3">{{ __('ui.registered')}}</button>
+                    <button type="submit" class="col-5 button-89 my-3 text-dark fs-6" role="button">{{ __('ui.registered')}}</button>
                  </form>
             </div>
             <p class="text-center mt-2">{{ __('ui.haveAccount')}}<a class="linkLog" href="{{route('login')}}">{{ __('ui.login')}}</a></p>
