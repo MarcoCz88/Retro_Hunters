@@ -25,5 +25,8 @@ return [
     'noAccount'=>'Non hai ancora un account?',
     'name'=>'Nome',
     'confirmPsw'=>'Conferma password',
-    'haveAccount'=>'Hai già un account?'
+    'haveAccount'=>'Hai già un account?',
+    'noAds'=>'Ops, nessuno ha caricato ancora nessun annuncio per questa categoria.',
+    'addAds'=>'Vuoi pubblicarne uno?',
+    'addAds2'=>'Pubblica un annuncio'
 ];

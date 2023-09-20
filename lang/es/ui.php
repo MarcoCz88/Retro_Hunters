@@ -26,5 +26,8 @@ return [
     'name'=>'Nombre',
     'confirmPsw'=>'Confirmar password',
     'haveAccount'=>'¿Ya tienes una cuenta?',
+    'noAds'=>'Vaya, nadie ha subido ningún anuncio para esta categoría todavía.',
+    'addAds'=>'¿Quieres publicar uno?',
+    'addAds2'=>'Publicar un anuncio'
     
 ];

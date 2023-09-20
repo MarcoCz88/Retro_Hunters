@@ -26,4 +26,7 @@ return [
     'name'=>'Name',
     'confirmPsw'=>'Confirm password',
     'haveAccount'=>'Already have an account?',
+    'noAds'=>'Oops, no one has uploaded any ads for this category yet.',
+    'addAds'=>'Want to publish one?',
+    'addAds2'=>'Post an ad'
 ];
