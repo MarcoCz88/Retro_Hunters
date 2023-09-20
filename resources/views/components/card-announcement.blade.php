@@ -21,7 +21,8 @@
                 width="14">
                 <path stroke-linejoin="round" stroke-linecap="round" stroke-width="3" stroke="#000" d="M12 2L2 12L12 22">
                 </path>
-            </svg></div>
+            </svg>
+        </div>
         <div class="card__menu">
             <a href="{{ route('announcement.show', compact('announcement')) }}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="29" viewBox="0 0 29 14" height="14"
@@ -33,18 +34,6 @@
             </a>
         </div>
     </div>
-    <div class="card__img carousel-inner">
-        @if ($announcement->images)
-            @foreach ($announcement->images as $image)
-                <div class="carousel-item @if ($loop->first) active @endif" style="background-image: url('{{ Storage::url($image->path) }}');height:170px; background-size:contain">
-                    {{-- <img src="{{ Storage::url($image->path) }}" alt="{{ $announcement->title }}"
-                        class="img-fluid p-3 rounded"> --}}
-                </div>
-            @endforeach
-            {{-- <img src="https://picsum.photos/200" class="card-img-top"
-                    alt="{{ $announcement->title }}"> --}}
-        @else
-        @endif
     <div class="card__img">
         <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : Storage::url('images/default.jpg')}}" class="card-img-top" alt="{{ $announcement->title }}">
     </div>
