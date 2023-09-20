@@ -1,0 +1,6 @@
+.borderteam-custom{
+    border: solid yellow 5px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 50%;
+}
