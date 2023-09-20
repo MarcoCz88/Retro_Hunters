@@ -20,6 +20,7 @@ class CreateAnnouncement extends Component
     public $category;
     public $temporary_images;
     public $images = [];
+    public $announcement;
 
     protected $rules = [
         'title' => 'required|min:2|max:100',
@@ -53,21 +54,21 @@ class CreateAnnouncement extends Component
         $this->validate();
 
         $category = Category::find($this->category);
-        $announcement = $category->announcements()->create([
-
+        $this->announcement = $category->announcements()->create([
             'title'=>$this->title,
            'body'=>$this->body,
            'price'=>$this->price,
            'developer'=>$this->developer,
            'publisher'=>$this->publisher,
-
+           
         ]);
+
         if(count($this->images)){
-            foreach($this->$images as $image){
+            foreach($this->images as $image){
                 $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
             }
         }
-        Auth::user()->announcements()->save($announcement);
+        Auth::user()->announcements()->save($this->announcement);
 
         $this->reset();
         return redirect()->route('home')->with('message', 'Annuncio creato con successo');
