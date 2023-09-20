@@ -9,9 +9,19 @@
                 <div class="col-12 d-flex justify-content-center">
                     <div class="card card_revisor m-3" style="width: 18rem;">
                         <div class="card__img__revisor">
-                            <img src="https://picsum.photos/200" class="card-img-top"
-                                alt="{{ $announcement_to_check->title }}">
+                            @if ($announcement_to_check->images)
+                            <div class="carousel-inner">
+                                @foreach ($announcement_to_check->images as $image)
+                                    <div class="carousel-item @if($loop->first)active @endif">
+                                        <img src="{{Storage::url($image->path)}}" alt="{{ $announcement_to_check->title }}" class="img-fluid p-3 rounded">
+                                    </div>
+                                @endforeach
+                            </div>
+                            {{-- <img src="https://picsum.photos/200" class="card-img-top"
+                                alt="{{ $announcement_to_check->title }}"> --}}
                         </div>
+                            @else
+                            @endif
                         <div class="card-body d-flex flex-column align-items-center">
                             <h5 class="card-title">{{ $announcement_to_check->title }}</h5>
                             <p class="card-text">{{ $announcement_to_check->category->name }}</p>
