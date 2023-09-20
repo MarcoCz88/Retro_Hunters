@@ -4,7 +4,7 @@
         <div class="row ">
             <div class=" col-12 col-md-6 p-5">
                 <div id="carouselExample" class="carousel slide p-5">
-                    @if ($announcement->images)
+                    @if ($announcement->images->isNotEmpty())
                         <div class="carousel-inner">
                             @foreach ($announcement->images as $image)
                                 <div class="carousel-item @if ($loop->first) active @endif">

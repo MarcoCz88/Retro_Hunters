@@ -45,6 +45,8 @@
                     alt="{{ $announcement->title }}"> --}}
         @else
         @endif
+    <div class="card__img">
+        <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : Storage::url('images/default.jpg')}}" class="card-img-top" alt="{{ $announcement->title }}">
     </div>
     <div class="card__title" style="min-height: 75px; color:#0053FF">{{ $announcement->title }}</div>
     <div class="card__subtitle">{{ $announcement->category->name }}</div>
