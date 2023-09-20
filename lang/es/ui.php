@@ -9,7 +9,7 @@ return [
     'contact'=>'Contactos',
     'addAnnouncement'=>'Añadir un anuncio nuevo:',
     'addAnnouncementNav'=>'Nuevo anuncio',
-    'genre'=>'categoría',
+    'genre'=>'Categoría',
     'noAnnouncements'=>'Vaya, nadie ha subido anuncios para esta investigación todavía.',
     'addYou'=>'¡Agrégalo tú mismo!',
     'genreCreate'=>'Categorìa',
@@ -17,5 +17,14 @@ return [
     'published'=>'Publicado por',
     'price'=>'Precio',
     'createdBy'=>'Creado por',
+    'title'=>'Título',
+    'plot'=>'Descripción',
+    'category'=>'Elige una categoría',
+    'summit'=>'Enviar',
+    'login'=>'Inicia sesión',
+    'noAccount'=>'¿Aún no tienes una cuenta?',
+    'name'=>'Nombre',
+    'confirmPsw'=>'Confirmar password',
+    'haveAccount'=>'¿Ya tienes una cuenta?',
     
 ];

@@ -17,4 +17,13 @@ return [
     'published'=>'Published by',
     'price'=>'Price',
     'createdBy'=>'Created by',
+    'title'=>'Title',
+    'plot'=>'Description',
+    'category'=>'Choose a category',
+    'summit'=>'Summit',
+    'login'=>'Login',
+    'noAccount'=>'Don\'t have an account yet?',
+    'name'=>'Name',
+    'confirmPsw'=>'Confirm password',
+    'haveAccount'=>'Already have an account?',
 ];

@@ -16,10 +16,10 @@
                          <label class="form_label">Password</label>
                          <input type="password" class="form-control" name="password">
                       </div>
-                      <button type="submit" class="btn btn-primary my-3">Accedi</button>
+                      <button type="submit" class="btn btn-primary my-3">{{ __('ui.login')}}</button>
                    </form>
             </div>
-            <p class="text-center mt-2">Non hai ancora un account? <a class="linkLog" href="{{route('register')}}">Registrati</a></p>
+            <p class="text-center mt-2">{{ __('ui.noAccount')}} <a class="linkLog" href="{{route('register')}}"> {{ __('ui.registered')}}</a></p>
         </div>
         <div class="row">
            {{-- <form action="{{route('login')}}" method="POST">

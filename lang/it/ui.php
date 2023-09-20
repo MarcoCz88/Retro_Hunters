@@ -16,5 +16,14 @@ return [
     'developer'=>'Sviluppatore',
     'published'=>'Pubblicato da',
     'price'=>'Prezzo',
-    'createdBy'=>'Creato da'
+    'createdBy'=>'Creato da',
+    'title'=>'Titolo',
+    'plot'=>'Descrizione',
+    'category'=>'Scegli una categoria',
+    'summit'=>'Invia',
+    'login'=>'Accedi',
+    'noAccount'=>'Non hai ancora un account?',
+    'name'=>'Nome',
+    'confirmPsw'=>'Conferma password',
+    'haveAccount'=>'Hai già un account?'
 ];
