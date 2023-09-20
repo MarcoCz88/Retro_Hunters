@@ -1,4 +1,4 @@
-.button-89 {
+.button-891 {
     --b: 3px;   /* border thickness */
     --s: .45em; /* size of the corner */
     --color: #3586ff;
@@ -22,14 +22,14 @@
     touch-action: manipulation;
   }
 
-  .button-89:hover,
-  .button-89:focus-visible{
+  .button-891:hover,
+  .button-891:focus-visible{
     --_p: 0px;
     outline-color: var(--color);
     outline-offset: .05em;
   }
 
-  .button-89:active {
+  .button-891:active {
     background: var(--color);
     color: #ffffff;
   }
