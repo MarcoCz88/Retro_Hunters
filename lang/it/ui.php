@@ -28,5 +28,6 @@ return [
     'haveAccount'=>'Hai già un account?',
     'noAds'=>'Ops, nessuno ha caricato ancora nessun annuncio per questa categoria.',
     'addAds'=>'Vuoi pubblicarne uno?',
-    'addAds2'=>'Pubblica un annuncio'
+    'addAds2'=>'Pubblica un annuncio',
+    'categoryGame'=>'Nome categoria'
 ];

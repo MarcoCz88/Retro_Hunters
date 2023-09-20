@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 d-flex justify-content-center text-primary">
-                <h2 class="my-3">Giochi di genere {{ $category->name }}</h2>
+                <h2 class="my-3">{{ __('ui.categoryGame')}} : {{ $category->name }}</h2>
             </div>
         </div>
         <div class="row">

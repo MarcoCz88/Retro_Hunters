@@ -1,9 +1,9 @@
 <x-layout>
     <x-search />
     <div class="container">
-        <div class="row">
-            <div class="col-12  mt-3 text-primary">
-            <p class="h3 my-3">{{ __('ui.allAnnouncements')}}</p>
+        <div class="row ">
+            <div class="col-4 mt-3 text-primary border-index">
+            <p class="h3 my-3 text-center">{{ __('ui.allAnnouncements')}} :</p>
             </div>
         </div>
         <div class="row mb-5">
