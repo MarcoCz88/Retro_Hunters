@@ -19,7 +19,12 @@
                     </div>
                 </div>
             @endforelse
-            {{ $announcements->links() }}
+            <div class="container">
+                <div class="row mt-5 justify-content-center">
+                        <div class="col-2">{{ $announcements->links() }}</div>
+    
+                </div>
+            </div>
         </div>
     </div>
 </x-layout>
