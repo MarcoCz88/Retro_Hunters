@@ -16,9 +16,9 @@
     transition: color 0.3s;
 }
 
-a{
+/* a{
     text-decoration: none;
-}
+} */
 
 .nav-link:hover, .nav-link:active {
     color: yellow;

@@ -23,7 +23,7 @@
                 <p class="border-bottom border-warning">{{ __('ui.addAds')}}</p>
             </div>
             <div class="col-4 mx-2 px-2 d-flex justify-content-center">
-            <a href="{{ route('announcement.create') }}" class="button-89 text-dark" role="button">{{ __('ui.addAds2')}}</a>
+            <a href="{{ route('announcement.create') }}" class="button-891 text-dark" role="button">{{ __('ui.addAds2')}}</a>
                 
             </div>
         </div>

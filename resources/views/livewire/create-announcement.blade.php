@@ -69,7 +69,7 @@
                         <span class="text-danger error">{{ $message }}</span>
                     @enderror
                 </div>
-                <button class="button-89 text-dark" role="button">{{ __('ui.summit') }}</button>
+                <button class="button-892 text-dark" role="button">{{ __('ui.summit') }}</button>
             </form>
         </div>
         <div class="col-12 col-xl-6">
