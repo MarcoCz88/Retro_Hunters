@@ -4,11 +4,11 @@
 }
 
 .navbar-custom{
-    background-color: #3586FF;
+    background-color: var(--blu);
 }
 
 .dropdown-menu{
-    background-color: #3586FF;
+    background-color: var(--bluscuro);
 }
 
 .link-custom{
