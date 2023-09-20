@@ -38,8 +38,8 @@
 
   .btnImg{
     position: absolute;
-    left:125px;
-    top: 5px;
+    left:65px;
+    bottom: -40px;
     background:none;
     border:none;
     
@@ -48,8 +48,11 @@
 
   @media screen and (max-width: 600px) {
     .btnImg {
-      right:-190px;
-      top: 5px;
+      right:0px;
+      top: -150px;
+      bottom: 0px;
+      left: 315px;
+      
     }
   }
 
