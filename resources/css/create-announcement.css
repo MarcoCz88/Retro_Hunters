@@ -34,3 +34,24 @@
     background: var(--color);
     color: #fff;
   }
+
+
+  .btnImg{
+    position: absolute;
+    left:125px;
+    top: 5px;
+    background:none;
+    border:none;
+    
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .btnImg {
+      right:-190px;
+      top: 5px;
+    }
+  }
+
+
+  
