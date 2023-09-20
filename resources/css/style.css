@@ -28,7 +28,17 @@ main {
 
 }
 
-.img-preview{
-    height: 250px;
-    width: 250px;
+/* .img-preview{
+    height: 200px;
+    width: 200px;
+} */
+
+.boxImg{
+    height: 200px;
+    /* width: 200px; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 10px;
+
 }

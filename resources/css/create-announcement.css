@@ -34,3 +34,27 @@
     background: var(--color);
     color: #fff;
   }
+
+
+  .btnImg{
+    position: absolute;
+    left:65px;
+    bottom: -40px;
+    background:none;
+    border:none;
+    
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .btnImg {
+      right:0px;
+      top: -150px;
+      bottom: 0px;
+      left: 315px;
+      
+    }
+  }
+
+
+  
