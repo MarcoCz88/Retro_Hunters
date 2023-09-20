@@ -16,7 +16,7 @@
                 <p>{{ __('ui.price')}} : {{$announcement->price}}</p>
                 <p>{{$announcement->body}}</p>
             </div>
-            <div class="col-10">
+            <div class="col-7">
                 <p>{{ __('ui.createdBy')}} : {{$announcement->user->name }} il {{$announcement->created_at->format('d/m/Y H:i')}} </p>
             </div>
         </div>
