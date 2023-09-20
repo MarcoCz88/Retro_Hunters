@@ -2,7 +2,7 @@
     <x-search />
     <div class="container">
         <div class="row">
-            <div class="col-12  mt-3 text-primary">
+            <div class="col-12  mt-3 text-blue">
             <p class="h3 my-3">{{ __('ui.allAnnouncements')}}</p>
             </div>
         </div>

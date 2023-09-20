@@ -36,9 +36,9 @@
     <div class="card__img carousel-inner">
         @if ($announcement->images)
             @foreach ($announcement->images as $image)
-                <div class="carousel-item @if ($loop->first) active @endif">
-                    <img src="{{ Storage::url($image->path) }}" alt="{{ $announcement->title }}"
-                        class="img-fluid p-3 rounded">
+                <div class="carousel-item @if ($loop->first) active @endif" style="background-image: url('{{ Storage::url($image->path) }}');height:170px; background-size:contain">
+                    {{-- <img src="{{ Storage::url($image->path) }}" alt="{{ $announcement->title }}"
+                        class="img-fluid p-3 rounded"> --}}
                 </div>
             @endforeach
             {{-- <img src="https://picsum.photos/200" class="card-img-top"
@@ -46,7 +46,7 @@
         @else
         @endif
     </div>
-    <div class="card__title">{{ $announcement->title }}</div>
+    <div class="card__title" style="min-height: 75px; color:#0053FF">{{ $announcement->title }}</div>
     <div class="card__subtitle">{{ $announcement->category->name }}</div>
     <hr>
 

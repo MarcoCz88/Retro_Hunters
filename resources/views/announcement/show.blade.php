@@ -1,53 +1,73 @@
 <x-layout>
+    
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="text-center my-3">{{$announcement->title}}</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-5">
-                @if ($announcement->images)
-                <div class="carousel-inner">
-                    @foreach ($announcement->images as $image)
-                        <div class="carousel-item @if($loop->first)active @endif">
-                            <img src="{{Storage::url($image->path)}}" alt="{{ $announcement->title }}" class="img-fluid p-3 rounded">
+        <div class="row ">
+            <div class=" col-12 col-md-6 p-5">
+                <div id="carouselExample" class="carousel slide p-5">
+                    @if ($announcement->images)
+                        <div class="carousel-inner">
+                            @foreach ($announcement->images as $image)
+                                <div class="carousel-item @if ($loop->first) active @endif">
+                                    <img src="{{ Storage::url($image->path) }}" width="100%"
+                                        alt="{{ $announcement->title }}">
+                                </div>
+                            @endforeach
                         </div>
-                    @endforeach
-                </div>
-                {{-- <img src="https://picsum.photos/200" class="card-img-top"
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                            <span class="" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="26" height="26" style="color: black" fill="currentColor"
+                                    class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                                </svg></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                            <span class="" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="26" height="26" style="color: black" fill="currentColor"
+                                    class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                </svg></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                        {{-- <img src="https://picsum.photos/200" class="card-img-top"
                     alt="{{ $announcement->title }}"> --}}
+                    <p class='mx-auto fontCreateAt mt-3'>{{ __('ui.createdBy') }} : {{ $announcement->user->name }} il
+                        {{ $announcement->created_at->format('d/m/Y H:i') }} </p>
+                </div>
+                
             </div>
-                @else
-                @endif
-            </div>
-            <div class="col-5">
-                <p>{{ __('ui.genreCreate')}} : {{$announcement->category->name}}</p>
-                <p>{{ __('ui.developer')}} : {{$announcement->developer}}</p>
-                <p>{{ __('ui.published')}} : {{$announcement->publisher}}</p>
-                <p>{{ __('ui.price')}} : {{$announcement->price}}</p>
-                <p>{{$announcement->body}}</p>
-            </div>
-            <div class="col-7">
-                <p>{{ __('ui.createdBy')}} : {{$announcement->user->name }} il {{$announcement->created_at->format('d/m/Y H:i')}} </p>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            @if ($announcement->images)
-            <div class="carousel-inner">
-                @foreach ($announcement->images as $image)
-                    <div class="carousel-item @if($loop->first)active @endif">
-                        <img src="{{Storage::url($image->path)}}" alt="{{ $announcement->title }}" class="img-fluid p-3 rounded">
-                    </div>
-                @endforeach
-            </div>
-            {{-- <img src="https://picsum.photos/200" class="card-img-top"
-                alt="{{ $announcement_to_check->title }}"> --}}
-        </div>
             @else
             @endif
+            <div class="col-6 d-flex flex-column  justify-content-center ps-5">
+                <h2 class=" my-3">{{ $announcement->title }}</h2>
+                {{ __('ui.plot') }} : <p class="pt-2" style="min-height: 150px">{{ $announcement->body }}</p>
+                {{ __('ui.price') }}<p class="fs-3 ">{{ $announcement->price }},00 €</p>
+                
+            </div>
+        </div>
+        <div class="row justify-content-center px-md-5">
+            <div class="col-12 px-md-5">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">{{__('ui.details')}}</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Feedback</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active p-4" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                        <p>{{ __('ui.genreCreate') }} : {{ $announcement->category->name }}</p>
+                        <p>{{ __('ui.developer') }} : {{ $announcement->developer }}</p>
+                        <p>{{ __('ui.published') }} : {{ $announcement->publisher }}</p>
+                    </div>
+                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+                  </div>
+            </div>
         </div>
     </div>
 </x-layout>
