@@ -1,3 +1,16 @@
+:root {
+    --bluscuro: #05217E;
+    --blu: #0053FF;
+    --giallo: #F8FE00;
+    --acqua: #05ECC6;
+    --fuxia: #FC04FC;
+}
+
+.text-blue{
+    color: var(--blu);
+}
+
+
 body {
     min-height: 100vh;
     display: flex;
@@ -42,3 +55,7 @@ main {
     margin: 10px;
 
 }
+.fontCreateAt{
+    font-size: small;
+    font-style: italic;
+ }

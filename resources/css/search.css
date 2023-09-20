@@ -2,8 +2,8 @@ body{
     background: #f2f2f2;
   }
   .border-custom{
-    border-top: solid #3586FF 5px;
-    border-bottom: solid #3586FF 5px;
+    border-top: solid var(--blu) 5px;
+    border-bottom: solid var(--blu) 5px;
     
   }
 .bg-custom{
