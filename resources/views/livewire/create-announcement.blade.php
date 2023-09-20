@@ -70,21 +70,21 @@
     </form>
 
     @if (!empty($images))
-    <div class="row">
-        <div class="col-12">
-            <p>Photo preview: </p>
-            <div class="row border">
-                @foreach ($images as $key => $image)
-                    <div class="col-4 my-3 mx-2 d-flex justify-content-around">
-                        <img class=" img-preview shadow rounded" src="{{ $image->temporaryUrl() }}">
-                        {{-- <div  style="backgroud-image:url({{$image->temporaryUrl()}});"></div> --}}
-                        <button type="button" class="btn btn-danger shadow"
-                            wire:click="removeImage({{ $key }})">Cancella</button>
-                    </div>
-                @endforeach
+        <div class="row">
+            <div class="col-12">
+                <p>Photo preview: </p>
+                <div class="row border">
+                    @foreach ($images as $key => $image)
+                        <div class="col-4 my-3 mx-2 d-flex justify-content-around">
+                            <img class=" img-preview shadow rounded" src="{{ $image->temporaryUrl() }}">
+                            {{-- <div  style="backgroud-image:url({{$image->temporaryUrl()}});"></div> --}}
+                            <button type="button" class="btn btn-danger shadow"
+                                wire:click="removeImage({{ $key }})">Cancella</button>
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
-    </div>
-@endif
+    @endif
 
 </div>
