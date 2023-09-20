@@ -5,16 +5,21 @@ namespace App\Livewire;
 use Livewire\Component;
 use App\Models\Category;
 use App\Models\Announcement;
+use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 
 class CreateAnnouncement extends Component
 {
+    use WithFileUploads;
+
     public $title;
     public $body;
     public $price;
     public $developer;
     public $publisher;
     public $category;
+    public $temporary_images;
+    public $images = [];
 
     protected $rules = [
         'title' => 'required|min:2|max:100',
@@ -23,7 +28,25 @@ class CreateAnnouncement extends Component
         'developer' => 'required|min:2|max:35',
         'publisher' => 'required|min:2|max:35',
         'category' => 'required',
+        'images.*' => 'image|max:1024',
+        'temporary_images.*' => 'image|max:1024'
     ];
+
+    public function updatedTemporaryImages(){
+        if($this->validate([
+            'temporary_images.*' => 'image|max:1024',
+        ])) {
+            foreach ($this->temporary_images as $image){
+                $this->images[] = $image;
+            }
+        }
+    }
+
+    public function removeImage($key){
+        if(in_array($key, array_keys($this->images))){
+            unset($this->images[$key]);
+        }
+    }
 
     public function store(){
 
@@ -39,6 +62,11 @@ class CreateAnnouncement extends Component
            'publisher'=>$this->publisher,
 
         ]);
+        if(count($this->images)){
+            foreach($this->$images as $image){
+                $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
+            }
+        }
         Auth::user()->announcements()->save($announcement);
 
         $this->reset();
