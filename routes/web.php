@@ -8,6 +8,7 @@ use App\Http\Controllers\AnnouncementController;
 // ROTTE GUEST
 Route::get('/', [PublicController::class,'welcome'])->name('home');
 Route::get('/category/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');
+Route::get('/team',[PublicController::class, 'team'])->name('team');
 
 // ROTTE AUTH ANNUNCI
 Route::get('/announcement/create',[AnnouncementController::class,'create'])->name('announcement.create')->middleware('auth');

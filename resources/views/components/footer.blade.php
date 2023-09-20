@@ -21,7 +21,7 @@
       <li class="menu__item"><a class="menu__link" href="{{ route('home') }}">Home</a></li>
       <li class="menu__item"><a class="menu__link" href="{{route('become.revisor')}}">{{ __('ui.workWithUs')}}</a></li>
       <li class="menu__item"><a class="menu__link" href="{{ route('register') }}">{{ __('ui.registered')}}</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+      <li class="menu__item"><a class="menu__link" href="{{ route('team') }}">Team</a></li>
       <li class="menu__item"><a class="menu__link" href="#">{{ __('ui.contact')}}</a></li>
 
     </ul>
