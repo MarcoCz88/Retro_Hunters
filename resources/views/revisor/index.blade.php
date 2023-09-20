@@ -15,8 +15,7 @@
                         <div class="card-body d-flex flex-column align-items-center">
                             <h5 class="card-title">{{ $announcement_to_check->title }}</h5>
                             <p class="card-text">{{ $announcement_to_check->category->name }}</p>
-                            <p class="card-text text-truncate">{{ $announcement_to_check->body }}</p>
-                            {{-- <p class="card-text text-center">Prezzo: {{ $announcement_to_check->price }}€</p> --}}
+                            <p class="card-text">{{ $announcement_to_check->body }}</p>
                             <p class="card-text">Sviluppato da: {{ $announcement_to_check->developer }}</p>
                             <p class="card-text">Pubblicato da: {{ $announcement_to_check->publisher }}</p>
                             <div class="card__price">{{ $announcement_to_check->price }}€</div>
@@ -24,7 +23,7 @@
                                 <p class="card-text">Caricato da: {{ $announcement_to_check->user->name ?? '' }} il
                                     {{ $announcement_to_check->created_at->format('d/m/Y H:i') }}</p>
                             </span>
-                            <span class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="card-footer d-flex">
                                 <form
                                     action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
                                     method="POST">
