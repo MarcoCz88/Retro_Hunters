@@ -16,6 +16,9 @@ class Image extends Model
         "path"
     ];
 
+    protected $casts = [
+        'labels' => 'array'
+    ];
    
 
     public static function getUrlByFilePath($filePath, $w=null, $h=null){

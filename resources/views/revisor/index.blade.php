@@ -6,7 +6,7 @@
                 <h2>
                     Ecco l'annuncio da revisionare: {{ $announcement_to_check->title }}
                 </h2>
-                <div class="col-12 d-flex justify-content-center">
+                <div class="col-12 col-lg-6 d-flex justify-content-center">
                     <div class="card card_revisor m-3" style="width: 18rem;">
                         <div class="card__img__revisor">
                             @if ($announcement_to_check->images)
@@ -50,6 +50,26 @@
                                 </form>
                             </span>
                         </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h5 class="tc-accent">Tags</h5>
+                    <div class="p-2">
+                        @if ($image->labels)
+                            @foreach ($image->labels as $label)
+                                <p class="d-inline">{{$label}}</p>
+                            @endforeach
+                        @endif
+                    </div>
+                </div>
+                <div class="col-lg-3 col6">
+                    <div class="card-body">
+                        <h5 class="tc-accent">Revisione Immagini</h5>
+                        <p>Esplicito: <span class="{{$image->adult}}"></span></p>
+                        <p>Parodia: <span class="{{$image->spoof}}"></span></p>
+                        <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                        <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                        <p>Erotico: <span class="{{$image->racy}}"></span></p>
                     </div>
                 </div>
             </div>
