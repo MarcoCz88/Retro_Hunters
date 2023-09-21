@@ -37,10 +37,16 @@
   .aqua-gradient3 {
     background: linear-gradient(40deg, #eff57a, #f6f6f7 ) !important;
   }
+  .m-custom2{
+    margin-bottom: 15%;
+  }
+  .m-custom{
+    margin-top:15%
+  }
   
   .testimonial-card .avatar {
     width: 120px;
-    margin-top: -60px;
+    margin-top: -65px;
     overflow: hidden;
     border: 5px solid #f3ff05;
     border-radius: 50%;
