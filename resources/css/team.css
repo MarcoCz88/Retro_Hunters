@@ -1,6 +1,27 @@
-.borderteam-custom{
-    border: solid yellow 5px;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 50%;
+
+.img-bg{
+    background: url(../img/marco.jpg);
+    height: 120px;
+    width: 120px;
+    background-size:99%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+.testimonial-card .card-up {
+    height: 120px;
+    overflow: hidden;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+  }
+  
+  .aqua-gradient {
+    background: linear-gradient(40deg, #2096ff, #f3ff05) !important;
+  }
+  
+  .testimonial-card .avatar {
+    width: 120px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 5px solid #f3ff05;
+    border-radius: 50%;
+  }
