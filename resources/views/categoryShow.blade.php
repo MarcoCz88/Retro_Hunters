@@ -15,7 +15,7 @@
         </div>
         <div class="row">
             <div class="col-12 d-flex justify-content-center text-primary text-center">
-                <h2 >{{ __('ui.noAds')}}</sh2>
+                <h2 >{{ __('ui.noAds')}}</h2>
             </div>
         </div>
         <div class="row flex-column align-items-center mt-3 ">
