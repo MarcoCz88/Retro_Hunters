@@ -15,7 +15,7 @@
         </div>
         <div class="row">
             <div class="col-12 d-flex justify-content-center text-primary text-center">
-                <h2 >{{ __('ui.noAds')}}</sh2>
+                <h2 >{{ __('ui.noAds')}}</h2>
             </div>
         </div>
         <div class="row flex-column align-items-center mt-3 ">
@@ -23,7 +23,7 @@
                 <p class="border-bottom border-warning">{{ __('ui.addAds')}}</p>
             </div>
             <div class="col-4 mx-2 px-2 d-flex justify-content-center">
-            <a href="{{ route('announcement.create') }}" class="button-891 text-dark" role="button">{{ __('ui.addAds2')}}</a>
+            <a href="{{ route('announcement.create') }}" class="button-892 text-dark" role="button">{{ __('ui.addAds2')}}</a>
                 
             </div>
         </div>

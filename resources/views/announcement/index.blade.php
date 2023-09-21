@@ -2,7 +2,7 @@
     <x-search />
     <div class="container">
         <div class="row">
-            <div class="col-12  mt-3 text-blue">
+            <div class="col-4  mt-3 text-blue border-index">
             <p class="h3 my-3">{{ __('ui.allAnnouncements')}}</p>
             </div>
         </div>
@@ -19,7 +19,12 @@
                     </div>
                 </div>
             @endforelse
-            {{ $announcements->links() }}
+            <div class="container">
+                <div class="row mt-5 justify-content-center">
+                        <div class="col-2">{{ $announcements->links() }}</div>
+    
+                </div>
+            </div>
         </div>
     </div>
 </x-layout>
