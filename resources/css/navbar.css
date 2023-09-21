@@ -5,6 +5,8 @@
 
 .navbar-custom{
     background-color: var(--blu);
+    position: relative;
+    z-index: 9999;
 }
 
 .dropdown-menu{

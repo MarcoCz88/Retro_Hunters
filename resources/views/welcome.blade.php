@@ -1,11 +1,10 @@
 <x-layout>
+  <x-masthead/>
     
     <div class="container mt-3">
-        <x-masthead/>
-        <x-search />
         <div class="row">
           <div class="col-4 border-index">
-            <p class="my-4 text-primary text-center fs-3">{{ __('ui.lastSixAnnouncements')}} :</p>
+            <p class="my-4 text-primary text-center fs-3">{{ __('ui.lastSixAnnouncements')}}:</p>
           </div>
           
           <div class="col-12">
