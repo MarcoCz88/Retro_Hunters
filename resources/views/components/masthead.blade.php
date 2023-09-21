@@ -3,9 +3,7 @@
     <div class="row align-items-top justify-content-center masthead">
         <div class="col-12">
             <x-search />
-            <div id="fungo" class="fungo">
-                <img src="/media/fungo.png" height="40px" alt="">
-            </div>
+            
             {{-- <div id="" class="supermario">
                 <img src="/media/supermario.png" height="70px" alt="">
             </div> --}}

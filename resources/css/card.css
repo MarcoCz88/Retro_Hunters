@@ -5,12 +5,42 @@
     position: relative;
     padding: 20px;
     width: 320px;
-    background: var(--bg-color);
-    border-radius: 20px;
+    background: #cdcdcd;
+    border-radius: 15px 15px 60px 15px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+
   }
+
+  .btnGB{
+    position: absolute;
+    height: 60px;
+    top: 360px;
+    right: 50px;
+    z-index: 2;
+  }
+  .btnGB2{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 450px;
+    right: 80px;
+    z-index: 2;
+    background-color: #dc2767;
+    border-radius: 50%;
+  }
+  .btnGB2_2{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 430px;
+    right: 40px;
+    z-index: 2;
+    background-color: #dc2767;
+    border-radius: 50%;
+  }
+
 
   .card_revisor {
     min-width: 350px !important;
@@ -39,14 +69,8 @@
   .card__img {
     width: 250px;
     height: 300px;
-    /* background: linear-gradient(90deg, #FFF8F7, #F0F7DF);
-    border-radius: 100%; 
-    margin-inline: auto;*/
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 10px;
-
-    
+    border: 20px solid rgb(133, 133, 133) ;
+    border-radius: 10px;  
   }
 
   .card__img__revisor {
