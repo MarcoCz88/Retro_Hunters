@@ -70,16 +70,16 @@
 
 @keyframes slidein {
    0% {
-      top: -20%;
-      left: 26%;
+      top: -100px;
+      left: 450px;
    }
    10%{
-      top: 18%;
-      left:30%;
+      top: 155px;
+      left:500px;
    }
    40%{
-      top: 18%;
-      left:73%;
+      top: 155px;
+      left:1200px;
    }
    55%{
       top:85.5%;

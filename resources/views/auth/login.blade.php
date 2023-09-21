@@ -2,10 +2,13 @@
     <x-slot name="title">
         Login
     </x-slot>
-    <div class="container mt-5  ">
+    <div class="container">
         <div class="row justify-content-center">
-         <h2 class="text-center text-primary my-4">Login</h2>
-            <div class="col-12 col-md-4 boxLog mx-2 mx-md-0 p-3 login-custom">
+         <div class="col-8 bd-login">
+            <h2 class="text-center text-primary my-4 ">Login</h2>
+         </div>
+         
+            <div class="col-12 col-md-4 boxLog mx-2 mx-md-0 p-3 login-custom mt-5">
                 
                 <form action="{{route('login')}}" method="POST" class="d-flex flex-column align-items-center">
                     @csrf
