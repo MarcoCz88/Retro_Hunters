@@ -1,14 +1,99 @@
-*{
-   padding: 0; 
-}
+
 .masthead{
-   background: url(../img/header4.jpg);
+   background: url(../img/brosback2.jpeg);
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
    opacity: 90%;
+   height: 93vh;
+   position: relative;
+
 }
 .bg-masthead{
    background: #0000009d;
-   color: #ebff35;
+   color: #08e0e7;
 }
+
+.fungo{
+   position: absolute;
+   top:0;
+   left: 30%;
+   animation-name: slidein;
+   animation-duration: 10s; 
+   animation-iteration-count: infinite;
+   animation-timing-function: steps(80);
+}
+.supermario{
+   position: relative;
+   left:40%;
+   top: 30.5%;
+}
+
+
+@media (max-width: 600px) {
+   .fungo {
+      animation-name: slideinMob;
+      
+   }
+}
+
+
+@keyframes slideinMob {
+   0% {
+      top: -20%;
+      left: 26%;
+   }
+   10%{
+      top: 19.3%;
+      left:32%;
+   }
+   40%{
+      top: 19.3%;
+      left:73%;
+   }
+   55%{
+      top:81.5%;
+      left:80%;
+   } 
+   65% {
+      top:81.5%;
+
+      left: 90%;
+   }
+   100%{
+      top:81.5%;
+
+      left: -10%;
+    }
+
+  }
+
+@keyframes slidein {
+   0% {
+      top: -20%;
+      left: 26%;
+   }
+   10%{
+      top: 18%;
+      left:30%;
+   }
+   40%{
+      top: 18%;
+      left:73%;
+   }
+   55%{
+      top:85.5%;
+      left:80%;
+   } 
+   65% {
+      top:85.5%;
+
+      left: 98%;
+   }
+   100%{
+      top:85.5%;
+
+      left: -10%;
+    }
+
+  }

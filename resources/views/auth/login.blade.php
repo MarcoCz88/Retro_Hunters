@@ -10,7 +10,7 @@
                 <form action="{{route('login')}}" method="POST" class="d-flex flex-column align-items-center">
                     @csrf
                       <div class="form-group ">
-                         <label class="form_label  bg-color fs-3 ms-5 rounded-pill">-Email-</label>
+                         <label class="form_label bg-color fs-3 ms-5 rounded-pill">-Email-</label>
                          <input type="email" class="form-control" name="email">
                       </div>
                       <div class="form-group">

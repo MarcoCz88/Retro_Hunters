@@ -1,5 +1,5 @@
 
-.img-bg{
+.img-bg-marco{
     background: url(../img/marco.jpg);
     height: 120px;
     width: 120px;
@@ -7,15 +7,35 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.bg-marco{
+  background: url(../img/donkey.jpg);
+  background-size:95%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img-bg-valerio{
+  background: url(../img/valerio.jpg);
+  height: 120px;
+  width: 120px;
+  background-size:99%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .testimonial-card .card-up {
     height: 120px;
-    overflow: hidden;
+    /* overflow: hidden; */
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
   }
   
   .aqua-gradient {
     background: linear-gradient(40deg, #2096ff, #f3ff05) !important;
+  }
+  .aqua-gradient2 {
+    background: linear-gradient(40deg, #f6f6f7, #eff57a) !important;
+  }
+  .aqua-gradient3 {
+    background: linear-gradient(40deg, #eff57a, #f6f6f7 ) !important;
   }
   
   .testimonial-card .avatar {
