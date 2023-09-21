@@ -9,7 +9,9 @@
     /* background-color: #0000009d; */
     color: #ebff35;
 }
-
+.bd-login{
+  border-bottom: solid yellow 5px;
+}
 /* BUTTON */
 .button-893 {
     --b: 3px;   /* border thickness */
