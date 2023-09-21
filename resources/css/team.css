@@ -7,6 +7,14 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.img-bg2{
+  background: url(../img/valerio.jpg);
+  height: 120px;
+  width: 120px;
+  background-size:99%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .testimonial-card .card-up {
     height: 120px;
     overflow: hidden;
