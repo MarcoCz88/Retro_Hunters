@@ -2,37 +2,71 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="text-center text-primary mt-5">Retro Hunters</h2>
-                <h2 class="text-center text-primary my-2">Il Team</h2>
+                <h2 class="text-center text-primary mt-3">Retro Hunters</h2>
+                <h2 class="text-center text-primary">Il Team</h2>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-5 d-flex flex-column align-items-center justify-content-center mt-5">
-                <p class="text-center fs-2 text-primary">Piertobia</p>
-                    <div class="borderteam-custom">
-                       <img class="rounded-circle"src="https://picsum.photos/201" alt="">
-                    </div>
-            </div>
-            <div class="col-12 col-md-5 d-flex flex-column align-items-center justify-content-center mt-5">
-                <p class="text-center fs-2 text-primary">Davide</p>
-                    <div class="borderteam-custom">
-                       <img class="rounded-circle"src="https://picsum.photos/203" alt="">
-                    </div>
-            </div>
-            <div class="col-12 col-md-5 d-flex flex-column align-items-center justify-content-center mt-5">
-                <p class="text-center fs-2 text-primary">Valerio</p>
-                    <div class="borderteam-custom">
-                       <img class="rounded-circle"src="https://picsum.photos/202" alt="">
-                    </div>
-            </div>
-            <div class="col-12 col-md-5 d-flex flex-column align-items-center justify-content-center mt-5">
-                <p class="text-center fs-2 text-primary">Marco</p>
-                    <div class="borderteam-custom">
-                       <img class="rounded-circle"src="https://picsum.photos/204" alt="">
-                    </div>
-            </div>
-        </div>
-    </div>
+      <div class="container">
+        <div class="row justify-content-center ">
+          <div class="col-9 col-md-3 marginleft">
+            <section class="mx-auto my-5" style="max-width: 23rem;">
+              <div class="card testimonial-card mt-2 mb-3">
+                <div class="card-up aqua-gradient"></div>
+                <div class="avatar mx-auto white">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2831%29.jpg" class="rounded-circle img-fluid" alt="woman avatar">
+                </div>
+                <div class="card-body text-center">
+                  <h4 class="card-title font-weight-bold text-primary">Piertobia</h4>
+                  <hr>
+                </div>
+              </div>            
+            </section>
+          </div>
+          <div class="col-9 col-md-3 marginleft">
+            <section class="mx-auto my-5" style="max-width: 23rem;">
+              <div class="card testimonial-card mt-2 mb-3">
+                <div class="card-up aqua-gradient"></div>
+                <div class="avatar mx-auto white">
+                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2831%29.jpg" class="rounded-circle img-fluid" alt="woman avatar">
+                </div>
+                <div class="card-body text-center">
+                  <h4 class="card-title font-weight-bold text-primary">Davide</h4>
+                  <hr>
+                </div>
+              </div>            
+            </section>
+          </div>
+          <div class="col-9 col-md-3 marginleft">
+            <section class="mx-auto my-5" style="max-width: 23rem;">
+              <div class="card testimonial-card mt-2 mb-3">
+                <div class="card-up aqua-gradient"></div>
+                <div class="avatar mx-auto white img-bg2">
+                </div>
+                <div class="card-body text-center">
+                  <h4 class="card-title font-weight-bold text-primary">Valerio</h4>
+                  <hr>
+                </div>
+              </div>            
+            </section>
+          </div>
+          <div class="col-9 col-md-3  marginleft">
+            <section class="mx-auto my-5" style="max-width: 23rem;">
+              <div class="card testimonial-card mt-2 mb-3">
+                <div class="card-up aqua-gradient"></div>
+                <div class="avatar mx-auto white img-bg">
+                </div>
+                <div class="card-body text-center">
+                  <h4 class="card-title font-weight-bold text-primary">Marco</h4>
+                  <hr>
+                </div>
+              </div>            
+            </section>
+          </div>
+        </div>    
+      </div>
+          
+          
+          
+        
 </x-layout>

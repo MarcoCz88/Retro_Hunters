@@ -1,3 +1,14 @@
 *{
    padding: 0; 
 }
+.masthead{
+   background: url(../img/header4.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   opacity: 90%;
+}
+.bg-masthead{
+   background: #0000009d;
+   color: #08e0e7;
+}
