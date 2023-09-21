@@ -10,6 +10,9 @@
     background-color: #00000066;
     color: #ebff35;
 }
+.bd-register{
+  border-bottom: solid yellow 5px;
+}
 
 /* BUTTON */
 .button-894 {
