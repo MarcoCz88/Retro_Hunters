@@ -16,12 +16,12 @@
     
     <header class="mt-5">
         @if (session('message'))
-            <div class="alert alert-success mt-4 z-index">
+            <div class="alert alert-success mt-3 mb-0 z-index">
                 {{ session('message') }}
             </div>
         @endif
         @if (session('access.denied'))
-            <div class="alert alert-danger mt-4 z-index">
+            <div class="alert alert-danger mt-3 mb-0 z-index">
                 {{ session('access.denied') }}
             </div>
         @endif
