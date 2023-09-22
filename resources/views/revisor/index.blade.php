@@ -1,9 +1,9 @@
 <x-layout>
 
     @if ($announcement_to_check)
-        <div class="container my-3">
+        <div class="container mt-5 mb-3">
             <div class="row row_card">
-                <h2>
+                <h2 class="mt-5">
                     Ecco l'annuncio da revisionare: {{ $announcement_to_check->title }}
                 </h2>
                 <div class="col-12 col-lg-6 d-flex justify-content-center">

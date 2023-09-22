@@ -8,6 +8,13 @@
     background-repeat: no-repeat;
 }
 .bg-marco{
+  background: linear-gradient(40deg, #2096ff, #f3ff05);
+  background-size:95%;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+.bg-marco:hover{
   background: url(../img/donkey.jpg);
   background-size:95%;
   background-repeat: no-repeat;
@@ -23,7 +30,7 @@
 }
 .testimonial-card .card-up {
     height: 120px;
-    /* overflow: hidden; */
+    overflow: hidden;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
   }
@@ -32,22 +39,18 @@
     background: linear-gradient(40deg, #2096ff, #f3ff05) !important;
   }
   .aqua-gradient2 {
-    background: linear-gradient(40deg, #f6f6f7, #eff57a) !important;
+    background: linear-gradient(245deg, #2097ff43, #ffc905a0) !important;
   }
   .aqua-gradient3 {
-    background: linear-gradient(40deg, #eff57a, #f6f6f7 ) !important;
+    background: linear-gradient(245deg, #ffc90593, #2097ff3f ) !important;
   }
-  .m-custom2{
-    margin-bottom: 15%;
-  }
-  .m-custom{
-    margin-top:15%
-  }
-  
+  .m-custom:hover{
+    margin-bottom: 40%;
+  } 
   .testimonial-card .avatar {
     width: 120px;
     margin-top: -65px;
     overflow: hidden;
-    border: 5px solid #f3ff05;
+    border: 5px solid #ffa305;
     border-radius: 50%;
   }

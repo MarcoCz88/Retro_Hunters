@@ -23,6 +23,6 @@
       <li class="menu__item"><a class="menu__link" href="{{ route('register') }}">{{ __('ui.registered')}}</a></li>
       <li class="menu__item"><a class="menu__link" href="{{ route('team') }}">Team</a></li>
     </ul>
-    <p>&copy;2023 Retro-Hunters.it | All Rights Reserved</p>
+    <p class="text-center">&copy;2023 Retro-Hunters.it | All Rights Reserved</p>
 </footer>
   

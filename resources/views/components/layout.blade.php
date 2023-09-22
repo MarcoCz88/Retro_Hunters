@@ -14,14 +14,14 @@
 <body class="body-custom">
     <x-navbar />
     
-    <header>
+    <header class="mt-5">
         @if (session('message'))
-            <div class="alert alert-success">
+            <div class="alert alert-success mt-4 z-index">
                 {{ session('message') }}
             </div>
         @endif
         @if (session('access.denied'))
-            <div class="alert alert-danger">
+            <div class="alert alert-danger mt-4 z-index">
                 {{ session('access.denied') }}
             </div>
         @endif
