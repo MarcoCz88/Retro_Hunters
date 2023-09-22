@@ -38,12 +38,17 @@
         </div>
     </div>
     <div class="mx-auto">
-        <div class="card__img" style="background-image: url('{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : Storage::url('images/default.jpg')}}');background-size:cover">
-           
+        <div class="card__img"
+            style="background-image: url('{{ !$announcement->images()->get()->isEmpty()? Storage::url($announcement->images()->first()->path): Storage::url('images/default.jpg') }}');background-size:cover">
+
         </div>
     </div>
     <div class="card__title" style="min-height: 75px; color:#0053FF">{{ $announcement->title }}</div>
-    <div class="card__subtitle">{{ $announcement->platform }} - {{ $announcement->category->name }}</div>
+    <div class="card__subtitle">
+        <a href="{{ route('platformIndex', compact('announcement')) }}">{{ $announcement->platform }}</a>
+        -
+        <a href="{{ route('categoryIndex', $announcement->category->id) }}">{{ $announcement->category->name }}</a>
+    </div>
     <hr>
 
     <div class="card__wrapper">
@@ -59,4 +64,4 @@
         </div> --}}
     </div>
 </div>
- {{-- <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : Storage::url('images/default.jpg')}}" class="card-img-top" alt="{{ $announcement->title }}"> --}}
+{{-- <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : Storage::url('images/default.jpg')}}" class="card-img-top" alt="{{ $announcement->title }}"> --}}
