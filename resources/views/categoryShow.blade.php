@@ -1,6 +1,6 @@
 <x-layout>
     <x-search />
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-12 d-flex justify-content-center text-primary">
                 <h2 class="my-3">{{ __('ui.categoryGame')}} : {{ $category->name }}</h2>
@@ -23,7 +23,7 @@
                 <p class="border-bottom border-warning">{{ __('ui.addAds')}}</p>
             </div>
             <div class="col-4 mx-2 px-2 d-flex justify-content-center">
-            <a href="{{ route('announcement.create') }}" class="button-892 text-dark" role="button">{{ __('ui.addAds2')}}</a>
+            <a href="{{ route('announcement.create') }}" class="button-891 text-primary" role="button">{{ __('ui.addAds2')}}</a>
                 
             </div>
         </div>
