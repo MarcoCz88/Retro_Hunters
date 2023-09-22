@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-custom">
+<nav class="navbar container-fluid navbar-expand-lg navbar-custom">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('home') }}"><img src="/media/logo-white.png" height="50px" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -33,12 +33,16 @@
                 </li>
 
             </ul>
+                
+            <ul class="navbar-nav mb-2 mb-lg-0">
+
             @auth
                 <p class="d-none">
                     {{ $counter = App\Models\Announcement::toBeRevisionedCount() }}
                 </p>
-                <li class="nav-item dropdown ms-auto mx-5">
-                    <a class="nav-link link-custom dropdown-toggle mx-2" href="#" role="button"
+
+                <li class="nav-item dropdown ms-lg-auto mx-lg-5">
+                    <a class="nav-link link-custom dropdown-toggle mx-lg-2" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{ Auth::user()->name }}
                         @if (Auth::user()->is_revisor)
@@ -53,7 +57,7 @@
                     <ul class="dropdown-menu">
                         @if (Auth::user()->is_revisor)
                             <li class="nav-item">
-                                <a class="nav-link btn btn-sm link-custom" href="{{ route('revisor.index') }}">Area
+                                <a class="nav-link px-2 link-custom" href="{{ route('revisor.index') }}">Area
                                     Revisioni
                                     <span class="badge rounded-pill bg-danger">
                                         {{ App\Models\Announcement::toBeRevisionedCount() }}
@@ -74,8 +78,8 @@
                 </li>
             @endauth
             @guest
-                <li class="nav-item dropdown ms-auto me-1">
-                    <a class="nav-link link-custom dropdown-toggle mx-2" href="#" role="button"
+                <li class="nav-item dropdown ms-auto me-5">
+                    <a class="nav-link link-custom dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Visitatore
                     </a>
@@ -86,7 +90,9 @@
                         </li>
                         <form id="form-login" action="{{ route('login') }}" method="GET">
                         </form>
-                        <li class="nav-item mx-2">
+                        <hr class="mx-2">
+
+                        <li class="nav-item dropdown mx-2">
                             <a href="/register"
                                 onclick="event.preventDefault();getElementById('form-register').submit()">Registrati</a>
                         </li>

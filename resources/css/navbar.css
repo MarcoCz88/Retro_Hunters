@@ -4,13 +4,13 @@
 }
 
 .navbar-custom{
-    background-color: var(--blu);
-    position: relative;
+    background-color: var(--giallo);
+    position: fixed;
     z-index: 9999;
 }
 
 .dropdown-menu{
-    background-color: var(--bluscuro);
+    background-color: var(--verde);
 }
 
 .link-custom{
@@ -88,7 +88,7 @@ li{
     position: absolute;
     right: 13px;
     top:60px;
-    animation: slidein 1s;
+    animation: cascade 1s;
 
 }
 .lengEN{
@@ -99,7 +99,7 @@ li{
     position: absolute;
     right: 13px;
     top:100px;
-    animation: slidein 1.5s;
+    animation: cascade 1.5s;
 
 }
 .lengES{
@@ -111,10 +111,47 @@ li{
     right: 13px;
     top:140px;
     border: 1px solid white;
-    animation: slidein 2s;
+    animation: cascade 2s;
 }
 
-@keyframes slidein {
+
+@media (max-width: 991px) {
+    .lengIT{
+        position: absolute;
+        left: 55px;
+        top:310px;
+        border: 1px solid white;
+        animation: right 2s;
+       
+    }
+    .lengEN{
+        position: absolute;
+        left: 100px;
+        top:310px;
+        border: 1px solid white;
+        animation: right 2s;
+       
+    }
+    .lengES{
+        position: absolute;
+        left: 145px;
+        top:310px;
+        border: 1px solid white;
+        animation: right 2s;
+       
+    }
+    .boxLeng,.select-leng{
+        margin: 5px;
+    }
+  }
+
+
+
+
+
+
+
+@keyframes cascade {
     from {
       transform: translateY(-100%);
       opacity: 0;
@@ -125,3 +162,16 @@ li{
       opacity: 1;
     }
   }
+
+@keyframes right {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+}
+
