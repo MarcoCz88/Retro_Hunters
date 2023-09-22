@@ -2,7 +2,7 @@
 return [
     'allAnnouncements'=>'Todos los anuncios',
     'lastSixAnnouncements'=>'Últimos anuncios',
-    'search'=>'¿Qué estás buscando?',
+    'search'=>'Buscar...',
     'unMareDiGiochi'=>'Un mar de videojuegos',
     'workWithUs'=>'Trabaja con nosotros',
     'registered'=>'Registrado',

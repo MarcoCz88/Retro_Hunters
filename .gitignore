@@ -18,3 +18,5 @@ yarn-error.log
 /.idea
 /.vscode
 /storage/*.index
+/googlePippoFranco.json
+/GOOGLE_CREDENTIAL.JSON.json
