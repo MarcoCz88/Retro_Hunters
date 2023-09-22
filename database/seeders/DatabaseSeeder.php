@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
-            'password' => '12345678'
+            'password' => '12345678',
+            'is_revisor'=> 1
         ]);
 
         // $categories = [

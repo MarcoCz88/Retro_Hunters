@@ -7,7 +7,9 @@ use App\Http\Controllers\AnnouncementController;
 
 // ROTTE GUEST
 Route::get('/', [PublicController::class,'welcome'])->name('home');
-Route::get('/category/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');
+Route::get('/category/{category}', [PublicController::class, 'categoryIndex'])->name('categoryIndex');
+Route::get('/announcement/user/{user}', [PublicController::class, 'userIndex'])->name('userIndex');
+Route::get('/announcement/platform/{announcement}', [PublicController::class, 'platformIndex'])->name('platformIndex');
 Route::get('/team',[PublicController::class, 'team'])->name('team');
 
 // ROTTE AUTH ANNUNCI
@@ -30,3 +32,6 @@ Route::get('/search/announcement', [PublicController::class,'searchAnnouncements
 
 //ROTTE LINGUA
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
+
+//ROTTE UTENTE
+Route::get('/myannouncement/{user}',[AnnouncementController::class,'show'])->name('auth.myAnnouncement');

@@ -30,5 +30,7 @@ return [
     'addAds'=>'Vuoi pubblicarne uno?',
     'addAds2'=>'Pubblica un annuncio',
     'details'=>'Dettagli',
-    'categoryGame'=>'Nome categoria'
+    'categoryGame'=>'Nome categoria',
+    'platform'=>'Piattaforma',
+    'byUserTitle'=>'Annunci per' 
 ];

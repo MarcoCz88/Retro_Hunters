@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 
@@ -29,9 +30,9 @@ class AnnouncementController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Announcement $announcement)
+    public function show(Announcement $announcement, Category $category)
     {
-        return view('announcement.show', compact('announcement'));
+        return view('announcement.show', compact('announcement', 'category'));
     }
 
     /**

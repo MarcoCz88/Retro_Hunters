@@ -29,5 +29,7 @@ return [
     'noAds'=>'Oops, no one has uploaded any ads for this category yet.',
     'addAds'=>'Want to publish one?',
     'addAds2'=>'Post an ad',
-    'categoryGame'=>'Category name'
+    'categoryGame'=>'Category name',
+    'platform'=>'Platform',
+    'byUserTitle'=>'Announcements for' 
 ];

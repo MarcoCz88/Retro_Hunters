@@ -29,6 +29,6 @@ return [
     'noAds'=>'Vaya, nadie ha subido ningún anuncio para esta categoría todavía.',
     'addAds'=>'¿Quieres publicar uno?',
     'addAds2'=>'Publicar un anuncio',
-    'categoryGame'=>'Nombre de la categoría'
-    
+    'categoryGame'=>'Nombre de la categoría',
+    'byUserTitle'=>'Anuncios por' 
 ];

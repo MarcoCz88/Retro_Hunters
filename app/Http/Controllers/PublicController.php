@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+
+
 
 class PublicController extends Controller
 {
@@ -13,8 +18,18 @@ class PublicController extends Controller
         return view('welcome', compact('announcements'));
     }
 
-    public function categoryShow(Category $category){
-        return view ('categoryShow', compact('category') );
+    public function categoryIndex(Category $category){
+        return view ('announcement.categoryIndex', compact('category') );
+    }
+
+    public function userIndex(User $user){
+        return view ('announcement.userIndex', compact('user') );
+    }
+
+    public function platformIndex(Request $request, Announcement $announcement){
+        $platform = $announcement->platform;
+        $announcements = Announcement::where('platform', $platform)->take(6)->orderBy('created_at', 'desc')->get();
+        return view ('announcement.platformIndex', compact('announcements'))->with('platform', $platform);
     }
 
     public function team(){
