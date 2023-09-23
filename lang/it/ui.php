@@ -32,5 +32,7 @@ return [
     'details'=>'Dettagli',
     'categoryGame'=>'Nome categoria',
     'platform'=>'Piattaforma',
-    'byUserTitle'=>'Annunci per' 
+    'byUserTitle'=>'Annunci per',
+    'myAnn' => 'I miei annunci',
+    'recapAnn' => 'Riepilogo annunci di '
 ];
