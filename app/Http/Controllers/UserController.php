@@ -9,8 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     public function index (){
-       $user = Auth::user();
-       $revStatus = '';
-       return view('user.myAnnouncements', compact('user'))->with('revStatus', $revStatus);
+      
+       return view('user.myAnnouncements');
     }
 }
