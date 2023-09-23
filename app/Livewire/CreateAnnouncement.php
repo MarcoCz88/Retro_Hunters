@@ -23,16 +23,18 @@ class CreateAnnouncement extends Component
     public $developer;
     public $publisher;
     public $category;
+    public $platform;
     public $temporary_images;
     public $images = [];
     public $announcement;
 
     protected $rules = [
         'title' => 'required|min:2|max:100',
-        'body' => 'required|min:20|max:300',
+        'body' => 'required|min:20|max:3000',
         'price' => 'required|numeric',
         'developer' => 'required|min:2|max:35',
         'publisher' => 'required|min:2|max:35',
+        'platform' => 'required|min:2|max:15',
         'category' => 'required',
         'images.*' => 'image|max:1024',
         'temporary_images.*' => 'image|max:1024'
@@ -62,10 +64,10 @@ class CreateAnnouncement extends Component
         $this->announcement = $category->announcements()->create([
             'title'=>$this->title,
            'body'=>$this->body,
+           'platform' =>$this->platform,
            'price'=>$this->price,
            'developer'=>$this->developer,
-           'publisher'=>$this->publisher,
-           
+           'publisher'=>$this->publisher
         ]);
 
         if(count($this->images)){

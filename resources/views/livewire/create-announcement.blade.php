@@ -21,6 +21,15 @@
                     </div>
                 </div>
                 <div class="mb-3">
+                    <label class="form-label text-primary">{{ __('ui.platform') }} :</label>
+                    <input type="text" class="form-control border border-warning" wire:model="platform">
+                    <div>
+                        @error('developer')
+                            <span class="text-danger error">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="mb-3">
                     <label class="form-label text-primary">{{ __('ui.price') }} :</label>
                     <input type="numeric" class="form-control border border-warning" wire:model="price">
                     <div>

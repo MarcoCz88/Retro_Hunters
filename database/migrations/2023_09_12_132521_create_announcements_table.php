@@ -18,6 +18,7 @@ return new class extends Migration
             $table->float('price', 6, 2);
             $table->string('developer');
             $table->string('publisher');
+            $table->string('platform')->nullable();
             $table->timestamps();
         });
     }

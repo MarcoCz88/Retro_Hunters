@@ -8,13 +8,13 @@
     --azzurro:#249afe;
 }
 
-body{
+/* body{
         background-image: url(/public/media/background.jpg)!important;
 
         background-position: center !important;
         background-repeat: no-repeat !important;
         background-attachment:fixed !important;
-}   
+}    */
 
 .text-blue{
     color: var(--blu);
