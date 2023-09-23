@@ -66,6 +66,10 @@
                                 </a>
                             </li>
                         @endif
+                        <li class="nav-item mx-2">
+                            <a class="nav_link" href="{{route('user.myAnnouncements')}}"
+                                >{{__('ui.myAnn')}}</a>
+                        </li>
                         <hr class="mx-2">
                         <li class="nav-item mx-2">
                             <a class="nav_link" href="/logout"

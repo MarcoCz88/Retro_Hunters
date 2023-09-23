@@ -31,5 +31,7 @@ return [
     'addAds2'=>'Post an ad',
     'categoryGame'=>'Category name',
     'platform'=>'Platform',
-    'byUserTitle'=>'Announcements for' 
+    'byUserTitle'=>'Announcements for',
+    'myAnn'=>'My announcements',
+    'recapAnn' => 'Announcements recap for '
 ];

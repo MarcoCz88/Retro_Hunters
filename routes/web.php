@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
@@ -34,4 +35,4 @@ Route::get('/search/announcement', [PublicController::class,'searchAnnouncements
 Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
 
 //ROTTE UTENTE
-Route::get('/myannouncement/{user}',[AnnouncementController::class,'show'])->name('auth.myAnnouncement');
+Route::get('user/myannouncement', [UserController::class, 'index'])->middleware('auth')->name('user.myAnnouncements');
