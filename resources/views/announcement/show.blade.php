@@ -17,6 +17,15 @@
                                     <img src="{{ Storage::url($announcement->images()->first()->getUrl(300, 300)) }}"
                                     width="600px"  alt="{{ $announcement->title }}">
                                 </div>
+
+
+
+                                {{-- <div class="carousel-item{{ $loop->first ? ' active' : '' }}">
+                                    <img src="{{ asset($image->path) }}" alt="{{ $image->id }}" class="d-block w-100">
+                                </div> --}}
+
+
+
                             @endforeach
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"

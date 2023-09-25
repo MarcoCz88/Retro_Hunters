@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
+use App\Jobs\WatermarkImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionLabelImage;
