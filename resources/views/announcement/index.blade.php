@@ -1,5 +1,4 @@
 <x-layout>
-    {{-- <x-search /> --}}
     <div class="container">
         <div class="row">
             <div class="col-4 mt-5 text-blue border-index">
@@ -22,7 +21,6 @@
             <div class="container">
                 <div class="row mt-5 justify-content-center">
                         <div class="col-2">{{ $announcements->links() }}</div>
-    
                 </div>
             </div>
         </div>

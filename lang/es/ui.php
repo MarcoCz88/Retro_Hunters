@@ -5,7 +5,7 @@ return [
     'search'=>'Buscar...',
     'unMareDiGiochi'=>'Un mar de videojuegos',
     'workWithUs'=>'Trabaja con nosotros',
-    'registered'=>'Registrado',
+    'registered'=>'Inscripción',
     'contact'=>'Contactos',
     'addAnnouncement'=>'Añadir un anuncio nuevo:',
     'addAnnouncementNav'=>'Nuevo anuncio',
@@ -40,5 +40,9 @@ return [
     'message'=>'Mensaje',
     'summit'=>'Envia',
     'prevImg'=>'Vista Previa',
-    'new'=>'Nuevo'
+    'new'=>'Nuevo',
+    'revisorArea' => 'Área de revisión',
+    'guest' => 'Invitado',
+    'il' => 'en',
+    'clickA' => 'también puedes pulsar la tecla "A" de la consola.'
 ];

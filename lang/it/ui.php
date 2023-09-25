@@ -44,4 +44,8 @@ return [
     'summit'=>'Invia',
     'prevImg'=>'Anteprima Immagini',
     'new'=>'Nuova',
+    'revisorArea' => 'Area Revisioni',
+    'guest' => 'Visitatore',
+    'il' => 'il',
+    'clickA' => 'puoi cliccare anche il tasto "A" della console.'
 ];

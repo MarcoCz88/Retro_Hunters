@@ -48,6 +48,12 @@
             margin: 20px;
             width: 50%;
         }
+        .dataBox3{
+            margin: 20px;
+            padding:0px 20px;
+            text-align: justify
+
+        }
     </style>
 </head>
 <body>
@@ -64,7 +70,10 @@
                 <div class="dataBox">
                     <div class="dataBox2"><p class="data">Nome dell'Utente:</p><span>{{Auth::user()->name}}</span><br></p></div>
                     <div class="dataBox2"><p class="data">Email dell'Utente:</p><span>{{Auth::user()->email}}</span><br></p></div>
+                    
                 </div>
+                <div class="dataBox3"><p class="data">Messaggio dell'Utente:</p><span>{{$presentation_message}}</span><br></p></div>
+                
                 <br>
                 Per favore, prendi in considerazione questa candidatura e procedi con la valutazione del candidato per determinare se è adatto al ruolo di revisore. <br>
                 <br>
@@ -80,7 +89,5 @@
             <a class="btn" href="{{route('make.revisor', Auth::user())}}">Rendi revisore</a>
         </div>
         
-        
-    </div>
 </body>
 </html>

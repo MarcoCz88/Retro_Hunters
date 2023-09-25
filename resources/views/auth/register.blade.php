@@ -16,11 +16,11 @@
              <div class="btnConsoleDX"></div>
 
               <div class="boxDisplay">
-                 <form action="{{route('login')}}" method="POST" id="form-register" class="bg-dark form text-center">
+                 <form action="{{route('register')}}" method="POST" id="form-register" class="bg-dark form text-center">
                      @csrf
                        <div class="form-group ">
                           <label class="form_label text-white rounded-pill">{{ __('ui.name')}}</label>
-                          <input type="email" class="form-control" name="email">
+                          <input type="name" class="form-control" name="name">
                        </div>
                        <div class="form-group ">
                         <label class="form_label text-white rounded-pill">Email</label>
@@ -35,7 +35,7 @@
                         <input type="password" class="form-control" name="password_confirmation">
                      </div>
                        <button type="submit" class="col-5 btn btn-success my-3 fs-6" role="button">{{ __('ui.registered')}}</button>
-                       <div class="text-white label" for="">puoi cliccare anche il tasto "A" della console.</div>
+                       <div class="text-white label" for="">{{__('ui.clickA')}}</div>
 
                     </form>
               </div>
