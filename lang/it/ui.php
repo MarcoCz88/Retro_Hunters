@@ -68,5 +68,6 @@ return [
     'noArticle' => 'Non ci sono articoli da revisionare',
     'revOn' => 'Revisionato il',
     'undoRev' => 'Annulla revisione',
-    'team' => 'Il Team'
+    'team' => 'Il Team',
+    'editAnn' => 'Modifica Annuncio'
 ];
