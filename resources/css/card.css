@@ -21,16 +21,16 @@
   .btnGB{
     position: absolute;
     height: 60px;
-    top: 360px;
-    right: 50px;
+    top: 340px;
+    right: 20px;
     z-index: 2;
   }
   .btnGB2{
     position: absolute;
     width: 30px;
     height: 30px;
-    top: 450px;
-    right: 80px;
+    top: 430px;
+    right: 50px;
     z-index: 2;
     background-color: #dc2767;
     border-radius: 50%;
@@ -40,8 +40,8 @@
     position: absolute;
     width: 30px;
     height: 30px;
-    top: 430px;
-    right: 40px;
+    top: 410px;
+    right: 10px;
     z-index: 2;
     background-color: #dc2767;
     border-radius: 50%;
@@ -142,4 +142,16 @@
 
   .hr{
     margin: 2px;
+  }
+
+  .card__title{
+    max-width: 82%;
+    min-height:75px; 
+    color: #0053FF;
+  }
+
+  a,a:hover{
+    text-decoration: none;
+    color: #000;
+    
   }
