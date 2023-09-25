@@ -4,27 +4,14 @@
             <h2 class="col-6 text-center text-primary fs-3 mt-5">Entra nel Team</h2>
         </div>
     </div>
-    <form action="{{route('become.revisor')}}" method="GET" class="contact-form row justify-content-center align-items-center">
-      <div class="form-field col-lg-5">
-         <input id="name" class="input-text js-input" type="text" required>
-         <label class="label" for="name">Nome</label>
-      </div>
-      <div class="form-field col-lg-5 ">
-         <input id="surname" class="input-text js-input" type="text" required>
-         <label class="label" for="surname">Cognome</label>
-      </div>
-      <div class="form-field col-lg-5 ">
-         <input id="email" class="input-text js-input" type="email" required>
-         <label class="label" for="email">E-mail</label>
-      </div>
-      
-       <div class="form-field col-lg-5 ">
-         <input id="phone" class="input-text js-input" type="text" required>
-         <label class="label" for="phone">Contatto telefonico</label>
-      </div>
+    <form action="{{route('become.revisor', $p_message)}}" method="get" class="contact-form row justify-content-center align-items-center">
+      @csrf
       <div class="form-field col-lg-6">
-         <input id="message" class="input-text js-input" type="text" required>
-         <label class="label" for="message">Messaggio</label>
+         <label class="label" for="message">Inserisci le motivazioni per la tua candidatura: </label>
+         <textarea id="message" name= "p_message" class="input-text js-input" type="text" required></textarea>
+         @error('p_message')
+         {{ $message }}
+     @enderror
       </div>
       <div class="row align-items-center justify-content-center">
          <button class=" col-3 button-892 text-dark" role="button">{{ __('ui.summit') }}</button>
