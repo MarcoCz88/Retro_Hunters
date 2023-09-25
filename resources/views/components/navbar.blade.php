@@ -36,7 +36,9 @@
             
                 
             <ul class="navbar-nav mb-2 mb-lg-0">
-           
+           @if ((Route::currentRouteName() != 'home'))
+               <x-searchNav/>
+           @endif
             @auth
                 <p class="d-none">
                     {{ $counter = App\Models\Announcement::toBeRevisionedCount() }}
