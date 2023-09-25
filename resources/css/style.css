@@ -64,3 +64,9 @@ main {
     font-size: small;
     font-style: italic;
  }
+
+.boxform{
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 20px;
+    padding: 30px;
+}

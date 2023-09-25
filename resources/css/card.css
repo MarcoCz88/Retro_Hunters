@@ -36,6 +36,13 @@
     border-radius: 50%;
     border-right: solid  rgba(0, 0, 0, 0.668) 3px;
   }
+  .btnGB2:hover{
+    width: 38px;
+    height: 38px;
+    right: 38px;
+    top: 425px;
+    background-color: #fd065c;
+  }
   .btnGB2_2{
     position: absolute;
     width: 30px;

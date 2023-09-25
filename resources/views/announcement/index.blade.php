@@ -2,7 +2,7 @@
     {{-- <x-search /> --}}
     <div class="container">
         <div class="row">
-            <div class="col-4  mt-3 text-blue border-index">
+            <div class="col-4 mt-5 text-blue border-index">
             <p class="h3 my-3">{{ __('ui.allAnnouncements')}}</p>
             </div>
         </div>

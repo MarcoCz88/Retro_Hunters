@@ -4,18 +4,17 @@
         <div class="row ">
             <div class=" col-12 col-md-6 p-5">
                 <div id="myCarousel" class="carousel slide p-5" data-ride="carousel">
-
                     @if ($announcement->images->isNotEmpty())
-                         {{-- <ol class="carousel-indicators">
+                        <ol class="carousel-indicators">
                             @foreach ($announcement->images as $key => $image)
-                                <li data-target="#myCarousel" data-slide-to="{{ $key }}"
+                                <li data-target="#myCarousel" data-slide-to="{{ $key }}"    
                                     {{ $key == 0 ? 'class=active' : '' }}></li>
                             @endforeach
-                        </ol> --}}
-                        <div class="carousel-inner">                               
-                            @foreach ($announcement->images as $image)
-                                <div class="carousel-item{{ $loop->first ? ' active' : '' }}">
-                                    <img src="<img src="{{ asset($image->path) }}
+                        </ol>
+                        <div class="carousel-inner">
+                            @foreach ($announcement->images as $key => $image)
+                                <div class="carousel-item active">
+                                    <img src="{{ Storage::url($announcement->images()->first()->getUrl(300, 300)) }}"
                                         alt="{{ $announcement->title }}">
                                 </div>
 
@@ -49,11 +48,16 @@
                                 </svg></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-                         {{-- <img src="https://picsum.photos/200" class="card-img-top" alt="{{ $announcement->title }}"> --}}
-                            <p class='mx-auto fontCreateAt mt-3'>{{ __('ui.createdBy') }} : <a href="{{ route('userIndex', $announcement->user->id) }}">{{ $announcement->user->name }}</a> il{{ $announcement->created_at->format('d/m/Y H:i') }} </p>
-                        </div>
+                        {{-- <img src="https://picsum.photos/200" class="card-img-top"
+                    alt="{{ $announcement->title }}"> --}}
+                    @else
                     @endif
+                    <p class='mx-auto fontCreateAt mt-3'>{{ __('ui.createdBy') }} : <a
+                            href="{{ route('userIndex', $announcement->user->id) }}">{{ $announcement->user->name }}</a>
+                        il {{ $announcement->created_at->format('d/m/Y H:i') }} </p>
                 </div>
+            </div>
+
             <div class="col-6 d-flex flex-column  justify-content-center ps-5">
                 <h2 class=" my-3">{{ $announcement->title }}</h2>
                 {{ __('ui.plot') }} : <p class="pt-2" style="min-height: 150px">{{ $announcement->body }}</p>
