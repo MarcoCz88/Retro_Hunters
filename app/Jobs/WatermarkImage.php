@@ -43,10 +43,9 @@ class WatermarkImage implements ShouldQueue
 
         $image->watermark(base_path('public/media/logo-white.png'))
                 ->watermarkOpacity(50)
-                ->watermarkPadding(80, 80)
+                ->watermarkPosition(Manipulations::POSITION_CENTER)
                 ->watermarkHeight(14, Manipulations::UNIT_PERCENT)
-                ->watermarkWidth(14, Manipulations::UNIT_PERCENT)
-                ->watermarkFit(Manipulations::FIT_STRETCH);
+                ->watermarkWidth(14, Manipulations::UNIT_PERCENT);
             
             $image->save($srcPath);
         

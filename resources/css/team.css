@@ -15,7 +15,7 @@
   
 }
 .bg-marco{
-  background: url(../img/donkey.jpg);
+  background: url(../img/thewitcher.jpg);
   background-size:95%;
   background-repeat: no-repeat;
   background-position: center;
@@ -27,6 +27,40 @@
   background-size:99%;
   background-position: center;
   background-repeat: no-repeat;
+}
+.bg-valerio{
+  background: url(../img/copertinavalerio.jpg);
+  background-size:95%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img-bg-pier{
+  background: url(../img/pier.jpg);
+  height: 120px;
+  width: 120px;
+  background-size:99%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg-pier{
+  background: url(../img/piercopertina.jpg);
+  background-size:95%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img-bg-davide{
+  background: url(../img/davide.jpg);
+  height: 120px;
+  width: 120px;
+  background-size:99%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg-davide{
+  background: url(../img/davidecop.jpg);
+  background-size:95%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .testimonial-card .card-up {
     height: 120px;
