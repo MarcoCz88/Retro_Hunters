@@ -112,7 +112,7 @@
                 @if (!empty($images))
                     <div class="row">
                         <div class="col-12">
-                            <p>Photo preview: </p>
+                            <p>{{ __('ui.prevImg') }}: </p>
                         </div>
                     </div>
                     <div class="row justify-content-around ">

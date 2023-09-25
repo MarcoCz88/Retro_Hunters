@@ -38,5 +38,6 @@ return [
     'team'=> 'Únete al equipo',
     'telephoneContact'=>'Contacto telefónico',
     'message'=>'Mensaje',
-    'summit'=>'summit'
+    'summit'=>'summit',
+    'prevImg'=>'Vista Previa'
 ];
