@@ -33,10 +33,10 @@
                 </li>
                 
             </ul>
-            
+
                 
             <ul class="navbar-nav mb-2 mb-lg-0">
-           
+                <x-searchNav/>
             @auth
                 <p class="d-none">
                     {{ $counter = App\Models\Announcement::toBeRevisionedCount() }}

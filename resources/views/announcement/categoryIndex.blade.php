@@ -1,5 +1,4 @@
 <x-layout>
-    <x-search />
     <div class="container mt-5">
         <div class="row">
             <div class="col-12 d-flex justify-content-center text-primary">
