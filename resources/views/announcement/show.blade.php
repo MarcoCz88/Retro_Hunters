@@ -14,7 +14,7 @@
                         <div class="carousel-inner">
                             @foreach ($announcement->images as $key => $image)
                                 <div class="carousel-item active">
-                                    <img src="{{ $announcement->images()->first()->getUrl(300, 300) }}"
+                                    <img src="{{ Storage::url($announcement->images()->first()->getUrl(300, 300)) }}"
                                         alt="{{ $announcement->title }}">
                                 </div>
                             @endforeach

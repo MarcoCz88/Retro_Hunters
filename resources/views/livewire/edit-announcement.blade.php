@@ -24,7 +24,7 @@
                     <label class="form-label text-primary">{{ __('ui.platform') }} :</label>
                     <input type="text" class="form-control border border-warning" wire:model.blur="platform">
                     <div>
-                        @error('developer')
+                        @error('platform')
                             <span class="text-danger error">{{ $message }}</span>
                         @enderror
                     </div>
@@ -110,23 +110,23 @@
         </div>
         <div class="col-12 col-md-3 border">
             <div class="carousel-inner container-fluid">
-                @foreach ($announcement->images as $image)
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="carousel-item @if ($loop->first) active @endif">
-                                <img src="{{ !$announcement->images()->get()->isEmpty()? $image->getUrl(600, 600): 'https://picsum.photos/300' }}"
-                                    alt="" class="d-block w-100 rounded-4 img-fluid p-2">
-                                <button type="button" class=" btnImg" wire:click="deleteImg({{ $image }})">
-                                    X
-                                </button>
-                            </div>
+                <div class="row">
 
+
+                    @foreach ($announcement->images as $image)
+                        <div class="col-12">
+                            <img src="{{ !$announcement->images()->get()->isEmpty()? Storage::url($image->getUrl(300, 300)): 'https://picsum.photos/300' }}"
+                                alt="">
+                                <button type="button" wire:click="deleteImg({{ $image }})">
+                                            x
+                                 </button>
                         </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
+            
         </div>
     </div>
-</div>
 </div>
 {{-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">

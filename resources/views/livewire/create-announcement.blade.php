@@ -24,7 +24,7 @@
                     <label class="form-label text-primary">{{ __('ui.platform') }} :</label>
                     <input type="text" class="form-control border border-warning" wire:model="platform">
                     <div>
-                        @error('developer')
+                        @error('platform')
                             <span class="text-danger error">{{ $message }}</span>
                         @enderror
                     </div>

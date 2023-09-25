@@ -13,7 +13,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($announcement_to_check->images as $image)
                                         <div class="carousel-item @if ($loop->first) active @endif">
-                                            <img src="{{ Storage::url($image->path) }}"
+                                            <img src="{{ $announcement_to_check->images()->get()->isNotEmpty() ? Storage::url($announcement_to_check->images()->first()->getUrl(300, 300)) : Storage::url('images/default.jpg') }}"
                                                 alt="{{ $announcement_to_check->title }}" class="img-fluid p-3 rounded">
                                         </div>
                                     @endforeach
