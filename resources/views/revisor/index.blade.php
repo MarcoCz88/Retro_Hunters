@@ -51,7 +51,7 @@
     </div>
     </div>
     </div>
-    @endif
+    
     <div class="col-12 col-lg-6">
         <h5 class="tc-accent">Tags</h5>
         <div class="p-2">
@@ -79,6 +79,17 @@
             <div class="col-12">
                 <h2>
                     Non ci sono dati per questo articolo
+                </h2>
+            </div>
+        </div>
+    </div>
+    @endif
+    @else
+    <div class="container my-3">
+        <div class="row row_revisor">
+            <div class="col-12">
+                <h2>
+                    Non ci sono articoli da revisionare
                 </h2>
             </div>
         </div>
