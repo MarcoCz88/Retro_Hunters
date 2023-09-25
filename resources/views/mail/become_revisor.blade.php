@@ -7,7 +7,6 @@
     <title>Retro Hunters Support</title>
 </head>
 <body>
-    <div>
         <h2>Un utente si è candidato al ruolo di revisore</h2>
         <h3>I suoi dati sono: </h3>
         <p>Nome: {{Auth::user()->name}}</p>

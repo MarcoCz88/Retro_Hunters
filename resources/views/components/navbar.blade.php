@@ -26,7 +26,7 @@
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                             <li><a class="dropdown-item link-custom"
-                                    href="{{ route('categoryIndex', compact('category')) }}">{{ $category->name }}</a>
+                                    href="{{ route('categoryIndex', compact('category')) }}">{{ __("category.{$category->name}") }}</a>
                             </li>
                         @endforeach
                     </ul>

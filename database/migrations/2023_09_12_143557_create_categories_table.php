@@ -21,13 +21,13 @@ return new class extends Migration
         $categories = [
             "Azione",
             "MMORPG",
-            "Sparatutto",
-            "Survival",
             "Puzzle",
-            "Strategia",
             "RPG",
             "Simulatori",
-            "Sport"
+            "Sparatutto",
+            "Sport",
+            "Strategia",
+            "Survival",
         ];
         
         foreach ($categories as $category) {
