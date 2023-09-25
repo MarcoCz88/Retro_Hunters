@@ -7,7 +7,10 @@
     --verde: #36892e;
     --azzurro:#249afe;
 }
-
+.tx-red{
+    color: red;
+    font-weight: bold;
+}
 /* body{
         background-image: url(/public/media/background.jpg)!important;
 
