@@ -3,8 +3,8 @@
     
     <div class="container mt-3">
         <div class="row">
-          <div class="col-4">
-            <p class="my-4 text-primary text-center fs-3">{{ __('ui.lastSixAnnouncements')}}:</p>
+          <div class="col-4 border-index">
+            <h3 class="my-4 text-blue text-center">{{ __('ui.lastSixAnnouncements')}}:</h3>
           </div>
           
           <div class="col-12">
