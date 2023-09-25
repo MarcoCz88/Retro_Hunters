@@ -39,5 +39,6 @@ return [
     'telephoneContact'=>'Contacto telefónico',
     'message'=>'Mensaje',
     'summit'=>'Envia',
-    'prevImg'=>'Vista Previa'
+    'prevImg'=>'Vista Previa',
+    'new'=>'Nuevo'
 ];

@@ -133,6 +133,7 @@
                 @foreach ($images as $key => $image)
                 <div class="col-12 col-md-3 mb-5 position-relative boxImg border"
                 style="background-image: url('{{ $image->temporaryUrl() }}')">
+                <div class="badgeNew translate-middle badge rounded-pill bg-danger">{{__('ui.new')}}</div>
                 {{-- <img class=" img-preview shadow rounded " src="{{ $image->temporaryUrl() }}"> --}}
                 {{-- <div  style="backgroud-image:url({{$image->temporaryUrl()}});"></div> --}}
                 <button type="button" class=" btnImg"

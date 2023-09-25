@@ -40,5 +40,6 @@ return [
     'telephoneContact'=>'telephone contact',
     'message'=>'Message',
     'summit'=>'Submit',
-    'prevImg'=>'Image Preview'
+    'prevImg'=>'Image Preview',
+    'new'=>'New'
 ];
