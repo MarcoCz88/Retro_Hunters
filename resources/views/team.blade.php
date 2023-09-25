@@ -3,7 +3,7 @@
         <div class="row align-items-center justify-content-center ">
             <div class="col-7 col-md-4 br-custom mb-3">
                 <h2 class="text-center text-primary mt-5">Retro Hunters</h2>
-                <h2 class="text-center text-primary mb-5">Il Team</h2>
+                <h2 class="text-center text-primary mb-5">{{__('ui.team')}} </h2>
             </div>
         </div>
     </div>

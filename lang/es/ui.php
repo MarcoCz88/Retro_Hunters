@@ -46,5 +46,26 @@ return [
     'il' => 'en',
     'clickA' => 'también puedes pulsar la tecla "A" de la consola.',
     'revStatus' => 'Estado de revisión',
-    'actions' => 'Acciones'
+    'actions' => 'Acciones',
+    'join' => 'Únete al equipo', 
+    'sendCurriculum' => 'Indique los motivos de su solicitud:',
+    'revTitle' => 'Este es el anuncio que hay que revisar:',
+    'details' => 'Detalles',
+    'imgRev' => 'Revisión de imágenes',
+    'refuse' => 'Rechazar',
+    "accept" => 'Accepta',
+    'type' => 'Tipo',
+    'esito' => 'Resultado',
+    'explicit' => 'Explícito',
+    'parody' => 'Parodia',
+    'medical' => 'Medicale',
+    'violence' => 'Violencia',
+    'racy' => 'Erótico',
+    'log' => 'Última acción',
+    'noData' => 'Sin fecha',
+    'noArticle' => 'No hay artículos para revisar',
+    'revOn' => 'Revisado el',
+    'undoRev' => 'Cancelar revisión',
+    'team' => 'El equipo'
+
 ];
