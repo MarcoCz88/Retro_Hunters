@@ -10,12 +10,13 @@
 }
 
 .dropdown-menu{
-    background-color: var(--verde);
+    background-color: var(--giallo);
 }
 
 .link-custom{
     color: #F8F9FA;
     transition: color 0.3s;
+    text-decoration: none;
 }
 
 /* a{

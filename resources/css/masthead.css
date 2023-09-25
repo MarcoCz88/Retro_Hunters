@@ -1,3 +1,7 @@
+@font-face {
+   font-family: 'FontTitolo';
+   src: url(/public/fonts/04B_19__.TTF);
+   }
 
 .masthead{
    background: url(../img/brosback2.jpeg);
@@ -13,4 +17,14 @@
    background: #0000009d;
    color: #08e0e7;
 }
-
+h1{
+   text-align: center;
+   padding-top: 120px;
+   font-family: 'FontTitolo';
+   font-size: 100px;
+   background: url(/public/media/muro.jpg);
+   background-size: contain;
+   background-position: top;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color:transparent;
+}

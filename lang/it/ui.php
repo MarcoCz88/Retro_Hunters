@@ -39,4 +39,6 @@ return [
     'team'=> 'Entara nel Team',
     'telephoneContact'=>'Contatto telefonico',
     'message'=>'Messaggio',
+    'recapAnn' => 'Riepilogo annunci di ',
+    'approved'=>'Approvato',
 ];

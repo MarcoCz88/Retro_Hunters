@@ -66,12 +66,12 @@
                                 </a>
                             </li>
                         @endif
-                        <li class="nav-item mx-2">
-                            <a class="nav_link" href="{{route('user.myAnnouncements')}}"
+                        <li class="nav-link px-2 link-custom">
+                            <a class="nav_link link-custom" href="{{route('user.myAnnouncements')}}"
                                 >{{__('ui.myAnn')}}</a>
                         </li>
                         <hr class="mx-2">
-                        <li class="nav-item mx-2">
+                        <li class="nav-link px-2 link-custom">
                             <a class="nav_link" href="/logout"
                                 onclick="event.preventDefault();getElementById('form-logout').submit()">Logout</a>
                         </li>
@@ -90,7 +90,7 @@
                     <ul class="dropdown-menu ">
                         <li class="nav-item mx-2">
                             <a href="/login"
-                                onclick="event.preventDefault();getElementById('form-login').submit()">Login</a>
+                                onclick="event.preventDefault();getElementById('form-login').submit()" class="nav-link px-2 link-custom">Login</a>
                         </li>
                         <form id="form-login" action="{{ route('login') }}" method="GET">
                         </form>
@@ -98,7 +98,7 @@
 
                         <li class="nav-item dropdown mx-2">
                             <a href="/register"
-                                onclick="event.preventDefault();getElementById('form-register').submit()">Registrati</a>
+                                onclick="event.preventDefault();getElementById('form-register').submit()" class="nav-link px-2 link-custom">Registrati</a>
                         </li>
                         <form id="form-register" action="{{ route('register') }}" method="GET">
                         </form>

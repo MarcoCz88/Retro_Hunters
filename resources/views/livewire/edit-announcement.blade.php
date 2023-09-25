@@ -69,10 +69,11 @@
                             <span class="text-danger error">{{ $message }}</span>
                         @enderror
                     </div>
-                </div> 
-                <button class="button-892 text-dark" role="button">{{ __('ui.summit') }}</button>
-            </form>
-               {{--  <div class="mb-3">
+
+                </div>
+
+
+                <div class="mb-3">
                     <input wire:model.blur="temporary_images" type="file" multiple
                         class="form-control shadow @error('temporary_images.*') is invalid @enderror"
                         placeholder="Img" />
@@ -80,8 +81,8 @@
                         <span class="text-danger error">{{ $message }}</span>
                     @enderror
                 </div>
-                
-           
+                <button class="button-892 text-dark" role="button">{{ __('ui.summit') }}</button>
+            </form>
         </div>
         <div class="col-12 col-xl-6">
             @if (!empty($images))
@@ -94,7 +95,6 @@
                     @foreach ($images as $key => $image)
                         <div class="col-12 col-md-3 position-relative boxImg border"
                             style="background-image: url('{{ $image->temporaryUrl() }}')">
-
                             <button type="button" class=" btnImg" wire:click="removeImage({{ $key }})">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
                                     fill="currentColor" style="color: red" class="bi bi-trash3-fill"
@@ -107,18 +107,43 @@
                     @endforeach
                 </div>
             @endif
-        </div> --}}
-    </div>
+        </div>
+        <div class="col-12 col-md-3 border">
+            <div class="carousel-inner container-fluid">
+                @foreach ($announcement->images as $image)
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="carousel-item @if ($loop->first) active @endif">
+                                <img src="{{ !$announcement->images()->get()->isEmpty()? $image->getUrl(600, 600): 'https://picsum.photos/300' }}"
+                                    alt="" class="d-block w-100 rounded-4 img-fluid p-2">
+                                <button type="button" class=" btnImg" wire:click="deleteImg({{ $image }})">
+                                    X
+                                </button>
+                            </div>
 
-    <div class="carousel-inner">
-        @foreach ($announcement->images as $image)
-            <div class="carousel-item active">
-                <img src="{{ Storage::url($image->path) }}" alt="{{ $announcement->title }}">
-                <a href=""></a>
+                        </div>
+                @endforeach
             </div>
-        @endforeach
+        </div>
     </div>
 </div>
-
-{{-- <img class=" img-preview shadow rounded " src="{{ $image->temporaryUrl() }}"> --}}
-{{-- <div  style="backgroud-image:url({{$image->temporaryUrl()}});"></div> --}}
+</div>
+{{-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                @foreach ($announcement->images as $image)
+                    <img src="{{ $image->getUrl(600, 600) }}" alt="{{ $announcement->title }}">
+                    
+            </div>
+            @endforeach
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a> --}}

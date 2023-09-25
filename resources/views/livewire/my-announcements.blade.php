@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-5">
     <div class="row">
         <div class="col-12">
             <h2>{{ __('ui.recapAnn') }}{{ $user->name }}</h2>
