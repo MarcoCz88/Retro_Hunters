@@ -5,7 +5,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 ">
+        <div class="col-12 overflow-auto">
             <table class="table tableRevisor table-hover">
                 <thead class="table-light">
                     <tr>

@@ -6,7 +6,7 @@
                 <h2 class="mt-5">
                     {{ __('ui.revTitle') }} {{ $announcement_to_check->title }}
                 </h2>
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div id="myCarousel" class="carousel slide p-5" data-ride="carousel">
                         @if ($announcement_to_check->images->isNotEmpty())
                             <div class="carousel-inner">
@@ -43,7 +43,7 @@
                             {{ $announcement_to_check->created_at->format('d/m/Y H:i') }}</p>
                     </div>
                 </div>
-                <div class="col-6 p-5">
+                <div class="col-12 col-md-6 p-md-5">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
@@ -61,7 +61,7 @@
                                 aria-controls="contact-tab-pane" aria-selected="false">{{__('ui.imgRev')}}</button>
                         </li>
                     </ul>
-                    <div class="tab-content p-4" id="myTabContent">
+                    <div class="tab-content p-md-4" id="myTabContent">
                         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
                             aria-labelledby="home-tab" tabindex="0">
                             <div class="card-body ">
@@ -177,9 +177,9 @@
     @endif
     @if ($announcement_to_undo)
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <table class="table">
+            <div class="row ">
+                <div class="col-12 overflow-auto">
+                    <table class="table ">
                         <thead>
                             <h2>{{__('ui.log')}} </h2>
                             <tr>

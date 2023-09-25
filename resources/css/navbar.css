@@ -120,7 +120,7 @@ li{
     .lengIT{
         position: absolute;
         left: 55px;
-        top:310px;
+        top:358px;
         border: 1px solid white;
         animation: right 2s;
        
@@ -128,7 +128,7 @@ li{
     .lengEN{
         position: absolute;
         left: 100px;
-        top:310px;
+        top:358px;
         border: 1px solid white;
         animation: right 2s;
        
@@ -136,7 +136,7 @@ li{
     .lengES{
         position: absolute;
         left: 145px;
-        top:310px;
+        top:358px;
         border: 1px solid white;
         animation: right 2s;
        
