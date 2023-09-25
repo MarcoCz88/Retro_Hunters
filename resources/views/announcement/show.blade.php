@@ -8,8 +8,8 @@
                         <div class="carousel-inner">
                             @foreach ($announcement->images as $image)
                                 <div class="carousel-item {{$loop->first ? 'active' : ''}}">
-                                    <img src="{{ Storage::url($image->getUrl(300, 300)) }}"
-                                    width="600px"  alt="{{ $announcement->title }}">
+                                    <img src="{{ Storage::url($image->getUrl(250, 300)) }}"
+                                    width="100%"  alt="{{ $announcement->title }}">
                                 </div>
                             @endforeach
                         </div>

@@ -87,7 +87,7 @@ class EditAnnouncement extends Component
             
                 RemoveFaces::withChain([
                     new WatermarkImage($newImage->id),
-                    new ResizeImage($newImage->path, 300, 300),
+                    new ResizeImage($newImage->path, 250, 300),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id),
                 ])->dispatch($newImage->id);
