@@ -35,7 +35,7 @@
                         <input type="password" class="form-control" name="password_confirmation">
                      </div>
                        <button type="submit" class="col-5 btn btn-success my-3 fs-6" role="button">{{ __('ui.registered')}}</button>
-                       <div class="text-white label" for="">puoi cliccare anche il tasto "A" della console.</div>
+                       <div class="text-white label" for="">{{__('ui.clickA')}}</div>
 
                     </form>
               </div>

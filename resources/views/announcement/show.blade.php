@@ -7,7 +7,7 @@
                     @if ($announcement->images->isNotEmpty())
                         <ol class="carousel-indicators">
                             @foreach ($announcement->images as $key => $image)
-                                <li data-target="#myCarousel" data-slide-to="{{ $key }}"    
+                                <li data-target="#myCarousel" data-slide-to="{{ $key }}"
                                     {{ $key == 0 ? 'class=active' : '' }}></li>
                             @endforeach
                         </ol>
@@ -15,17 +15,8 @@
                             @foreach ($announcement->images as $key => $image)
                                 <div class="carousel-item active">
                                     <img src="{{ Storage::url($announcement->images()->first()->getUrl(300, 300)) }}"
-                                    width="600px"  alt="{{ $announcement->title }}">
+                                        width="600px" alt="{{ $announcement->title }}">
                                 </div>
-
-
-
-                                {{-- <div class="carousel-item{{ $loop->first ? ' active' : '' }}">
-                                    <img src="{{ asset($image->path) }}" alt="{{ $image->id }}" class="d-block w-100">
-                                </div> --}}
-
-
-
                             @endforeach
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
@@ -48,13 +39,11 @@
                                 </svg></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-                        {{-- <img src="https://picsum.photos/200" class="card-img-top"
-                    alt="{{ $announcement->title }}"> --}}
                     @else
                     @endif
                     <p class='mx-auto fontCreateAt mt-3'>{{ __('ui.createdBy') }} : <a
                             href="{{ route('userIndex', $announcement->user->id) }}">{{ $announcement->user->name }}</a>
-                        il {{ $announcement->created_at->format('d/m/Y H:i') }} </p>
+                        {{__('ui.il')}} {{ $announcement->created_at->format('d/m/Y H:i') }} </p>
                 </div>
             </div>
 

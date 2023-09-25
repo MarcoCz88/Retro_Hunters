@@ -27,7 +27,7 @@
                             <input type="password" class="form-control" name="password">
                          </div>
                          <button type="submit" class="col-5 btn btn-success my-3 fs-6" role="button">{{ __('ui.login')}}</button>
-                         <div class="text-white label" for="">puoi cliccare anche il tasto "A" della console.</div>
+                         <div class="text-white label" for="">{{__('ui.clickA')}}</div>
 
                       </form>
                 </div>
@@ -35,19 +35,6 @@
             <p class="text-center mt-2">{{ __('ui.noAccount')}} <a class="linkLog" href="{{route('register')}}"> {{ __('ui.registered')}}</a></p>
         </div>
         <div class="row">
-           {{-- <form action="{{route('login')}}" method="POST">
-            @csrf
-              <div class="form-group">
-                 <label class="form_label">Email</label>
-                 <input type="email" class="form-control" name="email">
-              </div>
-              <div class="form-group">
-                 <label class="form_label">Password</label>
-                 <input type="password" class="form-control" name="password">
-              </div>
-              <button type="submit" class="btn my-3">Accedi</button>
-           </form>
-           <p>Non hai ancora un account? <a href="{{route('register')}}">Registrati</a></p> --}}
         </div>
     </div>
 </x-layout>

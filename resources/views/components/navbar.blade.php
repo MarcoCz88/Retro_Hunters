@@ -57,8 +57,7 @@
                     <ul class="dropdown-menu">
                         @if (Auth::user()->is_revisor)
                             <li class="nav-item">
-                                <a class="nav-link px-2 link-custom" href="{{ route('revisor.index') }}">Area
-                                    Revisioni
+                                <a class="nav-link px-2 link-custom" href="{{ route('revisor.index') }}">{{__('ui.revisorArea')}}
                                     <span class="badge rounded-pill bg-danger">
                                         {{ App\Models\Announcement::toBeRevisionedCount() }}
                                         <span class="visually-hidden">messaggi non letti</span>
@@ -85,7 +84,7 @@
                 <li class="nav-item dropdown ms-auto me-5">
                     <a class="nav-link link-custom dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Visitatore
+                        {{__('ui.guest')}}
                     </a>
                     <ul class="dropdown-menu ">
                         <li class="nav-item mx-2">
@@ -98,7 +97,7 @@
 
                         <li class="nav-item dropdown mx-2">
                             <a href="/register"
-                                onclick="event.preventDefault();getElementById('form-register').submit()" class="nav-link px-2 link-custom">Registrati</a>
+                                onclick="event.preventDefault();getElementById('form-register').submit()" class="nav-link px-2 link-custom">{{__('ui.registered')}}</a>
                         </li>
                         <form id="form-register" action="{{ route('register') }}" method="GET">
                         </form>
