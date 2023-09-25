@@ -53,5 +53,20 @@ return [
     'join' => 'Entra nel team',
     'sendCurriculum' => 'Inserisci le motivazioni per la tua candidatura:', 
     'revTitle' => 'Ecco l\'annuncio da revisionare:',
-    'imgRev' => 'Revisione Immagini'
+    'imgRev' => 'Revisione Immagini',
+    'refuse' => 'Rifiuta',
+    'accept' => 'Accetta',
+    'type' => 'Tipo',
+    'esito' => 'Esito',
+    'explicit' => 'Esplicito',
+    'parody' => 'Parodia',
+    'medical' => 'Medicale',
+    'violence' => 'Violenza',
+    'racy' => 'Erotico',
+    'log' => 'Ultima azione',
+    'noData' => 'Nessun dato disponibile',
+    'noArticle' => 'Non ci sono articoli da revisionare',
+    'revOn' => 'Revisionato il',
+    'undoRev' => 'Annulla revisione',
+    'team' => 'Il Team'
 ];

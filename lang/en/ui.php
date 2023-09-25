@@ -52,5 +52,21 @@ return [
     'sendCurriculum' => 'Enter the reasons for your application:',
     'revTitle' => 'Here is the ad for review:',
     'details' => 'Details',
-    'imgRev' => 'Image review'
+    'imgRev' => 'Image review',
+    'refuse' => 'Reject',
+    'accept' => 'Accepts',
+    'type' => 'Type',
+    'esito' => 'Result',
+    'explicit' => 'Explicit',
+    'parody' => 'Parody',
+    'medical' => 'Medical',
+    'violence' => 'Violence',
+    'racy' => 'Racy',
+    'log' => 'Last Action',
+    'noData' => 'No Data',
+    'noArticle' => 'There are no items to review',
+    'revOn' => 'Revised on',
+    'undoRev' => 'Cancel revision',
+    'team' => 'The team'
+
 ];

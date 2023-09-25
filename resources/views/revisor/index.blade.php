@@ -39,7 +39,7 @@
                             </button>
                         @else
                         @endif
-                        <p class="card-text">Caricato da: {{ $announcement_to_check->user->name ?? '' }} il
+                        <p class="card-text">{{ __('ui.createdBy') }} {{ $announcement_to_check->user->name ?? '' }} {{__('ui.il')}}
                             {{ $announcement_to_check->created_at->format('d/m/Y H:i') }}</p>
                     </div>
                 </div>
@@ -68,8 +68,8 @@
                                 <h5 class="card-title">{{ $announcement_to_check->title }}</h5>
                                 <p class="card-text">{{ $announcement_to_check->category->name }}</p>
                                 <p class="card-text">{{ $announcement_to_check->body }}</p>
-                                <p class="card-text">Sviluppato da: {{ $announcement_to_check->developer }}</p>
-                                <p class="card-text">Pubblicato da: {{ $announcement_to_check->publisher }}</p>
+                                <p class="card-text">{{ __('ui.developer') }} {{ $announcement_to_check->developer }}</p>
+                                <p class="card-text">{{ __('ui.published') }} {{ $announcement_to_check->publisher }}</p>
                                 <div class="card__price">{{ $announcement_to_check->price }}€</div>
                                 <span class="card-footer d-flex mt-5">
                                     <form
@@ -77,14 +77,14 @@
                                         method="POST">
                                         @csrf
                                         @method('PATCH')
-                                        <button type="submit" class="btn btn-success mx-1">Accetta</button>
+                                        <button type="submit" class="btn btn-success mx-1">{{__('ui.accept')}}</button>
                                     </form>
                                     <form
                                         action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
                                         method="POST">
                                         @csrf
                                         @method('PATCH')
-                                        <button type="submit" class="btn btn-danger mx-1">Rifiuta</button>
+                                        <button type="submit" class="btn btn-danger mx-1">{{__('ui.refuse')}}</button>
                                     </form>
 
                                 </span>
@@ -109,29 +109,29 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Tipo</th>
-                                                <th scope="col">Esito</th>
+                                                <th scope="col">{{__('ui.type')}}</th>
+                                                <th scope="col">{{__('ui.esito')}}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Esplicito:</td>
+                                                <td>{{__('ui.explicit')}}</td>
                                                 <td><span class="{{ $image->adult }}"></span></td>
                                             </tr>
                                             <tr>
-                                                <td>Parodia:</td>
+                                                <td>{{__('ui.parody')}}</td>
                                                 <td><span class="{{ $image->spoof }}"></span></td>
                                             </tr>
                                             <tr>
-                                                <td>Medicina:</td>
+                                                <td>{{__('ui.medical')}}</td>
                                                 <td><span class="{{ $image->medical }}"></span></td>
                                             </tr>
                                             <tr>
-                                                <td>Violenza:</td>
+                                                <td>{{__('ui.violence')}}:</td>
                                                 <td><span class="{{ $image->violence }}"></span></td>
                                             </tr>
                                             <tr>
-                                                <td>Erotico:</td>
+                                                <td>{{__('ui.racy')}}</td>
                                                 <td><span class="{{ $image->racy }}"></span></td>
                                             </tr>
 
@@ -158,7 +158,7 @@
             <div class="row row_revisor">
                 <div class="col-12">
                     <h2>
-                        Non ci sono dati per questo articolo
+                        {{__('ui.noData')}}
                     </h2>
                 </div>
             </div>
@@ -169,7 +169,7 @@
         <div class="row row_revisor">
             <div class="col-12">
                 <h2>
-                    Non ci sono articoli da revisionare
+                    {{__('ui.noArticle')}}
                 </h2>
             </div>
         </div>
@@ -181,11 +181,11 @@
                 <div class="col-12">
                     <table class="table">
                         <thead>
-                            <h2>Log ultima azione: </h2>
+                            <h2>{{__('ui.log')}} </h2>
                             <tr>
-                                <th scope="col">Titolo</th>
-                                <th scope="col">Descrizione</th>
-                                <th scope="col">Revisionato il: </th>
+                                <th scope="col">{{__('ui.title')}}</th>
+                                <th scope="col">{{__('ui.plot')}}</th>
+                                <th scope="col">{{__('ui.revOn')}} </th>
                                 <th scope="col"></th>
                             </tr>
                         </thead>
@@ -196,7 +196,7 @@
                                 <td>{{ $announcement_to_undo->updated_at->format('d/m/Y H:i') }}</td>
                                 <td>
                                     <button onclick="document.getElementById('formUndo').submit()" type="submit"
-                                        class="btn btn-primary mx-1">Annulla revisione</button>
+                                        class="btn btn-primary mx-1">{{__('ui.undoRev')}}</button>
                                 </td>
                             </tr>
                         </tbody>
