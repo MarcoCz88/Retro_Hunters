@@ -16,7 +16,7 @@ class Announcement extends Model
     use HasFactory, Searchable;
 
     protected $fillable = [
-        'title', 'body', 'price', 'developer', 'publisher'
+        'title', 'body', 'platform', 'price', 'developer', 'publisher'
     ];
 
     /**
@@ -30,6 +30,7 @@ class Announcement extends Model
         $array = [
             'id' => $this->id,
             'title' => $this->title,
+            'platform' => $this->platform,
             'body' => $this->body,
             'developer' => $this->developer,
             'publisher' => $this->publisher,
@@ -48,7 +49,6 @@ class Announcement extends Model
         return $this->belongsTo(User::class);
     }
 
-    
     public function images(): HasMany
     {
         return $this->hasMany(Image::class);

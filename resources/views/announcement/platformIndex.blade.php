@@ -3,11 +3,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12 d-flex justify-content-center text-primary">
-                <h2 class="my-3">{{ __('ui.categoryGame')}} : {{ $category->name }}</h2>
+                <h2 class="my-3">{{__('ui.byUserTitle')}} {{ $platform }}</h2>
             </div>
         </div>
         <div class="row">
-            @forelse ($category->announcements as $announcement)
+            @forelse ($announcements as $announcement)
             <div class="col-12 col-md-6 col-lg-4 mt-2 mb-5">
                 <x-card-announcement :announcement="$announcement"/>
             </div>

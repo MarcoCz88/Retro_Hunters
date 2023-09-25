@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
@@ -22,16 +23,18 @@ class CreateAnnouncement extends Component
     public $developer;
     public $publisher;
     public $category;
+    public $platform;
     public $temporary_images;
     public $images = [];
     public $announcement;
 
     protected $rules = [
         'title' => 'required|min:2|max:100',
-        'body' => 'required|min:20|max:300',
+        'body' => 'required|min:20|max:3000',
         'price' => 'required|numeric',
         'developer' => 'required|min:2|max:35',
         'publisher' => 'required|min:2|max:35',
+        'platform' => 'required|min:2|max:15',
         'category' => 'required',
         'images.*' => 'image|max:1024',
         'temporary_images.*' => 'image|max:1024'
@@ -61,10 +64,10 @@ class CreateAnnouncement extends Component
         $this->announcement = $category->announcements()->create([
             'title'=>$this->title,
            'body'=>$this->body,
+           'platform' =>$this->platform,
            'price'=>$this->price,
            'developer'=>$this->developer,
-           'publisher'=>$this->publisher,
-           
+           'publisher'=>$this->publisher
         ]);
 
         if(count($this->images)){
@@ -72,9 +75,12 @@ class CreateAnnouncement extends Component
                 $newFileName = "announcements/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
-                dispatch(new ResizeImage($newImage->path, 600, 600));
-                dispatch(new GoogleVisionSafeSearch($newImage->id));
-                dispatch(new GoogleVisionLabelImage($newImage->id));
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path, 600, 600),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch($newImage->id);
+                
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }

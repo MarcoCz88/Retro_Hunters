@@ -2,14 +2,12 @@
     <x-slot name="title">
     {{ __('ui.registered')}}
     </x-slot>
-    <div class="container">
+    <div class="container mt-5">
         <div class="row justify-content-center">
           <div class="col-8 bd-register">
-            <h2 class="text-center text-primary my-4">{{ __('ui.registered')}}</h2>
+            <h2 class="text-center text-primary my-5">{{ __('ui.registered')}}</h2>
           </div>
-          
-            <div class="col-12 col-md-4 boxLog mx-2 mx-md-0 p-3 register-custom mt-5">
-                
+          <div class="col-12 col-md-7 mx-2 mx-md-0 p-3 register-custom mt-5 rounded-pill">
                 <form method="POST" action="{{route('register')}}" class="d-flex flex-column align-items-center">
                   @csrf
                     <div class="form-group">
@@ -41,7 +39,7 @@
                  </form>
             </div>
             <p class="text-center mt-2">{{ __('ui.haveAccount')}}<a class="linkLog" href="{{route('login')}}">{{ __('ui.login')}}</a></p>
-
+          </div>
         </div>
     </div>
     <div class="container h-50 d-inline-block"></div>

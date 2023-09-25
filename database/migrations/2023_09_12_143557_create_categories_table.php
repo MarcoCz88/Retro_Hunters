@@ -29,6 +29,7 @@ return new class extends Migration
             "Simulatori",
             "Sport"
         ];
+        
         foreach ($categories as $category) {
             Category::create([
                'name'=> $category

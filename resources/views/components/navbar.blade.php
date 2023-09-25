@@ -26,7 +26,7 @@
                     <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                             <li><a class="dropdown-item link-custom"
-                                    href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}</a>
+                                    href="{{ route('categoryIndex', compact('category')) }}">{{ $category->name }}</a>
                             </li>
                         @endforeach
                     </ul>
@@ -66,6 +66,10 @@
                                 </a>
                             </li>
                         @endif
+                        <li class="nav-item mx-2">
+                            <a class="nav_link" href="{{route('user.myAnnouncements')}}"
+                                >{{__('ui.myAnn')}}</a>
+                        </li>
                         <hr class="mx-2">
                         <li class="nav-item mx-2">
                             <a class="nav_link" href="/logout"
