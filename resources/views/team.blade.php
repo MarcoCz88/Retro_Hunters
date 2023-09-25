@@ -12,9 +12,9 @@
           <div class="col-12 col-lg-3 col-md-10">
             <section class="mx-auto m-custom" style="max-width: 23rem;">
               <div class="card testimonial-card mt-2 mb-3 aqua-gradient3">
-                <div class="card-up aqua-gradient"></div>
-                <div class="avatar mx-auto white">
-                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2831%29.jpg" class="rounded-circle img-fluid" alt="woman avatar">
+                <div class="card-up bg-pier"></div>
+                <div class="avatar mx-auto white img-bg-pier">
+                  
                 </div>
                 <div class="card-body text-center">
                   <h4 class="card-title font-weight-bold text-primary">Piertobia</h4>
@@ -26,9 +26,8 @@
           <div class="col-12 col-lg-3 col-md-10">
             <section class="mx-auto m-custom" style="max-width: 23rem;">
               <div class="card testimonial-card mt-2 mb-3 aqua-gradient2">
-                <div class="card-up aqua-gradient"></div>
-                <div class="avatar mx-auto white">
-                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2831%29.jpg" class="rounded-circle img-fluid" alt="woman avatar">
+                <div class="card-up bg-davide"></div>
+                <div class="avatar mx-auto white img-bg-davide">
                 </div>
                 <div class="card-body text-center">
                   <h4 class="card-title font-weight-bold text-primary">Davide</h4>
@@ -40,7 +39,7 @@
           <div class="col-12 col-lg-3 col-md-10">
             <section class="mx-auto m-custom" style="max-width: 23rem;">
               <div class="card testimonial-card mt-2 mb-3 aqua-gradient3">
-                <div class="card-up aqua-gradient"></div>
+                <div class="card-up bg-valerio"></div>
                 <div class="avatar mx-auto white img-bg-valerio">
                 </div>
                 <div class="card-body text-center">
