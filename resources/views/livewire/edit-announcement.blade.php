@@ -105,7 +105,7 @@
 
                     @foreach ($announcement->images as $image)
                         <div class="col-12 col-md-3  mb-5 position-relative boxImg border"
-                            style="background-image: url('{{ !$announcement->images()->get()->isEmpty()? Storage::url($image->getUrl(300, 300)): 'https://picsum.photos/300' }}')">
+                            style="background-image: url('{{ !$announcement->images()->get()->isEmpty()? Storage::url($image->getUrl(250, 300)): 'https://picsum.photos/300' }}')">
                             <button type="button" class=" btnImg" wire:click="deleteImg({{ $image }})">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
                                     fill="currentColor" style="color: red" class="bi bi-trash3-fill"
