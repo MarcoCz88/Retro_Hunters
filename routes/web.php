@@ -26,6 +26,7 @@ Route::patch('/reject/announcement/{announcement}',[RevisorController::class, 'r
 Route::patch('/undo/announcement/{announcement}',[RevisorController::class, 'undoAnnouncement'])->middleware('isRevisor')->name('revisor.undo_announcement');
 
 //ROTTE CANDIDATURE
+Route::get('/revisor/request',[RevisorController::class, 'revisorRequest'])->middleware('auth')->name('revisor.request');
 Route::get('/become/revisor', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/make/revisor/{user}',[RevisorController::class, 'makeRevisor'])->name('make.revisor');
 

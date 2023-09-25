@@ -37,6 +37,10 @@ class RevisorController extends Controller
         return redirect()->back()->with('message', "L'azione è stata annullata con successo");
     }
 
+    public function revisorRequest(){
+        return view('revisor.request');
+    }
+
     public function becomeRevisor(){
         Mail::to('hello@example.com')->send(new BecomeRevisor(Auth::user()));
         return redirect()->back()->with('message', 'La tua candidatura è stata inviata con successo.');

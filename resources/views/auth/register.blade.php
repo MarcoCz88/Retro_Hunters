@@ -7,7 +7,7 @@
           <div class="col-8 bd-register">
             <h2 class="text-center text-primary my-5">{{ __('ui.registered')}}</h2>
           </div>
-          <div class="col-12 col-md-7 mx-2 mx-md-0 p-3 register-custom mt-5">
+          <div class="col-12 col-md-7 mx-2 mx-md-0 p-3 register-custom mt-5 rounded-pill">
                 <form method="POST" action="{{route('register')}}" class="d-flex flex-column align-items-center">
                   @csrf
                     <div class="form-group">

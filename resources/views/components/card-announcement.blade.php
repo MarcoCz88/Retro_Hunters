@@ -16,8 +16,8 @@
 </div> --}}
 
 <div class="card">
-    <img class="btnGB" src="/media/plus.png" alt="">
-    <div class="btnGB2"></div>
+    <img class="btnGB" src="/media/plus.png">
+    <a class="btnGB2" href="{{route('announcement.show',compact('announcement'))}}"></a>
     <div class="btnGB2_2"></div>
     <div class="card__wrapper">
         {{-- <div class="card__back"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 24" height="24"
@@ -38,10 +38,10 @@
         </div>
     </div>
     <div class="mx-auto">
-        <div class="card__img"
+        <button class="card__img" href="{{route('announcement.show',compact('announcement'))}}"
             style="background-image: url('{{ !$announcement->images()->get()->isEmpty()? Storage::url($announcement->images()->first()->path): Storage::url('images/default.jpg') }}');background-size:cover">
 
-        </div>
+        </button>
     </div>
     <div class="card__title" style="min-height: 75px; color:#0053FF">{{ $announcement->title }}</div>
     <div class="card__subtitle">
