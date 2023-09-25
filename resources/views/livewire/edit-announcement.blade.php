@@ -126,48 +126,7 @@
             @if (!empty($images))
             {{-- <div class="row">
                 <div class="col-12">
-<<<<<<< HEAD
-                    @foreach ($announcement->images as $image)
-                        <div class="col-12">
-                            <img src="{{ !$announcement->images()->get()->isEmpty()? Storage::url($image->getUrl(300, 300)): 'https://picsum.photos/300' }}"
-                                alt="">
-                            <button type="button" wire:click="deleteImg({{ $image }})">
-                                x
-                            </button>
-                    @endforeach
-                    @if (!empty($images))
-                        <div class="row">
-                            <div class="col-12">
-                                <p>{{ __('ui.prevImg') }}: </p>
-                            </div>
-                        </div>
-                        <div class="row justify-content-around ">
-                            <div class="col-12 col-md-3 border">
-                                <div class="carousel-inner container-fluid">
-                                    <div class="row">
-                                    </div>
-                                </div>
-                            </div>
-                            @foreach ($images as $key => $image)
-                                <div class="col-12 col-md-3 position-relative boxImg border"
-                                    style="background-image: url('{{ $image->temporaryUrl() }}')">
-                                    {{-- <img class=" img-preview shadow rounded " src="{{ $image->temporaryUrl() }}"> --}}
-                                    {{-- <div  style="backgroud-image:url({{$image->temporaryUrl()}});"></div> --}}
-                                    <button type="button" class=" btnImg"
-                                        wire:click="removeImage({{ $key }})">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                            fill="currentColor" style="color: red" class="bi bi-trash3-fill"
-                                            viewBox="0 0 16 16">
-                                            <path
-                                                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            @endforeach
-                    @endif
-=======
                     <p>{{ __('ui.prevImg') }}: </p>
->>>>>>> 8107419f8fca4a1c77ad1e44fa209bf9ee553fb4
                 </div>
             </div> --}}
             {{-- <div class="row justify-content-around "> --}}
