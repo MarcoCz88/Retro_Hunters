@@ -41,4 +41,5 @@ return [
     'message'=>'Messaggio',
     'recapAnn' => 'Riepilogo annunci di ',
     'imgCreate'=>'Immagini',
+    'summit'=>'summit'
 ];

@@ -39,4 +39,5 @@ return [
     'team'=> 'Join the team',
     'telephoneContact'=>'telephone contact',
     'message'=>'Message',
+    'summit'=>'summit'
 ];
