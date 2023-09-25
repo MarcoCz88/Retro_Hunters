@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container mt-5">
+    <div class="container w-100 mt-5">
         <div class="row align-items-center justify-content-center ">
             <div class="col-7 col-md-4 br-custom mb-3">
                 <h2 class="text-center text-primary mt-5">Retro Hunters</h2>
