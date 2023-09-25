@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
+use App\Jobs\WatermarkImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionLabelImage;
@@ -76,6 +77,7 @@ class CreateAnnouncement extends Component
                 $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
                 RemoveFaces::withChain([
+                    new WatermarkImage($newImage->id),
                     new ResizeImage($newImage->path, 600, 600),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)

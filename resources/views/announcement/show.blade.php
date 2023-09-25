@@ -6,18 +6,27 @@
                 <div id="myCarousel" class="carousel slide p-5" data-ride="carousel">
 
                     @if ($announcement->images->isNotEmpty())
-                        <ol class="carousel-indicators">
+                         {{-- <ol class="carousel-indicators">
                             @foreach ($announcement->images as $key => $image)
                                 <li data-target="#myCarousel" data-slide-to="{{ $key }}"
                                     {{ $key == 0 ? 'class=active' : '' }}></li>
                             @endforeach
-                        </ol>
-                        <div class="carousel-inner">
-                            @foreach ($announcement->images as $key => $image)
-                                <div class="carousel-item active">
-                                    <img src="{{ $announcement->images()->first()->getUrl(600, 600) }}"
+                        </ol> --}}
+                        <div class="carousel-inner">                               
+                            @foreach ($announcement->images as $image)
+                                <div class="carousel-item{{ $loop->first ? ' active' : '' }}">
+                                    <img src="<img src="{{ asset($image->path) }}
                                         alt="{{ $announcement->title }}">
                                 </div>
+
+
+
+                                {{-- <div class="carousel-item{{ $loop->first ? ' active' : '' }}">
+                                    <img src="{{ asset($image->path) }}" alt="{{ $image->id }}" class="d-block w-100">
+                                </div> --}}
+
+
+
                             @endforeach
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
@@ -40,15 +49,11 @@
                                 </svg></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-                        {{-- <img src="https://picsum.photos/200" class="card-img-top"
-                    alt="{{ $announcement->title }}"> --}}
-                        <p class='mx-auto fontCreateAt mt-3'>{{ __('ui.createdBy') }} : <a
-                                href="{{ route('userIndex', $announcement->user->id) }}">{{ $announcement->user->name }}</a>
-                            il{{ $announcement->created_at->format('d/m/Y H:i') }} </p>
+                         {{-- <img src="https://picsum.photos/200" class="card-img-top" alt="{{ $announcement->title }}"> --}}
+                            <p class='mx-auto fontCreateAt mt-3'>{{ __('ui.createdBy') }} : <a href="{{ route('userIndex', $announcement->user->id) }}">{{ $announcement->user->name }}</a> il{{ $announcement->created_at->format('d/m/Y H:i') }} </p>
+                        </div>
+                    @endif
                 </div>
-            </div>
-        @else
-            @endif
             <div class="col-6 d-flex flex-column  justify-content-center ps-5">
                 <h2 class=" my-3">{{ $announcement->title }}</h2>
                 {{ __('ui.plot') }} : <p class="pt-2" style="min-height: 150px">{{ $announcement->body }}</p>
