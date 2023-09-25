@@ -18,6 +18,7 @@ Route::get('/announcement/create',[AnnouncementController::class,'create'])->nam
 Route::get('/announcement/index',[AnnouncementController::class,'index'])->name('announcement.index');
 Route::get('/announcement/show/{announcement}',[AnnouncementController::class,'show'])->name('announcement.show');
 Route::get('/announcement/edit/{announcement}',[AnnouncementController::class,'edit'])->name('announcement.edit')->middleware('auth');
+// Route::get('/announcement/deleteImg/{image}',[AnnouncementController::class,'deleteImg'])->name('deleteImg')->middleware('auth');
 
 // ROTTE REVISORI
 Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');

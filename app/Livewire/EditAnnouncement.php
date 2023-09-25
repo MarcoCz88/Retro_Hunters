@@ -2,13 +2,23 @@
 
 namespace App\Livewire;
 
+use App\Models\Image;
 use Livewire\Component;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\File;
+use App\Jobs\RemoveFaces;
+use App\Jobs\ResizeImage;
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
+use Illuminate\Support\Facades\Storage;
 
 class EditAnnouncement extends Component
 {
+    use WithFileUploads;
+
     public $announcementId;
     public $title;
     public $body;
@@ -39,6 +49,22 @@ class EditAnnouncement extends Component
             // }
     }
 
+    public function updatedTemporaryImages(){
+        if($this->validate([
+            'temporary_images.*' => 'image|max:1024',
+        ])) {
+            foreach ($this->temporary_images as $image){
+                $this->images[] = $image;
+            }
+        }
+    }
+
+    public function removeImage($key){
+        if(in_array($key, array_keys($this->images))){
+            unset($this->images[$key]);
+        }
+    }
+
     public function update(){
         $announcement = Announcement::find($this->announcementId);
         $announcement->update(
@@ -52,10 +78,37 @@ class EditAnnouncement extends Component
                 'platform'=>$this->platform          
             ]
         );
+
+        if(count($this->images)){
+            foreach($this->images as $image){
+                $newFileName = "announcements/{$this->announcement->id}";
+                $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
+            
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path, 600, 600),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch($newImage->id);
+
+            }
+
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
+        }
+
         $announcement->category_id = $this->category;
         $announcement->save();
-        
+
         return redirect()->route('user.myAnnouncements');
+    }
+
+    public function deleteImg(Image $image){
+        $announcement = Announcement::find($image->announcement_id);
+        dd(Storage::url($image->getUrl(600, 600)));
+        Storage::delete($image->path);
+        Storage::delete($image->getUrl(600, 600));
+        $image->delete();
+
+        return view('announcement.edit', compact('announcement'));
     }
 
     public function render()
