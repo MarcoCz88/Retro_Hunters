@@ -12,7 +12,7 @@
                             <div class="carousel-inner">
                                 @foreach ($announcement_to_check->images as $image)
                                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                                        <img src="{{ Storage::url($image->getUrl(300, 300)) }}" width="300px"
+                                        <img src="{{ Storage::url($image->getUrl(300, 300)) }}" width="600px"
                                             alt="{{ $announcement_to_check->title }}">
                                     </div>
                                 @endforeach
@@ -38,7 +38,7 @@
                             </svg></span>
                         <span class="visually-hidden">Next</span>
                     </button>
-                </div>
+
                 @else
     @endif
     <p class="card-text">Caricato da: {{ $announcement_to_check->user->name ?? '' }} il
