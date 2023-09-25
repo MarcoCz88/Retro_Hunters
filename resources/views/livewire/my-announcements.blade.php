@@ -9,14 +9,14 @@
             <table class="table tableRevisor table-hover">
                 <thead class="table-light">
                     <tr>
-                        <th scope="col">Titolo</th>
-                        <th scope="col">Piattaforma</th>
-                        <th scope="col">Genere</th>
-                        <th scope="col">Prezzo</th>
-                        <th scope="col">Sviluppatore</th>
-                        <th scope="col">Editore</th>
-                        <th scope="col">Stato Revisione</th>
-                        <th scope="col">Azioni</th>
+                        <th scope="col">{{__('ui.title')}}</th>
+                        <th scope="col">{{__('ui.platform')}}</th>
+                        <th scope="col">{{__('ui.genre')}}</th>
+                        <th scope="col">{{__('ui.price')}}</th>
+                        <th scope="col">{{__('ui.developer')}}</th>
+                        <th scope="col">{{__('ui.published')}}</th>
+                        <th scope="col">{{__('ui.revStatus')}}</th>
+                        <th scope="col">{{__('ui.actions')}}</th>
                     </tr>
                 </thead>
                 <tbody>

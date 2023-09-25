@@ -44,5 +44,7 @@ return [
     'revisorArea' => 'Área de revisión',
     'guest' => 'Invitado',
     'il' => 'en',
-    'clickA' => 'también puedes pulsar la tecla "A" de la consola.'
+    'clickA' => 'también puedes pulsar la tecla "A" de la consola.',
+    'revStatus' => 'Estado de revisión',
+    'actions' => 'Acciones'
 ];

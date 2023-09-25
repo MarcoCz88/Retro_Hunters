@@ -47,5 +47,7 @@ return [
     'revisorArea' => 'Area Revisioni',
     'guest' => 'Visitatore',
     'il' => 'il',
-    'clickA' => 'puoi cliccare anche il tasto "A" della console.'
+    'clickA' => 'puoi cliccare anche il tasto "A" della console.',
+    'revStatus' => 'Stato Revisione',
+    'actions' => 'Azioni'
 ];

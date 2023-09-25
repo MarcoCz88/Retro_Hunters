@@ -45,5 +45,7 @@ return [
     'revisorArea' => 'Review Area',
     'guest' => 'Guest',
     'il' => 'on',
-    'clickA' => 'you can also click the "A" key on the console.'
+    'clickA' => 'you can also click the "A" key on the console.',
+    'revStatus' => 'Review status',
+    'actions' => 'Actions'
 ];
