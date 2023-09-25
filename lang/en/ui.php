@@ -47,5 +47,10 @@ return [
     'il' => 'on',
     'clickA' => 'you can also click the "A" key on the console.',
     'revStatus' => 'Review status',
-    'actions' => 'Actions'
+    'actions' => 'Actions', 
+    'join' => 'Join the team',
+    'sendCurriculum' => 'Enter the reasons for your application:',
+    'revTitle' => 'Here is the ad for review:',
+    'details' => 'Details',
+    'imgRev' => 'Image review'
 ];

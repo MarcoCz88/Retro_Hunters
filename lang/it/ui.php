@@ -49,5 +49,9 @@ return [
     'il' => 'il',
     'clickA' => 'puoi cliccare anche il tasto "A" della console.',
     'revStatus' => 'Stato Revisione',
-    'actions' => 'Azioni'
+    'actions' => 'Azioni',
+    'join' => 'Entra nel team',
+    'sendCurriculum' => 'Inserisci le motivazioni per la tua candidatura:', 
+    'revTitle' => 'Ecco l\'annuncio da revisionare:',
+    'imgRev' => 'Revisione Immagini'
 ];
