@@ -39,6 +39,6 @@ return [
     'team'=> 'Join the team',
     'telephoneContact'=>'telephone contact',
     'message'=>'Message',
-    'summit'=>'summit',
+    'summit'=>'Submit',
     'prevImg'=>'Image Preview'
 ];

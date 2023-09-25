@@ -2,7 +2,7 @@
 
     <div class="container">
         <div class="row ">
-            <div class=" col-12 col-md-6 p-5">
+            <div class=" col-12 col-md-6">
                 <div id="myCarousel" class="carousel slide p-5" data-ride="carousel">
                     @if ($announcement->images->isNotEmpty())
                         <ol class="carousel-indicators">
@@ -15,7 +15,7 @@
                             @foreach ($announcement->images as $key => $image)
                                 <div class="carousel-item active">
                                     <img src="{{ Storage::url($announcement->images()->first()->getUrl(300, 300)) }}"
-                                        alt="{{ $announcement->title }}">
+                                    width="600px"  alt="{{ $announcement->title }}">
                                 </div>
 
 
