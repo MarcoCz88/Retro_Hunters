@@ -1,7 +1,7 @@
 <div id="containerForm" class="container-fluid mt-5">
     <div class="row justify-content-center">
         <div id="boxform" class="col-12 boxform col-xl-6 ">
-            <h4 class="text-primary">Modifica Articolo</h4>
+            <h4 class="text-primary">{{__('ui.editAnn')}}</h4>
             <form id="formCreate" wire:submit.prevent="update">
                 <div class="col-12">
                     <div class=" mt-3">

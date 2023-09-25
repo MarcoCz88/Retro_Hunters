@@ -66,6 +66,7 @@ return [
     'noArticle' => 'No hay artículos para revisar',
     'revOn' => 'Revisado el',
     'undoRev' => 'Cancelar revisión',
-    'team' => 'El equipo'
+    'team' => 'El equipo',
+    'editAnn' => 'Editar anuncio'
 
 ];
