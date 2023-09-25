@@ -13,7 +13,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($announcement_to_check->images as $image)
                                         <div class="carousel-item @if ($loop->first) active @endif">
-                                            <img src="{{ $announcement_to_check->images()->get()->isNotEmpty() ? Storage::url($announcement_to_check->images()->first()->getUrl(300, 300)) : Storage::url('images/default.jpg') }}"
+                                            <img src="{{ $announcement_to_check->images()->get()->isNotEmpty()? Storage::url($announcement_to_check->images()->first()->getUrl(300, 300)): Storage::url('images/default.jpg') }}"
                                                 alt="{{ $announcement_to_check->title }}" class="img-fluid p-3 rounded">
                                         </div>
                                     @endforeach
@@ -21,7 +21,7 @@
                                 {{-- <img src="https://picsum.photos/200" class="card-img-top"
                                 alt="{{ $announcement_to_check->title }}"> --}}
                         </div>
-                            @endif
+    @endif
     <div class="card-body d-flex flex-column align-items-center">
         <h5 class="card-title">{{ $announcement_to_check->title }}</h5>
         <p class="card-text">{{ $announcement_to_check->category->name }}</p>
@@ -46,12 +46,12 @@
                 @method('PATCH')
                 <button type="submit" class="btn btn-danger mx-1">Rifiuta</button>
             </form>
-           
+
         </span>
     </div>
     </div>
     </div>
-    
+
     <div class="col-12 col-lg-6">
         <h5 class="tc-accent">Tags</h5>
         <div class="p-2">
@@ -73,46 +73,45 @@
     </div>
     </div>
     </div>
-    <div class="tab-pane fade p-4" id="revisor-tab-pane" role="tabpanel" aria-labelledby="revisor-tab"
-                tabindex="0">
-                {{-- <p>Esplicito: <span class="{{ $image->adult }}"></span></p>
+    <div class="tab-pane fade p-4" id="revisor-tab-pane" role="tabpanel" aria-labelledby="revisor-tab" tabindex="0">
+        {{-- <p>Esplicito: <span class="{{ $image->adult }}"></span></p>
                 <p>Parodia: <span class="{{ $image->spoof }}"></span></p>
                 <p>Medicina: <span class="{{ $image->medical }}"></span></p>
                 <p>Violenza: <span class="{{ $image->violence }}"></span></p>
                 <p>Erotico: <span class="{{ $image->racy }}"></span></p> --}}
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
+        <table class="table table-hover">
+            <thead>
+                <tr>
 
-                            <th scope="col">Tipo</th>
-                            <th scope="col">Esito</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Esito</th>
 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Esplicito:</th>
-                            <td><span class="{{ $image->adult }}"></span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Parodia:</th>
-                            <td><span class="{{ $image->spoof }}"></span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Medicina:</th>
-                            <td><span class="{{ $image->medical }}"></span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Violenza:</th>
-                            <td><span class="{{ $image->violence }}"></span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Erotico:</th>
-                            <td><span class="{{ $image->racy }}"></span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Esplicito:</th>
+                    <td><span class="{{ $image->adult }}"></span></td>
+                </tr>
+                <tr>
+                    <th scope="row">Parodia:</th>
+                    <td><span class="{{ $image->spoof }}"></span></td>
+                </tr>
+                <tr>
+                    <th scope="row">Medicina:</th>
+                    <td><span class="{{ $image->medical }}"></span></td>
+                </tr>
+                <tr>
+                    <th scope="row">Violenza:</th>
+                    <td><span class="{{ $image->violence }}"></span></td>
+                </tr>
+                <tr>
+                    <th scope="row">Erotico:</th>
+                    <td><span class="{{ $image->racy }}"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 @else
     <div class="container my-3">
         <div class="row row_revisor">
@@ -124,7 +123,7 @@
         </div>
     </div>
     @endif
-    @else
+@else
     <div class="container my-3">
         <div class="row row_revisor">
             <div class="col-12">
