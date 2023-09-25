@@ -6,6 +6,7 @@
     padding: 20px;
     width: 320px;
     background: #cdcdcd;
+    border-top: 10px solid rgb(149, 149, 149);
     border-radius: 15px 15px 60px 15px;
     display: flex;
     flex-direction: column;
