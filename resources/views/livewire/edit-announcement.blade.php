@@ -103,6 +103,14 @@
                 </div>
                 
                 <div class="col-12">
+                    @foreach ($announcement->images as $image)
+                        <div class="col-12">
+                            <img src="{{ !$announcement->images()->get()->isEmpty()? Storage::url($image->getUrl(300, 300)): 'https://picsum.photos/300' }}"
+                                alt="">
+                                <button type="button" wire:click="deleteImg({{ $image }})">
+                                            x
+                                 </button>
+                    @endforeach
                     @if (!empty($images))
                     <div class="row">
                         <div class="col-12">
@@ -110,6 +118,24 @@
                         </div>
                     </div>
                     <div class="row justify-content-around ">
+                        <div class="col-12 col-md-3 border">
+            <div class="carousel-inner container-fluid">
+                <div class="row">
+                    
+
+                    @foreach ($announcement->images as $image)
+                        <div class="col-12">
+                            <img src="{{ !$announcement->images()->get()->isEmpty()? Storage::url($image->getUrl(300, 300)): 'https://picsum.photos/300' }}"
+                                alt="">
+                                <button type="button" wire:click="deleteImg({{ $image }})">
+                                            x
+                                 </button>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+            
+        </div>
                         @foreach ($images as $key => $image)
                         <div class="col-12 col-md-3 position-relative boxImg border"
                         style="background-image: url('{{ $image->temporaryUrl() }}')">
