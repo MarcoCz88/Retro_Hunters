@@ -51,7 +51,7 @@ return [
     'revStatus' => 'Stato Revisione',
     'actions' => 'Azioni',
     'join' => 'Entra nel team',
-    'sendCurriculum' => 'Inserisci le motivazioni per la tua candidatura:', 
+    'sendCurriculum' => 'Inserisci le motivazioni della tua candidatura:', 
     'revTitle' => 'Ecco l\'annuncio da revisionare:',
     'imgRev' => 'Revisione Immagini',
     'refuse' => 'Rifiuta',
