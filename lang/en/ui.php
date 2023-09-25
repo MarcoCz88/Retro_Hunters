@@ -33,5 +33,6 @@ return [
     'platform'=>'Platform',
     'byUserTitle'=>'Announcements for',
     'myAnn'=>'My announcements',
-    'recapAnn' => 'Announcements recap for '
+    'recapAnn' => 'Announcements recap for ',
+    'imgCreate'=>'Images'
 ];

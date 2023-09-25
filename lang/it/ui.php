@@ -35,5 +35,5 @@ return [
     'byUserTitle'=>'Annunci per',
     'myAnn' => 'I miei annunci',
     'recapAnn' => 'Riepilogo annunci di ',
-    'approved'=>'Approvato',
+    'imgCreate'=>'Immagini',
 ];

@@ -32,5 +32,6 @@ return [
     'categoryGame'=>'Nombre de la categoría',
     'byUserTitle'=>'Anuncios por' ,
     'myAnn'=>'Mis anuncios',
-    'recapAnn' => 'Resumen de anuncios de '
+    'recapAnn' => 'Resumen de anuncios de ',
+    'imgCreate'=>'Imagenes',
 ];
