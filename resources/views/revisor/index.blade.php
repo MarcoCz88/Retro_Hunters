@@ -6,74 +6,80 @@
                 <h2 class="mt-5">
                     Ecco l'annuncio da revisionare: {{ $announcement_to_check->title }}
                 </h2>
-                <div class="col-12 col-lg-6 ">
-                    @if ($announcement_to_check->images)
-                        <div class="carousel-inner">
-                            @foreach ($announcement_to_check->images as $image)
-                                <div class="carousel-item @if ($loop->first) active @endif">
-                                    <img src="{{ Storage::url($image->path) }}" alt="{{ $announcement_to_check->title }}"
-                                        class="img-fluid p-3 rounded">
+                <div class="col-12 col-lg-6 d-flex justify-content-center">
+                    <div class="card card_revisor m-3" style="width: 18rem;">
+                        <div class="card__img__revisor">
+                            @if ($announcement_to_check->images)
+                                <div class="carousel-inner">
+                                    @foreach ($announcement_to_check->images as $image)
+                                        <div class="carousel-item @if ($loop->first) active @endif">
+                                            <img src="{{ Storage::url($image->path) }}"
+                                                alt="{{ $announcement_to_check->title }}" class="img-fluid p-3 rounded">
+                                        </div>
+                                    @endforeach
                                 </div>
-                            @endforeach
+                                {{-- <img src="https://picsum.photos/200" class="card-img-top"
+                                alt="{{ $announcement_to_check->title }}"> --}}
                         </div>
-                        <p class="px-3 card-text">Caricato da: {{ $announcement_to_check->user->name ?? '' }} il
-                            {{ $announcement_to_check->created_at->format('d/m/Y H:i') }}</p>
-                </div>
-            @else
-    @endif
-    <div class="col-12 col-lg-6 p-5">
-
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
-                    type="button" role="tab" aria-controls="home-tab-pane"
-                    aria-selected="true">{{ __('ui.details') }}</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="tags-tab" data-bs-toggle="tab" data-bs-target="#tags-tab-pane"
-                    type="button" role="tab" aria-controls="tags-tab-pane" aria-selected="false">Tags</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="revisor-tab" data-bs-toggle="tab" data-bs-target="#revisor-tab-pane"
-                    type="button" role="tab" aria-controls="revisor-tab-pane" aria-selected="false">Revisione
-                    Immagini</button>
-            </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active p-4" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
-                tabindex="0">
-                <h5 class="card-title">{{ $announcement_to_check->title }}</h5>
-                <p class="card-text">{{ $announcement_to_check->category->name }}</p>
-                <p class="card-text">{{ $announcement_to_check->body }}</p>
-                <p class="card-text">Sviluppato da: {{ $announcement_to_check->developer }}</p>
-                <p class="card-text">Pubblicato da: {{ $announcement_to_check->publisher }}</p>
-                <div class="card__price">{{ $announcement_to_check->price }}€</div>
-
-                <div class="card-footer d-flex mt-5 pt-5">
-                    <form action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
-                        method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button type="submit" class="btn btn-success mx-1">Accetta</button>
-                    </form>
-                    <form action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
-                        method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button type="submit" class="btn btn-danger mx-1">Rifiuta</button>
-                    </form>
-                </div>
-
-            </div>
-            <div class="tab-pane fade p-4" id="tags-tab-pane" role="tabpanel" aria-labelledby="tags-tab" tabindex="0">
-                <div class="p-2">
-                    @if ($image->labels)
-                        @foreach ($image->labels as $label)
-                            <p class="d-inline"><span
-                                    class="badge rounded-pill text-bg-secondary">#{{ $label }}</span> </p>
-                        @endforeach
-                    @endif
-                </div>
+                            @endif
+    <div class="card-body d-flex flex-column align-items-center">
+        <h5 class="card-title">{{ $announcement_to_check->title }}</h5>
+        <p class="card-text">{{ $announcement_to_check->category->name }}</p>
+        <p class="card-text">{{ $announcement_to_check->body }}</p>
+        <p class="card-text">Sviluppato da: {{ $announcement_to_check->developer }}</p>
+        <p class="card-text">Pubblicato da: {{ $announcement_to_check->publisher }}</p>
+        <div class="card__price">{{ $announcement_to_check->price }}€</div>
+        <span class="card-footer">
+            <p class="card-text">Caricato da: {{ $announcement_to_check->user->name ?? '' }} il
+                {{ $announcement_to_check->created_at->format('d/m/Y H:i') }}</p>
+        </span>
+        <span class="card-footer d-flex">
+            <form action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
+                method="POST">
+                @csrf
+                @method('PATCH')
+                <button type="submit" class="btn btn-success mx-1">Accetta</button>
+            </form>
+            <form action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
+                method="POST">
+                @csrf
+                @method('PATCH')
+                <button type="submit" class="btn btn-danger mx-1">Rifiuta</button>
+            </form>
+           
+        </span>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-12 col-lg-6">
+        <h5 class="tc-accent">Tags</h5>
+        <div class="p-2">
+            @if (!empty($image->labels))
+                @foreach ($image->labels as $label)
+                    <p class="d-inline">{{ $label }}</p>
+                @endforeach
+        </div>
+    </div>
+    <div class="col-lg-3 col6">
+        <div class="card-body">
+            <h5 class="tc-accent">Revisione Immagini</h5>
+            <p>Esplicito: <span class="{{ $image->adult }}"></span></p>
+            <p>Parodia: <span class="{{ $image->spoof }}"></span></p>
+            <p>Medicina: <span class="{{ $image->medical }}"></span></p>
+            <p>Violenza: <span class="{{ $image->violence }}"></span></p>
+            <p>Erotico: <span class="{{ $image->racy }}"></span></p>
+        </div>
+    </div>
+    </div>
+    </div>
+@else
+    <div class="container my-3">
+        <div class="row row_revisor">
+            <div class="col-12">
+                <h2>
+                    Non ci sono dati per questo articolo
+                </h2>
             </div>
             <div class="tab-pane fade p-4" id="revisor-tab-pane" role="tabpanel" aria-labelledby="revisor-tab"
                 tabindex="0">
@@ -118,64 +124,14 @@
             </div>
 
         </div>
-
-
-
-        {{-- <h5 class="card-title">{{ $announcement_to_check->title }}</h5>
-        <p class="card-text">{{ $announcement_to_check->category->name }}</p>
-        <p class="card-text">{{ $announcement_to_check->body }}</p>
-        <p class="card-text">Sviluppato da: {{ $announcement_to_check->developer }}</p>
-        <p class="card-text">Pubblicato da: {{ $announcement_to_check->publisher }}</p>
-        <div class="card__price">{{ $announcement_to_check->price }}€</div>
-        <span class="card-footer">
-            <p class="card-text">Caricato da: {{ $announcement_to_check->user->name ?? '' }} il
-                {{ $announcement_to_check->created_at->format('d/m/Y H:i') }}</p>
-        </span>
-        <span class="card-footer d-flex">
-            <form action="{{ route('revisor.accept_announcement', ['announcement' => $announcement_to_check]) }}"
-                method="POST">
-                @csrf
-                @method('PATCH')
-                <button type="submit" class="btn btn-success mx-1">Accetta</button>
-            </form>
-            <form action="{{ route('revisor.reject_announcement', ['announcement' => $announcement_to_check]) }}"
-                method="POST">
-                @csrf
-                @method('PATCH')
-                <button type="submit" class="btn btn-danger mx-1">Rifiuta</button>
-            </form>
-        </span> --}}
     </div>
-    </div>
-    </div>
-    {{-- <div class="col-12 col-lg-6">
-        <h5 class="tc-accent">Tags</h5>
-        <div class="p-2">
-            @if ($image->labels)
-                @foreach ($image->labels as $label)
-                    <p class="d-inline">{{ $label }}</p>
-                @endforeach
-            @endif
-        </div>
-    </div>
-    <div class="col-lg-3 col6">
-        <div class="card-body">
-            <h5 class="tc-accent">Revisione Immagini</h5>
-            <p>Esplicito: <span class="{{ $image->adult }}"></span></p>
-            <p>Parodia: <span class="{{ $image->spoof }}"></span></p>
-            <p>Medicina: <span class="{{ $image->medical }}"></span></p>
-            <p>Violenza: <span class="{{ $image->violence }}"></span></p>
-            <p>Erotico: <span class="{{ $image->racy }}"></span></p>
-        </div>
-    </div> --}}
-    </div>
-    </div>
-@else
+    @endif
+    @else
     <div class="container my-3">
         <div class="row row_revisor">
             <div class="col-12">
                 <h2>
-                    Non ci sono annunci da controllare
+                    Non ci sono articoli da revisionare
                 </h2>
             </div>
         </div>
