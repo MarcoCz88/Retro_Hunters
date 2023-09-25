@@ -9,7 +9,7 @@
                             @foreach ($announcement->images as $image)
                                 <div class="carousel-item {{$loop->first ? 'active' : ''}}">
                                     <img src="{{ Storage::url($image->getUrl(300, 300)) }}"
-                                    width="600px"  alt="{{ $announcement->title }}">
+                                    width="100%"  alt="{{ $announcement->title }}">
                                 </div>
                             @endforeach
                         </div>
@@ -41,7 +41,7 @@
                 </div>
             </div>
 
-            <div class="col-6 d-flex flex-column  justify-content-center ps-5">
+            <div class="col-6 d-flex flex-column  justify-content-center ps-lg-5">
                 <h2 class=" my-3">{{ $announcement->title }}</h2>
                 {{ __('ui.plot') }} : <p class="pt-2" style="min-height: 150px">{{ $announcement->body }}</p>
                 {{ __('ui.price') }}<p class="fs-3 ">{{ $announcement->price }},00 €</p>
