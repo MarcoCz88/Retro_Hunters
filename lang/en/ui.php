@@ -34,5 +34,9 @@ return [
     'byUserTitle'=>'Announcements for',
     'myAnn'=>'My announcements',
     'recapAnn' => 'Announcements recap for ',
-    'imgCreate'=>'Images'
+    'imgCreate'=>'Images',
+    'surname'=> 'Surname',
+    'team'=> 'Join the team',
+    'telephoneContact'=>'telephone contact',
+    'message'=>'Message',
 ];

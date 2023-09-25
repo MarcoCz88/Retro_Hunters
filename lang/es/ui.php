@@ -34,4 +34,8 @@ return [
     'myAnn'=>'Mis anuncios',
     'recapAnn' => 'Resumen de anuncios de ',
     'imgCreate'=>'Imagenes',
+    'surname'=> 'Apellido',
+    'team'=> 'Únete al equipo',
+    'telephoneContact'=>'Contacto telefónico',
+    'message'=>'Mensaje',
 ];

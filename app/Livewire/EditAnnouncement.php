@@ -85,7 +85,7 @@ class EditAnnouncement extends Component
                 $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
             
                 RemoveFaces::withChain([
-                    new ResizeImage($newImage->path, 600, 600),
+                    new ResizeImage($newImage->path, 300, 300),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)
                 ])->dispatch($newImage->id);
@@ -103,9 +103,8 @@ class EditAnnouncement extends Component
 
     public function deleteImg(Image $image){
         $announcement = Announcement::find($image->announcement_id);
-        dd(Storage::url($image->getUrl(600, 600)));
-        Storage::delete($image->path);
-        Storage::delete($image->getUrl(600, 600));
+        Storage::disk('public')->delete($image->path);
+        Storage::disk('public')->delete($image->getUrl(300, 300));
         $image->delete();
 
         return view('announcement.edit', compact('announcement'));
