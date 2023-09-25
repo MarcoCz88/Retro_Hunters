@@ -39,3 +39,8 @@ Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('s
 
 //ROTTE UTENTE
 Route::get('user/myannouncement', [UserController::class, 'index'])->middleware('auth')->name('user.myAnnouncements');
+
+
+
+// ROTTA TEST DAVIDE
+Route::get('/test',[PublicController::class,'testMail']);
