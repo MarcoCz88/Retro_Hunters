@@ -78,3 +78,7 @@ main {
     top: 0;
     right: -20px;
 }   
+
+h1{
+    font-size: 90px !important;
+}
