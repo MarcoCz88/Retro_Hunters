@@ -42,5 +42,10 @@ return [
     'recapAnn' => 'Riepilogo annunci di ',
     'imgCreate'=>'Immagini',
     'summit'=>'Invia',
-    'prevImg'=>'Anteprima Immagini'
+    'prevImg'=>'Anteprima Immagini',
+    'new'=>'Nuova',
+    'revisorArea' => 'Area Revisioni',
+    'guest' => 'Visitatore',
+    'il' => 'il',
+    'clickA' => 'puoi cliccare anche il tasto "A" della console.'
 ];

@@ -170,7 +170,6 @@
   }
 
   .boxDisplay{
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,7 +181,7 @@
     height: 100%;
     width: 60%;
     border-radius: 20px;
-    padding: 50px 50px 50px 50px;
+    padding: 0px 50px ;
   
   }
 
@@ -205,6 +204,13 @@
     }
     .boxLog{
       border-radius: 0;
+    }
+    .form{
+      height: 100%;
+      width: 100%;
+      border-radius: 20px;
+      padding: 0px 50px ;
+    
     }
   }
 

@@ -4,8 +4,7 @@
         <div class="row ">
             <div class=" col-12 col-md-6">
                 <div id="myCarousel" class="carousel slide p-5" data-ride="carousel">
-                    @if ($announcement->images->isNotEmpty())
-                        
+                    @if ($announcement->images->isNotEmpty())                        
                         <div class="carousel-inner">
                             @foreach ($announcement->images as $image)
                                 <div class="carousel-item {{$loop->first ? 'active' : ''}}">
@@ -34,13 +33,11 @@
                                 </svg></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-                        {{-- <img src="https://picsum.photos/200" class="card-img-top"
-                    alt="{{ $announcement->title }}"> --}}
                     @else
                     @endif
                     <p class='mx-auto fontCreateAt mt-3'>{{ __('ui.createdBy') }} : <a
                             href="{{ route('userIndex', $announcement->user->id) }}">{{ $announcement->user->name }}</a>
-                        il {{ $announcement->created_at->format('d/m/Y H:i') }} </p>
+                        {{__('ui.il')}} {{ $announcement->created_at->format('d/m/Y H:i') }} </p>
                 </div>
             </div>
 

@@ -7,12 +7,11 @@
     <title>Retro Hunters Support</title>
 </head>
 <body>
-    <div>
         <h2>Un utente si è candidato al ruolo di revisore</h2>
         <h3>I suoi dati sono: </h3>
         <p>Nome: {{Auth::user()->name}}</p>
         <p>Email: {{Auth::user()->email}}</p>
-        <p>Messaggio: {{$p_message}}</p>
+        <p>Messaggio: {{$presentation_message}}</p>
         <p>Se vuoi renderlo revisore clicca qui</p>
         <a href="{{route('make.revisor', Auth::user())}}">Rendi revisore</a>
     </div>

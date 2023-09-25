@@ -1,11 +1,11 @@
 <?php
 return [
-    'allAnnouncements'=>'All annouscements',
+    'allAnnouncements'=>'All announcements',
     'lastSixAnnouncements'=>'Last announcements',
     'search'=>'Search...',
     'unMareDiGiochi'=>'A sea full of video games',
     'workWithUs'=>'Work with us',
-    'registered'=>'Registered',
+    'registered'=>'Register',
     'contact'=>'Contact',
     'addAnnouncement'=>'Add new announcement:',
     'addAnnouncementNav'=>'New Announcement',
@@ -40,5 +40,10 @@ return [
     'telephoneContact'=>'telephone contact',
     'message'=>'Message',
     'summit'=>'Submit',
-    'prevImg'=>'Image Preview'
+    'prevImg'=>'Image Preview',
+    'new'=>'New', 
+    'revisorArea' => 'Review Area',
+    'guest' => 'Guest',
+    'il' => 'on',
+    'clickA' => 'you can also click the "A" key on the console.'
 ];

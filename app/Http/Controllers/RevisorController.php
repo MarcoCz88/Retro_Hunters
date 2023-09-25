@@ -41,8 +41,10 @@ class RevisorController extends Controller
         return view('revisor.request');
     }
 
-    public function becomeRevisor(){
-        Mail::to('hello@example.com')->send(new BecomeRevisor(Auth::user()));
+    public function becomeRevisor(Request $request){
+
+        $presentation_message = $request->presentation_message;
+        Mail::to('hello@example.com')->send(new BecomeRevisor(Auth::user(), $presentation_message));
         return redirect()->back()->with('message', 'La tua candidatura è stata inviata con successo.');
     }
 
