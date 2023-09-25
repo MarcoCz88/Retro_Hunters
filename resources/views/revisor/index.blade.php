@@ -73,15 +73,7 @@
     </div>
     </div>
     </div>
-@else
-    <div class="container my-3">
-        <div class="row row_revisor">
-            <div class="col-12">
-                <h2>
-                    Non ci sono dati per questo articolo
-                </h2>
-            </div>
-            <div class="tab-pane fade p-4" id="revisor-tab-pane" role="tabpanel" aria-labelledby="revisor-tab"
+    <div class="tab-pane fade p-4" id="revisor-tab-pane" role="tabpanel" aria-labelledby="revisor-tab"
                 tabindex="0">
                 {{-- <p>Esplicito: <span class="{{ $image->adult }}"></span></p>
                 <p>Parodia: <span class="{{ $image->spoof }}"></span></p>
@@ -118,11 +110,17 @@
                             <th scope="row">Erotico:</th>
                             <td><span class="{{ $image->racy }}"></span></td>
                         </tr>
-
                     </tbody>
                 </table>
             </div>
-
+@else
+    <div class="container my-3">
+        <div class="row row_revisor">
+            <div class="col-12">
+                <h2>
+                    Non ci sono dati per questo articolo
+                </h2>
+            </div>
         </div>
     </div>
     @endif
@@ -163,7 +161,6 @@
                             </tr>
                         </tbody>
                     </table>
-
                     <form id="formUndo"
                         action="{{ route('revisor.undo_announcement', ['announcement' => $announcement_to_undo]) }}"
                         method="POST">

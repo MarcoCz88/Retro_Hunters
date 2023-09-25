@@ -103,9 +103,8 @@ class EditAnnouncement extends Component
 
     public function deleteImg(Image $image){
         $announcement = Announcement::find($image->announcement_id);
-        dd(Storage::url($image->getUrl(600, 600)));
-        Storage::delete($image->path);
-        Storage::delete($image->getUrl(600, 600));
+        Storage::disk('public')->delete($image->path);
+        Storage::disk('public')->delete($image->getUrl(600, 600));
         $image->delete();
 
         return view('announcement.edit', compact('announcement'));
