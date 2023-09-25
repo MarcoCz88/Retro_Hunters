@@ -38,6 +38,6 @@ return [
     'team'=> 'Únete al equipo',
     'telephoneContact'=>'Contacto telefónico',
     'message'=>'Mensaje',
-    'summit'=>'summit',
+    'summit'=>'Envia',
     'prevImg'=>'Vista Previa'
 ];
