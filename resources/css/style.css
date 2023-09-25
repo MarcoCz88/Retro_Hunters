@@ -70,3 +70,8 @@ main {
     border-radius: 20px;
     padding: 30px;
 }
+.badgeNew{
+    position: absolute;
+    top: 0;
+    right: -20px;
+}   

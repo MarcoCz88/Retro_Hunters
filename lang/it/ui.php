@@ -42,5 +42,6 @@ return [
     'recapAnn' => 'Riepilogo annunci di ',
     'imgCreate'=>'Immagini',
     'summit'=>'Invia',
-    'prevImg'=>'Anteprima Immagini'
+    'prevImg'=>'Anteprima Immagini',
+    'new'=>'Nuova',
 ];
