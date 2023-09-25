@@ -14,7 +14,7 @@
   background-position: center;
   
 }
-.bg-marco:hover{
+.bg-marco{
   background: url(../img/donkey.jpg);
   background-size:95%;
   background-repeat: no-repeat;
@@ -44,6 +44,9 @@
   .aqua-gradient3 {
     background: linear-gradient(245deg, #ffc90593, #2097ff3f ) !important;
   }
+  .m-custom{
+    transition: 0.6s;
+  }
   .m-custom:hover{
     margin-bottom: 40%;
   } 
@@ -53,4 +56,7 @@
     overflow: hidden;
     border: 5px solid #ffa305;
     border-radius: 50%;
+  }
+  .br-custom{
+    border-bottom: solid rgb(255, 179, 0) 5px;
   }

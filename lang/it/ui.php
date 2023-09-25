@@ -34,5 +34,9 @@ return [
     'platform'=>'Piattaforma',
     'byUserTitle'=>'Annunci per',
     'myAnn' => 'I miei annunci',
-    'recapAnn' => 'Riepilogo annunci di '
+    'recapAnn' => 'Riepilogo annunci di',
+    'surname'=> 'Cognome',
+    'team'=> 'Entara nel Team',
+    'telephoneContact'=>'Contatto telefonico',
+    'message'=>'Messaggio',
 ];
