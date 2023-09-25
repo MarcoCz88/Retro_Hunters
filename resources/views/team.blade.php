@@ -19,6 +19,7 @@
                 <div class="card-body text-center">
                   <h4 class="card-title font-weight-bold text-primary">Piertobia</h4>
                   <hr>
+                  <p class="text-center text-primary">Back-end</p>
                 </div>
               </div>            
             </section>
@@ -32,6 +33,7 @@
                 <div class="card-body text-center">
                   <h4 class="card-title font-weight-bold text-primary">Davide</h4>
                   <hr>
+                  <p class="text-center text-primary">Front-end</p>
                 </div>
               </div>            
             </section>
@@ -45,6 +47,7 @@
                 <div class="card-body text-center">
                   <h4 class="card-title font-weight-bold text-primary">Valerio</h4>
                   <hr>
+                  <p class="text-center text-primary">Back-end</p>
                 </div>
               </div>            
             </section>
@@ -58,6 +61,7 @@
                 <div class="card-body text-center">
                   <h4 class="card-title font-weight-bold text-primary">Marco</h4>
                   <hr>
+                  <p class="text-center text-primary">Front-end</p>
                 </div>
               </div>            
             </section>
