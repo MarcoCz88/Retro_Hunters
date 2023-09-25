@@ -12,7 +12,7 @@
                             <div class="carousel-inner">
                                 @foreach ($announcement_to_check->images as $image)
                                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                                        <img src="{{ Storage::url($image->getUrl(300, 300)) }}" width="600px"
+                                        <img src="{{ Storage::url($image->getUrl(250, 300)) }}" width="100%"
                                             alt="{{ $announcement_to_check->title }}">
                                     </div>
                                 @endforeach

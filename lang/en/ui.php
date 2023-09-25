@@ -68,5 +68,4 @@ return [
     'revOn' => 'Revised on',
     'undoRev' => 'Cancel revision',
     'team' => 'The team'
-
 ];
