@@ -5,27 +5,13 @@
             <div class=" col-12 col-md-6">
                 <div id="myCarousel" class="carousel slide p-5" data-ride="carousel">
                     @if ($announcement->images->isNotEmpty())
-                        <ol class="carousel-indicators">
-                            @foreach ($announcement->images as $key => $image)
-                                <li data-target="#myCarousel" data-slide-to="{{ $key }}"    
-                                    {{ $key == 0 ? 'class=active' : '' }}></li>
-                            @endforeach
-                        </ol>
+                        
                         <div class="carousel-inner">
-                            @foreach ($announcement->images as $key => $image)
-                                <div class="carousel-item active">
-                                    <img src="{{ Storage::url($announcement->images()->first()->getUrl(300, 300)) }}"
+                            @foreach ($announcement->images as $image)
+                                <div class="carousel-item {{$loop->first ? 'active' : ''}}">
+                                    <img src="{{ Storage::url($image->getUrl(300, 300)) }}"
                                     width="600px"  alt="{{ $announcement->title }}">
                                 </div>
-
-
-
-                                {{-- <div class="carousel-item{{ $loop->first ? ' active' : '' }}">
-                                    <img src="{{ asset($image->path) }}" alt="{{ $image->id }}" class="d-block w-100">
-                                </div> --}}
-
-
-
                             @endforeach
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"

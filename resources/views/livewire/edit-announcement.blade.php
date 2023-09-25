@@ -2,7 +2,7 @@
     <div class="row justify-content-center">
         <div id="boxform" class="col-12 boxform col-xl-6 ">
             <h4 class="text-primary">Modifica Articolo</h4>
-            <form id="formCreate" wire:submit.prevent="store">
+            <form id="formCreate" wire:submit.prevent="update">
                 <div class="col-12">
                     <div class=" mt-3">
                         <label class="form-label text-primary">{{ __('ui.title') }} :</label>

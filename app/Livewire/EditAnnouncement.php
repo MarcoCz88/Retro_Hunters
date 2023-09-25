@@ -5,14 +5,15 @@ namespace App\Livewire;
 use App\Models\Image;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
+use App\Jobs\ResizeImage;
+use App\Jobs\WatermarkImage;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 use Livewire\WithFileUploads;
-use Illuminate\Support\Facades\File;
-use App\Jobs\RemoveFaces;
-use App\Jobs\ResizeImage;
 use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 class EditAnnouncement extends Component
@@ -85,9 +86,10 @@ class EditAnnouncement extends Component
                 $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
             
                 RemoveFaces::withChain([
+                    new WatermarkImage($newImage->id),
                     new ResizeImage($newImage->path, 300, 300),
                     new GoogleVisionSafeSearch($newImage->id),
-                    new GoogleVisionLabelImage($newImage->id)
+                    new GoogleVisionLabelImage($newImage->id),
                 ])->dispatch($newImage->id);
 
             }
