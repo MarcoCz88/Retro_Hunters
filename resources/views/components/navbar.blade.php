@@ -84,7 +84,7 @@
                 </li>
             @endauth
             @guest
-                <li class="nav-item dropdown ms-auto me-5">
+                <li class="nav-item dropdown ms-md-auto me-md-5">
                     <a class="nav-link link-custom dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         {{__('ui.guest')}}
@@ -107,7 +107,7 @@
                     </ul>
                 </li>
             @endguest
-            <button id="selectLeng" class="select-leng"><img src="/media/leng-3.png" class="imgSelectLeng" alt=""></button>
+            <button id="selectLeng" class="select-leng "><img src="/media/leng-3.png" class="imgSelectLeng" alt=""></button>
                 <div id="lengIT" class="lengIT d-none"><x-_locale lang="it" nation="it"/></div>
                 <div id="lengEN" class="lengEN d-none"><x-_locale lang="en" nation="gb"/></div>
                 <div id="lengES" class="lengES d-none"><x-_locale lang="es" nation="es"/></div>
